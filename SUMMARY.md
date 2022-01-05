@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-* [Overview](getting-started/overview.md)
+* [Overview](getting-started/README.md)
 * [Instalation](getting-started/instalation.md)
 * [Configuration](getting-started/configuration.md)
 * [User Interface](getting-started/user-interface.md)
