@@ -6,9 +6,9 @@ description: Installing Konstrukt, the fluent administration panel builder for U
 
 Konstrukt is installed via the NuGet package manager by issuing the following command.
 
-````
+```bash
 dotnet add package Konstrukt
-````
+```
 
 Alternatively, you can also find and install the NuGet package via the NuGet Package Manager GUI in Visual Studio.
 
