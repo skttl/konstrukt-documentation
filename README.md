@@ -1,4 +1,5 @@
 ---
+title: Konstrukt
 description: Documentation for Konstrukt, the fluent administration panel builder for Umbraco.
 ---
 
