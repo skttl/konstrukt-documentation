@@ -16,8 +16,8 @@ With Konstrukt, custom adminisration panel UI's can now take a matter of minutes
 
 To help with the different stages of learning, these have been broken up into 5 key areas, each with a specific focus.
 
-{% content-ref url="getting-started/README.md" %}
-[Getting Started](getting-started/README.md)
+{% content-ref url="getting-started/overview.md" %}
+[Getting Started](getting-started/overview.md)
 {% endcontent-ref %}
 
 ## Getting Help
