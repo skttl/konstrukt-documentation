@@ -20,6 +20,6 @@ It's important to understanding Konstrukt's versioning strategy so that you can 
 * **Feature** - A version with one or more new features that have been added. The release could be breaking or non-breaking so it is important to review the changelog before upgrading to a new feature release.
 * **Patch** - A version consisting of minor, non-breaking bug fixes.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 **A note about SemVer:** It is common within the development community that version numbers should follow the [SemVer](https://semver.org/) specification, however we don't feel that SemVer fits with how we wish to portray our versioning information. It is important then that developers understand the differences, especially when upgrading to a Feature/Minor release where the SemVer expectation would be for it to be non-breaking which may not be the case.
 {% endhint %}
