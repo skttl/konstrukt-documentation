@@ -16,14 +16,8 @@ With Konstrukt, custom adminisration panel UI's can now take a matter of minutes
 
 To help with the different stages of learning, these have been broken up into 5 key areas, each with a specific focus.
 
-1. **[Getting Started](./getting-started/overview.md)**
-   Key information on hoe to get started with Konstrukt
-2. **[Guides](./getting-started/overview.md)**
-   Key information on hoe to get started with Konstrukt
-
-
-#### 
-Key information on hoe to get started with Konstrukt
+1. **[Getting Started](./getting-started/overview.md)** - Key information on hoe to get started with Konstrukt
+2. **[Guides](./getting-started/overview.md)** - Key information on hoe to get started with Konstrukt
 
 #### [2. Guides](./getting-started/overview.md)
 
