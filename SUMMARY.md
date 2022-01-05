@@ -30,10 +30,6 @@
 * [Repositories](reference/repositories.md)
 * [Events](reference/events.md)
 
-## Use Cases
-
-* [CRM](use-cases/crm.md)
-
 ## Extras
 
 * [Property Editors](extras/property-editors/README.md)
