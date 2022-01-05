@@ -36,6 +36,8 @@ The `AddKonstrukt` extension method accepts a single parameter, a delegate funct
 
 To configure Konstrukt vis a `IKonstruktConfigurator` you can create a class anywhere in your project that inherits from the `IKonstruktConfigurator` interface and Konstrukt will automatically find them and register their configurations with the DI container.
 
+See the [reference section](../reference/conventions.md) for information on the various configuration options available on the config builder.
+
 ```csharp
 public class MyKonstruktConfigurator : IKonstruktConfigurator
 {
@@ -47,3 +49,5 @@ public class MyKonstruktConfigurator : IKonstruktConfigurator
 ```
 
 The `IKonstruktConfigurator` has a single `Configure` method with a single Konstrukt configuration builder argument on which you can call the relevant fluent API's to define your solution.
+
+See the [reference section](../reference/conventions.md) for information on the various configuration options available on the config builder.
