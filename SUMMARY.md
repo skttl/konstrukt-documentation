@@ -5,7 +5,7 @@
 ## Getting Started
 
 * [Overview](getting-started/overview.md)
-* [Instalation](getting-started/instalation.md)
+* [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
 * [User Interface](getting-started/user-interface.md)
 
