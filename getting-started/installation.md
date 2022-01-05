@@ -6,7 +6,7 @@ description: Installing Konstrukt, the fluent administration panel builder for U
 
 Konstrukt is installed via the NuGet package manager by issuing the following command.
 
-````powershell
+````
 dotnet add package Konstrukt
 ````
 
@@ -29,13 +29,9 @@ If you need to store your licenses in an alternative directory, you can change w
 {% hint style="info" %}
 **When do i need a license?**
 
-You only need to install a license when you are ready to go live. 
-
 Konstrukt is fully functional during development, and whilst it is hosted on a local server (`localhost` or `.local` domains).
 
-You can also host a staging site on a `*.azurewebsite.net` or `*.umbraco.io` domain without the need of a license. 
-
-Hosting on any other public domains without a license will be limited to a maximum of 20 orders.
+Hosting on any public domains will require a valid license.
 
 If you require an unrestricted staging environment, all licenses support two methods of allowing this:  
 
