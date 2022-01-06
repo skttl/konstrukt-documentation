@@ -22,8 +22,8 @@ Before you get to know Konstrukt, you need to become familiar with the Umbraco U
 
 ![Menu Item](../images/ui_04.png)
 
-**5. Menu Item** A context menu item + action.
+**6. Menu Item** A context menu item + action.
 
 ![Bulk Action](../images/ui_05.png)
 
-**5. Bulk Action** An action to perform on multiple list view items at once.
+**7. Bulk Action** An action to perform on multiple list view items at once.
