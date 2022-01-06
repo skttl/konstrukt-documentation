@@ -34,7 +34,7 @@ config.AddSectionBefore("settings", "Database", sectionConfig => {
 });
 ```
 
-------
+---------------------------------------  
 
 #### AddSectionAfter(string afterAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
 
