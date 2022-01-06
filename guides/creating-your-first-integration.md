@@ -24,7 +24,7 @@ CREATE TABLE [Person] (
 );
 ```
 
-## Configure your model
+## Set up your model
 
 With the database table setup we then need to create the associated poco model in our project.
 
