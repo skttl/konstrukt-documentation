@@ -8,6 +8,6 @@ As well as the API for managing your custom data source, Konstrukt also comes wi
 
 The property editors available are:
 
-{% content-ref url="extras/property-editors/entity-picker.md" %}
-[Entity Picker](extras/property-editors/entity-picker.md)
+{% content-ref url="entity-picker.md" %}
+[Entity Picker](entity-picker.md)
 {% endcontent-ref %}
