@@ -31,7 +31,7 @@ If you need to store your licenses in an alternative directory, you can change w
 
 Konstrukt is fully functional during development, and whilst it is hosted on a local server (`localhost` or `.local` domains).
 
-You can host on a public domain without a license for a maximum of one configured collection. To manage more than one collection, a full and valid license for the admin domain is required.
+Hosting on a public domain without a license will be restricted to the management of a single collection. To manage more than one collection will require a full and valid license for the admin domain to be installed.
 
 If you require an unrestricted staging environment, all licenses support two methods of allowing this:  
 
