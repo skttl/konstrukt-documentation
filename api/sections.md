@@ -1,5 +1,5 @@
 ---
-description: Configuring Sections in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring sections in Konstrukt, the fluent administration panel builder for Umbraco.
 ---
 
 # Sections
