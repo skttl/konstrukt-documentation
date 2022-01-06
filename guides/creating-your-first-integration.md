@@ -4,7 +4,7 @@ description: Creating your first integration with Konstrukt, the fluent administ
 
 # Creating your first integration
 
-In this guide we'll take you through the steps needed to setup Konstrukt to be able to administer a single custom database table.
+In this guide we'll take you through the steps needed for a basic implementation using Konstrukt to manage a single custom database table.
 
 ## Set up the database
 
