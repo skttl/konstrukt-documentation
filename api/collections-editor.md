@@ -36,7 +36,7 @@ editorConfig.AddTab("General", tabConfig => {
 
 ## Adding a fieldset to a tab
 
-#### AddFieldset(strin gname, Lambda fieldsetConfig = null) : *KonstruktEditorFieldTabConfigBuilder&lt;TEntityType, TValueType&gt;*
+#### AddFieldset(string name, Lambda fieldsetConfig = null) : *KonstruktEditorFieldTabConfigBuilder&lt;TEntityType, TValueType&gt;*
 
 Adds the given fieldset to the tab.
 
