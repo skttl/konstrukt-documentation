@@ -6,7 +6,7 @@ description: Configuring Sections in Konstrukt, the fluent administration panel 
 
 A section is a distinct area of the Umbraco backoffice, such as content, media, etc, and is accessed via a link in the main menu at the top of the Umbraco interface. Konstrukt allows you to define multiple sections in order to organise the management of your models into logical sections.
 
-Each section defined via the Konstrukt API will also generate a tree in the UI under which your collections / folders will be added. All Konstrukt defined sections can only contain a single tree and so you can think of a Konstrukt section as being both a section and a tree configuration combined.
+Each section defined via the Konstrukt API will also include a tree in the UI under which your collections / folders will be added. All Konstrukt defined sections can only contain a single tree and so you can think of a Konstrukt section as being both a section and a tree configuration combined.
 
 ## Defining a section
 
