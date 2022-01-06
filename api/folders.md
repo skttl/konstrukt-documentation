@@ -8,7 +8,7 @@ A folder can appear in either a section tree or as a sub folder to other folders
 
 ## Defining a folder
 
-You define a folder by calling one of the `AddFolder` methods on a given [`Section`](sections.md) or parent `Folder` builder instance.
+You define a folder by calling one of the `AddFolder` methods on a given [`Section`](sections.md) or parent `Folder` config builder instance.
 
 #### AddFolder(string name, Lambda folderConfig = null) : *KonstruktFolderConfigBuilder*
 
