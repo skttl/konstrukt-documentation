@@ -35,3 +35,7 @@ collectionConfig.AddChildCollection<Child>(c => c.Id, c => c.ParentId, "Child", 
     ...
 });
 ```
+
+## Configuring a child collection
+
+Child collections share the same API as the `Collection` config builder API, except child collections cannot contain further child collections. Please see the [Collections API documentation](collections.md) for more info.
