@@ -6,7 +6,7 @@ description: Configuring the editor of a collection in Konstrukt, the fluent adm
 
 An editor is the user interface used to edit an entity and is made up of tabs and property editors.
 
-### Configuring an editor
+## Configuring an editor
 
 The editor configuration is a sub configuration of a [`Collection`](collections.md) config builder instance and is accessing via it's `Editor` method.
 
@@ -21,7 +21,7 @@ collectionConfig.Editor(editorConfig => {
 });
 ````
 
-### Adding a tab to an editor
+## Adding a tab to an editor
 
 #### AddTab(string name, Lambda tabConfig = null) : *KonstruktTabConfigBuilder&lt;TEntityType&gt;*
 
@@ -34,7 +34,7 @@ editorConfig.AddTab("General", tabConfig => {
 });
 ````
 
-### Adding a fieldset to a tab
+## Adding a fieldset to a tab
 
 #### AddFieldset(strin gname, Lambda fieldsetConfig = null) : *KonstruktEditorFieldTabConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -47,7 +47,7 @@ tabConfig.AddFieldset("Contact", fieldsetConfig => {
 });
 ````
 
-### Adding a field to a fieldset
+## Adding a field to a fieldset
 
 #### AddField(Lambda propertyExpression, Lambda propertyConfig = null) : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -60,7 +60,7 @@ fieldsetConfig.AddField(p => p.FirstName, fieldConfig => {
 });
 ````
 
-### Changing the label of a field
+## Changing the label of a field
 
 By default Konstrukt will build the label from the property name, including splitting camel case names into sentence case, however you can set an explicit label if you'd prefer.
 
@@ -73,7 +73,7 @@ Sets the label for the editor field.
 fieldConfig.SetLabel("First Name");
 ````
 
-### Adding a description to a field
+## Adding a description to a field
 
 #### SetDescription(string description) : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -84,7 +84,7 @@ Sets the description for the editor field.
 fieldConfig.SetDescription("Enter your age in years");
 ````
 
-### Setting the default value of a field
+## Setting the default value of a field
 
 #### SetDefaultValue(TValueType defaultValue) : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -104,7 +104,7 @@ Sets the default value via a function that gets evaluated at time of entity crea
 fieldConfig.SetDefaultValue(() => DateTime.Now);
 ````
 
-### Making a field read only
+## Making a field read only
 
 #### MakeReadOnly() : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -124,7 +124,7 @@ Makes the current field read only disabling editing in the UI. A ReadOnly proper
 fieldConfig.MakeReadOnly(distanceProp => $"{distanceProp:## 'km'}");
 ````
 
-### Making a field mandatory
+## Making a field mandatory
 
 #### MakeRequired() : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -135,7 +135,7 @@ Makes the given field mandatory.
 fieldConfig.MakeRequired();
 ````
 
-### Validating a field
+## Validating a field
 
 #### SetValidationRegex(string regex) : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
@@ -146,7 +146,7 @@ Defines the regular expression to use when validating the field.
 fieldConfig.SetValidationRegex("[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}");
 ````
 
-### Changing the data type of a field
+## Changing the data type of a field
 
 By default Konstrukt will automatically choose a relevant data type for simple field types, however you can override this should you wish to use an alternative data type.
 
@@ -168,7 +168,7 @@ Set the data type of the current field to the Umbraco data type with the given i
 fieldConfig.SetDataType(-88);
 ````
 
-### Setting a field value mapper
+## Setting a field value mapper
 
 #### SetValueMapper&lt;TMapperType&gt;() : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
