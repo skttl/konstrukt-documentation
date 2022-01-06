@@ -21,7 +21,7 @@ config.AddSection("Database", sectionConfig => {
 });
 ```
 
-_____
+<hr />
 
 #### AddSectionBefore(string beforeAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
 
@@ -34,7 +34,7 @@ config.AddSectionBefore("settings", "Database", sectionConfig => {
 });
 ```
 
-_____
+------
 
 #### AddSectionAfter(string afterAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
 
