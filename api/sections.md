@@ -80,6 +80,7 @@ Adds a folder to the current section tree with the given name + icon. See the [F
 sectionConfig.AddFolder("Settings", "icon-settings", folderConfig => {
     ...
 });
+```
 
 ## Adding a collection to a section tree
 
