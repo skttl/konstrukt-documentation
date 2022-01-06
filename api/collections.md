@@ -325,3 +325,48 @@ collectionConfig.Editor(editorConfig => {
 
 ## Adding a child collection to a collection
 
+#### AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda childCollectionConfig = null) : *KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;*
+
+Adds a child collection to the current collection with the given names and description and default icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. See the [Child Collections API documentation](child-collections.md) for more info.
+
+```csharp
+// Example
+collectionConfig.AddChildCollection<Child>(c => c.Id, c => c.ParentId, "Child", "Children", "A collection of children", childCollectionConfig => {
+    ...
+});
+```
+
+#### AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda childCollectionConfig = null) : *KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;*
+
+Adds a child collection to the current collection with the given names, description and icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. See the [Child Collections API documentation](child-collections.md) for more info.
+
+```csharp
+// Example
+collectionConfig.AddChildCollection<Child>(c => c.Id, c => c.ParentId, "Child", "Children", "A collection of children", "icon-umb-users", "icon-umb-users", childCollectionConfig => {
+    ...
+});
+```
+
+## Adding a child collection group to a collection
+
+#### AddChildCollectionGroup(string name, Lambda childCollectionGroupConfig = null) : *KonstruktChildCollectionGroupConfigBuilder*
+
+Adds a child collection group to the current collection with the given name and default icon. See the [Child Collections Group API documentation](child-collection-groups.md) for more info.
+
+```csharp
+// Example
+collectionConfig.AddChildCollectionGroup("Family", childCollectionGroupConfig => {
+    ...
+});
+```
+
+#### AddChildCollectionGroup(string name, string icon, Lambda childCollectionGroupConfig = null) : *KonstruktChildCollectionGroupConfigBuilder*
+
+Adds a child collection group to the current collection with the given name and icon. See the [Child Collections Group API documentation](child-collection-groups.md) for more info.
+
+```csharp
+// Example
+collectionConfig.AddChildCollectionGroup("Family", "icon-users", childCollectionGroupConfig => {
+    ...
+});
+```
