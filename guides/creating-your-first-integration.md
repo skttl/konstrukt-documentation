@@ -102,14 +102,18 @@ For our example, we will use the following configuration.
 
 ## Access your UI
 
-{% hint style="info" %}
-**Good to know:** your product docs aren't just a reference of all your features! use them to encourage folks to perform certain actions and discover the value in your product.
-{% endhint %}
+With your configuration defined and your project compiled, before we can access our UI there is one last step to perform and that is to give your back office user account permission to access the newly defined  section. To do this you'll need to login to the back office and head to the users section and update the user group your user belongs to to allow access.
 
-## The basics
+![User group permissions](../images/permissions.png)
 
-Projects are containers for task lists. Think of them as a library for everything your team needs to get done to complete or ship a project.
+With the permissions set, you can refresh your browser and you should now see your new section available in the site navigation.
 
-## Creating a project
+![People list view](../images/people_listview.png)  
 
-Hit the big '+' button in your sidebar and select 'New Project' from the menu that pops up. Give your project a name, and you're good to go!
+![People editor](../images/people_edtior.png)
+
+## Summary
+
+As you can see, with very little code you can start to create very powerful interfaces for your custom data structures.
+
+To see all the possible configuration options for each of the UI components, be sure to read through the [API documentation](../api/conventions.md).
