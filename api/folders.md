@@ -8,7 +8,7 @@ A folder appears in a section tree and is used to help organise the tree structu
 
 ## Defining a folder
 
-You define a folder by calling one of the `AddFolder` methods on a given [`KonstruktTreeConfig`]({{ site.baseurl }}/api/trees/) or parent `KonstruktFolderConfig` instance.
+You define a folder by calling one of the `AddFolder` methods on a given [`Section`](sections.md) or parent `Folder` builder instance.
 
 #### AddFolder(string name, Lambda folderConfig = null) : *KonstruktFolderConfigBuilder*
 
