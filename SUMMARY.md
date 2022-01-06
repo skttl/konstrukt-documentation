@@ -21,6 +21,8 @@
   * [Collections](api/collections.md)
     * [List View](api/collections-list-view.md)
     * [Editor](api/collections-editor.md)
+    * [Child Collections](api/child-collections.md)
+    * [Child Collection Groups](api/child-collection-groups.md)
 * [Menu Items](api/menu-items.md)
 * [Bulk Actions](api/bulk-actions.md)
 * [Data View Builders](api/data-view-builders.md)
