@@ -32,7 +32,7 @@ public class Startup
 
 The `AddKonstrukt` extension method accepts a single parameter, a delegate function with a Konstrukt configuration builder argument on which you can call the relevant fluent API's to define your solution.
 
-See the [reference section](../reference/conventions.md) for information on the various configuration options available on the config builder.
+See the [API section](../api/conventions.md) for information on the various configuration options available on the config builder.
 
 ## IKonstruktConfigurator
 
@@ -50,4 +50,4 @@ public class MyKonstruktConfigurator : IKonstruktConfigurator
 
 The `IKonstruktConfigurator` has a single `Configure` method with a single Konstrukt configuration builder argument on which you can call the relevant fluent API's to define your solution.
 
-See the [reference section](../reference/conventions.md) for information on the various configuration options available on the config builder.
+See the [API section](../api/conventions.md) for information on the various configuration options available on the config builder.
