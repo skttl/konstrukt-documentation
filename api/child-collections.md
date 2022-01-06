@@ -7,7 +7,7 @@ description: Configuring child collections in Konstrukt, the fluent administrati
 A child collection is a container for a given data model that is tied to a parent collection data model. It shares all of the [Collections](collections.md) config builder API except child collections cannot contain further child collections.
 
 {% hint style="info" %}
-**A note about Child Collections:** By default, child collections will be presented in the UI as context apps in the parent models editor view. If you have multiple child collections that make the context apps area over populated, you can use the [Child Collection Groups](child-collection-groups.md) to group child collections under a single context app with the inner child collections then being arranged in tabs.
+**Child Collections UI:** By default, child collections will be presented in the UI as context apps in the parent models editor view. If you have multiple child collections that make the context apps area over populated, you can use the [Child Collection Groups](child-collection-groups.md) to group child collections under a single context app with the inner child collections then being arranged in tabs.
 {% endhint %}
 
 ## Defining a child collection
