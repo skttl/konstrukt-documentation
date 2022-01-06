@@ -84,7 +84,7 @@ folderConfig.AddFolder("Categories", "icon-tags", subFolderConfig => {
 
 #### AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : *KonstruktCollectionConfigBuilder&lt;TEntityType&gt;*
 
-Adds a collection to the current folder with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation]({{ site.baseurl }}/api/collections/) for more info.
+Adds a collection to the current folder with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](collections.md) for more info.
 
 ````csharp
 // Example
@@ -95,7 +95,7 @@ folderConfig.AddCollection<Person>(p => p.Id, "Person", "People", "A collection 
 
 #### AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : *KonstruktCollectionConfigBuilder&lt;TEntityType&gt;*
 
-Adds a collection to the current folder with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation]({{ site.baseurl }}/api/collections/) for more info.
+Adds a collection to the current folder with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](collections.md) for more info.
 
 ````csharp
 // Example
