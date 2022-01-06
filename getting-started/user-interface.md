@@ -22,8 +22,8 @@ Before you get to know Konstrukt, you need to become familiar with the Umbraco U
 
 ![Context Apps and Tabs](../images/ui_06.png)
 
-**6. Context Apps** A contextual section of a given editor UI.
-**7. Tabs** A tabbed container of content.
+**6. Context Apps** A contextual section of a given editor UI.  
+**7. Tabs** A tabbed container of content.  
 
 ![Menu Item](../images/ui_04.png)
 
