@@ -20,10 +20,15 @@ Before you get to know Konstrukt, you need to become familiar with the Umbraco U
 
 **5. Editor** The main content editing area made up of tabs, fieldsets and fields.
 
+![Context Apps and Tabs](../images/ui_06.png)
+
+**6. Context Apps** A contextual section of a given editor UI.
+**7. Tabs** A tabbed container of content.
+
 ![Menu Item](../images/ui_04.png)
 
-**6. Menu Item** A context menu item + action.
+**8. Menu Item** A context menu item + action.
 
 ![Bulk Action](../images/ui_05.png)
 
-**7. Bulk Action** An action to perform on multiple list view items at once.
+**9. Bulk Action** An action to perform on multiple list view items at once.
