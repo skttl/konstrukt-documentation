@@ -18,7 +18,7 @@ To help with the different stages of learning, these have been broken up into 4 
 
 1. **[Getting Started](./getting-started/overview.md)** - Key information on how to get started with Konstrukt
 2. **[Guides](./guides/creating-your-first-solution.md)** - Step by step guides explaining how to solve real-world problems
-3. **[Reference](./reference/conventions.md)** - Technical reference of the Konstrukt API
+3. **[API](./api/conventions.md)** - Technical reference of the Konstrukt API
 3. **[Extras](./extras/property-editors/README.md)** - Extra resources that may be useful
 
 ## Getting Help
