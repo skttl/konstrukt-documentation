@@ -10,7 +10,7 @@ A section is a distinct area of the Umbraco backoffice, such as content, media, 
 
 You define a section by calling one of the `AddSection` methods on the root level `KonstruktConfigBuilder` instance.
 
-### AddSection(string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
+#### AddSection(string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
 
 Adds a section to the Umbraco menu with the given name.
 
@@ -21,7 +21,9 @@ config.AddSection("Database", sectionConfig => {
 });
 ```
 
-### AddSectionBefore(string beforeAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
+---
+
+#### AddSectionBefore(string beforeAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
 
 Adds a section to the Umbraco menu with the given name before the section with the given alias.
 
@@ -32,7 +34,9 @@ config.AddSectionBefore("settings", "Database", sectionConfig => {
 });
 ```
 
-### AddSectionAfter(string afterAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
+---
+
+#### AddSectionAfter(string afterAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder
 
 Adds a section to the Umbraco menu with the given name after the section with the given alias.
 
