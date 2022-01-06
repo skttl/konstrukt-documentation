@@ -11,7 +11,7 @@
 
 ## Guides
 
-* [Creating your first solution](guides/creating-your-first-solution.md)
+* [Creating your first integration](guides/creating-your-first-integration.md)
 
 ## API
 
