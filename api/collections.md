@@ -242,7 +242,7 @@ collectionConfig.AddEntityMenuItem(new ExportMenuItem());
 
 ## Showing a collection on the section dashboard
 
-When navigating to a Konstrukt section you are automatically presented with a dashboard interface on which you can add your collections to. This dashboard gives a quick entry point to frequently used collections showing the number of items in the collection as well as links to it's list view (if one is defined) as well as a quick create link (if the collection isn't read only).
+When navigating to a Konstrukt section you are automatically presented with a dashboard interface on which you can add your collections to. This dashboard gives a quick entry point to frequently used collections showing the number of items in the collection as well as links to it's list view as well as a quick create link (if the collection isn't read only).
 
 #### ShowOnDashboard() : *KonstruktCollectionConfigBuilder&lt;TEntityType&gt;*
 
@@ -295,17 +295,6 @@ Disables the option to delete entities on the current collection. Useful if the 
 ````csharp
 // Example
 collectionConfig.DisableDelete();
-````
-
-## Setting a view mode
-
-#### SetViewMode(KonstruktViewMode viewMode) : *KonstruktCollectionConfigBuilder&lt;TEntityType&gt;*
-
-Sets the view mode of the current collection. Options are `Tree` or `List`. When set to `Tree` then all entities will appear as nodes in the tree. When set as `List` then entities will be hidden from the tree and show in a [list view](collections-list-view.md) in the right hand content area.
-
-````csharp
-// Example
-collectionConfig.SetViewMode(KonstruktViewMode.List);
 ````
 
 ## Configuring the list view
