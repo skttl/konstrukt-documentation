@@ -297,7 +297,7 @@ Disables the option to delete entities on the current collection. Useful if the 
 collectionConfig.DisableDelete();
 ````
 
-## Configuring the list view
+## Configuring the collection list view
 
 #### ListView(Lambda listViewConfig = null) : *KonstruktListViewConfigBuilder&lt;TEntityType&gt;*
 
@@ -310,7 +310,7 @@ collectionConfig.ListView(listViewConfig => {
 });
 ````
 
-## Configuring the editor
+## Configuring the collection editor
 
 #### Editor(Lambda editorConfig = null) : *KonstruktEditorConfigBuilder&lt;TEntityType&gt;*
 
@@ -322,3 +322,6 @@ collectionConfig.Editor(editorConfig => {
     ...
 });
 ````
+
+## Adding a child collection to a collection
+
