@@ -4,7 +4,7 @@ description: Configuring folders to organise sections in Konstrukt, the fluent a
 
 # Folders
 
-A folder appears in a section tree and is used to help organise the tree structure by grouping things together. Folders can be added to a section or any other folder and can contain either other (sub)folders or [collections](collections.md).
+A folder can appear in either a section tree or as a sub folder to other folders. Folders can contain either other (sub)folders or [collections](collections.md).
 
 ## Defining a folder
 
