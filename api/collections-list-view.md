@@ -45,6 +45,15 @@ Adds a data view with the given name and where clause filter expression. Express
 listViewConfig.AddDataView("Active", p => p.IsActive);
 ````
 
+#### AddDataView(string group, string name, Lambda whereClauseExpression) : *KonstruktListViewConfigBuilder&lt;TEntityType&gt;*
+
+Adds a data view with the given group, name and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+listViewConfig.AddDataView("Status", "Active", p => p.IsActive);
+````
+
 #### SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : *KonstruktListViewConfigBuilder&lt;TEntityType&gt;*
 
 Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
