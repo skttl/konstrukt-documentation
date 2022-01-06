@@ -6,13 +6,13 @@ description: Configuring child collection groups in Konstrukt, the fluent admini
 
 A child collection group is a container for other child collections. It's purpose is mainly to provide a logical grouping of multiple child collections to help with organisation and an improved user experience.
 
-## Defining a child collection
+## Defining a child collection group
 
 You define a child collection group by calling one of the `AddChildCollectionGroup` methods on a given [`Collection`](collections.md) config builder instance.
 
 #### AddChildCollectionGroup(string name, Lambda childCollectionGroupConfig = null) : *KonstruktChildCollectionGroupConfigBuilder*
 
-Adds a child collection group to the current collection with the given name and default icon. See the [Child Collections Group API documentation](child-collection-groups.md) for more info.
+Adds a child collection group to the current collection with the given name and default icon.
 
 ```csharp
 // Example
@@ -23,7 +23,7 @@ collectionConfig.AddChildCollectionGroup("Family", childCollectionGroupConfig =>
 
 #### AddChildCollectionGroup(string name, string icon, Lambda childCollectionGroupConfig = null) : *KonstruktChildCollectionGroupConfigBuilder*
 
-Adds a child collection group to the current collection with the given name and icon. See the [Child Collections Group API documentation](child-collection-groups.md) for more info.
+Adds a child collection group to the current collection with the given name and icon.
 
 ```csharp
 // Example

@@ -16,7 +16,7 @@ You define a child collection by calling one of the `AddChildCollection` methods
 
 #### AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda childCollectionConfig = null) : *KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;*
 
-Adds a child collection to the current collection with the given names and description and default icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. See the [Child Collections API documentation](child-collections.md) for more info.
+Adds a child collection to the current collection with the given names and description and default icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. 
 
 ```csharp
 // Example
@@ -27,7 +27,7 @@ collectionConfig.AddChildCollection<Child>(c => c.Id, c => c.ParentId, "Child", 
 
 #### AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda childCollectionConfig = null) : *KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;*
 
-Adds a child collection to the current collection with the given names, description and icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. See the [Child Collections API documentation](child-collections.md) for more info.
+Adds a child collection to the current collection with the given names, description and icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. 
 
 ```csharp
 // Example
