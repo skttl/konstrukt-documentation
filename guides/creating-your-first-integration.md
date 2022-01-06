@@ -26,7 +26,79 @@ CREATE TABLE [Person] (
 
 ## Configure your model
 
+With the database table setup we then need to create the associated poco model in our project.
+
+```csharp
+[TableName("Person")]
+[PrimaryKey("Id")]
+public class Person
+{
+    [PrimaryKeyColumn]
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string JobTitle { get; set; }
+    public string Email { get; set; }
+    public string Telephone { get; set; }
+    public int Age { get; set; }
+    public string Avatar { get; set; }
+}
+```
+
 ## Configure Konstrukt
+
+With the database and model setup, we can now start to configure Konstrukt itself. The entry point for a Konstrukt configuration is via the `AddKonstrukt` extension method that we call on the `IUmbracoBuilder` instance within the `ConfigureServices` method of the `Startup` class.
+
+```csharp
+public class Startup
+{
+    ...
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddUmbraco(_env, _config)
+            .AddBackOffice()
+            .AddWebsite()
+            .AddComposers()
+            .AddKonstrukt(cfg => {
+                // Apply your configuration here
+            })
+            .Build();
+    }
+    ...
+}
+```
+
+For our example, we will use the following configuration.
+
+```csharp
+...
+.AddKonstrukt(cfg => {
+    
+    cfg.AddSectionAfter("media", "Repositories", sectionConfig => sectionConfig
+        .AddCollection<Person>(x => x.Id, "Person", "People", "A person entity", "icon-umb-users", "icon-umb-users", collectionConfig => collectionConfig
+            .SetNameProperty(p => p.Name)
+            .ListView(listViewConfig => listViewConfig
+                .AddField(p => p.JobTitle).SetHeading("Job Title")
+                .AddField(p => p.Email)
+            ) 
+            .Editor(editorConfig => editorConfig
+                .AddTab("General", tabConfig => tabConfig
+                    .AddFieldset("General", fieldsetConfig => fieldsetConfig
+                        .AddField(p => p.JobTitle).MakeRequired()
+                        .AddField(p => p.Age)
+                        .AddField(p => p.Email).SetValidationRegex("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+")
+                        .AddField(p => p.Telephone).SetDescription("inc area code")
+                    )
+                    .AddFieldset("Media", fieldsetConfig => fieldsetConfig
+                        .AddField(p => p.Avatar).SetDataType("Upload File")
+                    )
+                )
+            )
+        )
+    );
+
+})
+...
+```
 
 ## Access your UI
 
