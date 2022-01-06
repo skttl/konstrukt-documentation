@@ -110,7 +110,7 @@ With the permissions set, you can refresh your browser and you should now see yo
 
 ![People list view](../images/people_listview.png)  
 
-![People editor](../images/people_edtior.png)
+![People editor](../images/people_editor.png)
 
 ## Summary
 
