@@ -12,22 +12,22 @@ You define a folder by calling one of the `AddFolder` methods on a given [`Secti
 
 #### AddFolder(string name, Lambda folderConfig = null) : *KonstruktFolderConfigBuilder*
 
-Adds a folder to the current tree with the given name and a default folder icon.
+Adds a folder to the current section tree with the given name and a default folder icon.
 
 ````csharp
 // Example
-treeConfig.AddFolder("Settings", folderConfig => {
+sectionConfig.AddFolder("Settings", folderConfig => {
     ...
 });
 ````
 
 #### AddFolder(string name, string icon, Lambda folderConfig = null) : *KonstruktFolderConfigBuilder*
 
-Adds a folder to the current tree with the given name + icon.
+Adds a folder to the current section tree with the given name + icon.
 
 ````csharp
 // Example
-treeConfig.AddFolder("Settings", "icon-settings", folderConfig => {
+sectionConfig.AddFolder("Settings", "icon-settings", folderConfig => {
     ...
 });
 ````
