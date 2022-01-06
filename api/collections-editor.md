@@ -124,11 +124,11 @@ Makes the current field read only disabling editing in the UI. A ReadOnly proper
 fieldConfig.MakeReadOnly(distanceProp => $"{distanceProp:## 'km'}");
 ````
 
-## Making a field mandatory
+## Making a field required
 
 #### MakeRequired() : *KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;*
 
-Makes the given field mandatory.
+Makes the given field required.
 
 ````csharp
 // Example
