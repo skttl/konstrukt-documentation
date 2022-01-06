@@ -42,3 +42,16 @@ config.AddSectionAfter("media", "Repositories", sectionConfig => {
     ...
 });
 ```
+
+## Changing a section alias
+
+#### SetAlias(string alias) : *KonstruktSectionConfigBuilder*
+
+Sets the alias of the section.
+
+**Optional:** When adding a new section, an alias is automatically generated from the supplied name for you, however you can use the `SetAlias` method to override this should you need a specific alias.
+
+```csharp
+// Example
+sectionConfig.SetAlias("repositories");
+```
