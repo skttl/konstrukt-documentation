@@ -16,7 +16,7 @@ Adds a section to the Umbraco menu with the given name.
 
 ```csharp
 // Example
-config.AddSection("Database", sectionConfig => {
+config.AddSection("Repositories", sectionConfig => {
     ...
 });
 ```
@@ -27,7 +27,7 @@ Adds a section to the Umbraco menu with the given name before the section with t
 
 ```csharp
 // Example
-config.AddSectionBefore("settings", "Database", sectionConfig => {
+config.AddSectionBefore("settings", "Repositories", sectionConfig => {
     ...
 });
 ```
@@ -38,7 +38,7 @@ Adds a section to the Umbraco menu with the given name after the section with th
 
 ```csharp
 // Example
-config.AddSectionAfter("media", "Database", sectionConfig => {
+config.AddSectionAfter("media", "Repositories", sectionConfig => {
     ...
 });
 ```
