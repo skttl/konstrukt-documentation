@@ -6,7 +6,7 @@ description: Configuring list view layouts in Konstrukt, the fluent administrati
 
 List view layouts allow you to provide custom angular views to be used by the list view UI. By default there are two build in layouts, `KonstruktTableListViewLayout` which displays results in a tabular layout and `KonstruktGridListViewLayout` which displays results in a tiled grid layout.
 
-### Defining a list view layout
+## Defining a list view layout
 
 To define a list view layout you create a class that inherits from the base class `KonstruktListViewLayout` and implements the abstract configuration properties.
 
@@ -41,6 +41,6 @@ As well as defining the list view layout class you will also need to implement t
 * Add the controller js file path to the `package.manifest`.
 * Build your custom logic.
 
-### Changing the list view layout of a list view
+## Changing the list view layout of a list view
 
 A list view layout is assigned to a list view as part of the list view configuration. See [List View API Documentation](collections-list-view.md#changing-the-list-view-layout) for more info.
