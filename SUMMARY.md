@@ -35,5 +35,4 @@
 
 * [Property Editors](extras/property-editors/README.md)
   * [Entity Picker](extras/property-editors/entity-picker.md)
-* [Umbraco Icons](extras/umbraco-icons.md)
 * [Known Issues](extras/known-issues.md)
