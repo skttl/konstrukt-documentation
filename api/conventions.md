@@ -10,11 +10,13 @@ Most configuration methods in Fluidity aim to be fluent in nature, in that they 
 
 ```csharp
 // Chaining example
-config.AddSection("Repositories").AddCollection<People>(p => p.Id, "Person", "People");
+config.AddSection("Repositories").Tree().AddCollection<People>(p => p.Id, "Person", "People");
 
 // Delegate example
 config.AddSection("Repositories", sectionConfig => {
-    sectionConfig.AddCollection<People>(p => p.Id, "Person", "People");
+    sectionConfig.Tree(treeConfig => {
+        treeConfig.AddCollection<People>(p => p.Id, "Person", "People");
+    });
 });
 ```
 
