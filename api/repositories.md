@@ -78,7 +78,7 @@ A repository is assigned to a collection as part of the collection configuration
 
 If you have created your own repository implementation, then accessing the repository can be as simple as instantiating a new instance of the repository class, however if you are using the built in repository, unfortunately a new instance can't be created in this way.
 
-To help with accessing a repository (default or custom) Konstrukt has a `IKonstruktRepositoryFactory` you can inject into your code base with couple of factory methods to create the repository instances for you.
+To help with accessing a repository (default or custom) Konstrukt has a `IKonstruktRepositoryFactory` you can inject into your code base with a couple of factory methods to create the repository instances for you.
 
 #### **IKonstruktRepositoryFactory.GetRepository&lt;TEntity, TId&gt;() : KonstruktRepository&lt;TEntity, TId&gt;**
 
