@@ -14,7 +14,7 @@ A child collection is a container for a given data model that is tied to a paren
 
 You define a child collection by calling one of the `AddChildCollection` methods on a given [`Collection`](collections.md) config builder instance.
 
-#### AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda childCollectionConfig = null) : *KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;*
+#### **AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda childCollectionConfig = null) : KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Adds a child collection to the current collection with the given names and description and default icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. 
 
@@ -25,7 +25,7 @@ collectionConfig.AddChildCollection<Child>(c => c.Id, c => c.ParentId, "Child", 
 });
 ```
 
-#### AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda childCollectionConfig = null) : *KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;*
+#### **AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda childCollectionConfig = null) : KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Adds a child collection to the current collection with the given names, description and icons. A property accessor expression is required for both the entity ID field and FK (Foreign Key) field of the entity. 
 

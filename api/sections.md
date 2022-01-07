@@ -12,7 +12,7 @@ Each section defined via the Konstrukt API will also include a tree in the UI un
 
 You define a section by calling one of the `AddSection` methods on the root level `KonstruktConfigBuilder` instance.
 
-### AddSection(string name, Lambda sectionConfig = null) : *KonstruktSectionConfigBuilder*
+#### **AddSection(string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder**
 
 Adds a section to the Umbraco menu with the given name.
 
@@ -34,7 +34,7 @@ config.AddSectionBefore("settings", "Repositories", sectionConfig => {
 });
 ```
 
-#### AddSectionAfter(string afterAlias, string name, Lambda sectionConfig = null) : *KonstruktSectionConfigBuilder*
+#### **AddSectionAfter(string afterAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder**
 
 Adds a section to the Umbraco menu with the given name after the section with the given alias.
 
@@ -47,7 +47,7 @@ config.AddSectionAfter("media", "Repositories", sectionConfig => {
 
 ## Changing a section alias
 
-#### SetAlias(string alias) : *KonstruktSectionConfigBuilder*
+#### **SetAlias(string alias) : KonstruktSectionConfigBuilder**
 
 Sets the alias of the section.
 
@@ -60,7 +60,7 @@ sectionConfig.SetAlias("repositories");
 
 ## Adding a folder to a section tree
 
-#### AddFolder(string name, Lambda folderConfig = null) : *KonstruktFolderConfigBuilder*
+#### **AddFolder(string name, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
 Adds a folder to the current section tree with the given name and a default folder icon. See the [Folders API documentation](folders.md) for more info.
 
@@ -71,7 +71,7 @@ sectionConfig.AddFolder("Settings", folderConfig => {
 });
 ```
 
-#### AddFolder(string name, string icon, Lambda folderConfig = null) : *KonstruktFolderConfigBuilder*
+#### **AddFolder(string name, string icon, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
 Adds a folder to the current section tree with the given name + icon. See the [Folders API documentation](folders.md) for more info.
 
@@ -84,7 +84,7 @@ sectionConfig.AddFolder("Settings", "icon-settings", folderConfig => {
 
 ## Adding a collection to a section tree
 
-#### AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : *KonstruktCollectionConfigBuilder&lt;TEntityType&gt;*
+#### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Adds a collection to the current section tree with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](collections.md) for more info.
 
@@ -95,7 +95,7 @@ sectionConfig.AddCollection<Person>(p => p.Id, "Person", "People", "A collection
 });
 ```
 
-#### AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : *KonstruktCollectionConfigBuilder&lt;TEntityType&gt;*
+#### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Adds a collection to the current tree with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](collections.md) for more info.
 
