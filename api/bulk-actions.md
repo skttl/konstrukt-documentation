@@ -8,7 +8,7 @@ Bulk actions provides an API to perform bulk operations from within a collection
 
 ## Defining a bulk action
 
-To define a bulk action you create a class that inherits from the base class `KonstruktBulkAction` and implements the abstract configuration properties.
+To define a bulk action you create a class that inherits from the base class `KonstruktBulkAction` and configure it within the constructor like so.
 
 ````csharp
 // Example
