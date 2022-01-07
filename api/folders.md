@@ -1,10 +1,10 @@
 ---
-description: Configuring folders to organise sections in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring folders to organise trees in Konstrukt, the fluent administration panel builder for Umbraco.
 ---
 
 # Folders
 
-A folder can appear in either a section tree or as a sub folder to other folders. Folders can contain either other (sub)folders or [collections](collections.md).
+A folder can appear in either a tree or as a sub folder to other folders. Folders can contain either other (sub)folders or [collections](collections.md).
 
 ## Defining a folder
 
@@ -12,22 +12,22 @@ You define a folder by calling one of the `AddFolder` methods on a given [`Secti
 
 #### **AddFolder(string name, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
-Adds a folder to the current section tree with the given name and a default folder icon.
+Adds a folder to the current tree with the given name and a default folder icon.
 
 ````csharp
 // Example
-sectionConfig.AddFolder("Settings", folderConfig => {
+treeConfig.AddFolder("Settings", folderConfig => {
     ...
 });
 ````
 
 #### **AddFolder(string name, string icon, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
-Adds a folder to the current section tree with the given name + icon.
+Adds a folder to the current tree with the given name + icon.
 
 ````csharp
 // Example
-sectionConfig.AddFolder("Settings", "icon-settings", folderConfig => {
+treeConfig.AddFolder("Settings", "icon-settings", folderConfig => {
     ...
 });
 ````
