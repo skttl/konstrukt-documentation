@@ -2,7 +2,7 @@
 description: Configuring the list view of a collection in Konstrukt, the fluent administration panel builder for Umbraco.
 ---
 
-# List View
+# List Views
 
 A list view is a list based view of a collections entities providing such features as pagination for large collections, custom data views, searching and bulk actions.
 

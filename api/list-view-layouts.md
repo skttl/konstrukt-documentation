@@ -43,4 +43,4 @@ As well as defining the list view layout class you will also need to implement t
 
 ## Changing the list view layout of a list view
 
-A list view layout is assigned to a list view as part of the list view configuration. See [List View API Documentation](collections-list-view.md#changing-the-list-view-layout) for more info.
+A list view layout is assigned to a list view as part of the list view configuration. See [List View API Documentation](collection-list-views.md#changing-the-list-view-layout) for more info.

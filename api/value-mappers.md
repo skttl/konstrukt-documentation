@@ -30,4 +30,4 @@ public class MyValueMapper : KonstruktValueMapper
 
 ## Setting a mapper on a field
 
-A mapper is assigned to a field as part of the editor configuration. See [Editor API Documentation](collections-editor.md#setting-a-field-value-mapper) for more info.
+A mapper is assigned to a field as part of the editor configuration. See [Editor API Documentation](collection-editors.md#setting-a-field-value-mapper) for more info.

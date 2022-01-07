@@ -8,7 +8,7 @@ A collection is a container for a given data model and configures how the given 
 
 ## Defining a collection
 
-You define a collection by calling one of the `AddCollection` methods on a given [`Section`](sections.md) or parent [`Folder`](folders.md) config builder instance.
+You define a collection by calling one of the `AddCollection` methods on a given [`Tree`](trees.md) or parent [`Folder`](folders.md) config builder instance.
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
@@ -300,7 +300,7 @@ collectionConfig.DisableDelete();
 
 #### **ListView(Lambda listViewConfig = null) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
-Accesses the list view config of the current collection. See [List View API documentation](collections-list-view.md) for more info.
+Accesses the list view config of the current collection. See [List View API documentation](collection-list-views.md) for more info.
 
 ````csharp
 // Example
@@ -313,7 +313,7 @@ collectionConfig.ListView(listViewConfig => {
 
 #### **Editor(Lambda editorConfig = null) : KonstruktEditorConfigBuilder&lt;TEntityType&gt;**
 
-Accesses the editor config of the current collection. See [Editor API documentation](collections-editor.md) for more info.
+Accesses the editor config of the current collection. See [Editor API documentation](collection-editors.md) for more info.
 
 ````csharp
 // Example

@@ -33,4 +33,4 @@ The required methods are:
 
 ## Setting the data views builder of a list view
 
-A data views builder is assigned to a list view as part of the list view configuration. See [List View API Documentation](collections-list-view.md#defining-data-views) for more info.
+A data views builder is assigned to a list view as part of the list view configuration. See [List View API Documentation](collection-list-views.md#defining-data-views) for more info.

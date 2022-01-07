@@ -2,7 +2,7 @@
 description: Configuring the editor of a collection in Konstrukt, the fluent administration panel builder for Umbraco.
 ---
 
-# Editor
+# Editors
 
 An editor is the user interface used to edit an entity and is made up of tabs and property editors.
 
