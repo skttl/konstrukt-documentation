@@ -46,6 +46,30 @@ public class PersonRepository : KonstruktRepository<Person, int> {
 
 **Note:** For all `Impl` methods there are public alternatives without the `Impl` suffix, however we have separate implementation methods in order to ensure all repositories fire the relevant Konstrukt events whether triggered via the Konstrukt UI or not.
 
+## Defining a child repository
+
+To define a repository for a child collection you create a class that inherits from the base class `KonstruktChildRepository<TEntity, TId, TFk>` and implements all of the same abstract methods of the `KonstruktRepository<TEntity, TId>` class as defined above, along with the following additional methods.
+
+````csharp
+// Example
+public class ChildRepository : KonstruktChildRepository<Child, int, int> {
+
+    ...
+
+    protected int GetForeignKeyImpl(Child entity){
+        return entity.ParentId;
+    }
+
+    protected IEnumerable<Child> GetAllImpl(int foreignKey) {
+        ...
+    }
+
+    protected long GetTotalRecordCountImpl(int foreignKey) {
+        ...
+    }
+}
+````
+
 ## Changing the repository implementation of a collection
 
 A repository is assigned to a collection as part of the collection configuration. See [Collection API Documentation](collections.md#changing-a-collection-repository-implementation) for more info.
