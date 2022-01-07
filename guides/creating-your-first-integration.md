@@ -74,22 +74,24 @@ For our example, we will use the following configuration.
 .AddKonstrukt(cfg => {
     
     cfg.AddSectionAfter("media", "Repositories", sectionConfig => sectionConfig
-        .AddCollection<Person>(x => x.Id, "Person", "People", "A person entity", "icon-umb-users", "icon-umb-users", collectionConfig => collectionConfig
-            .SetNameProperty(p => p.Name)
-            .ListView(listViewConfig => listViewConfig
-                .AddField(p => p.JobTitle).SetHeading("Job Title")
-                .AddField(p => p.Email)
-            ) 
-            .Editor(editorConfig => editorConfig
-                .AddTab("General", tabConfig => tabConfig
-                    .AddFieldset("General", fieldsetConfig => fieldsetConfig
-                        .AddField(p => p.JobTitle).MakeRequired()
-                        .AddField(p => p.Age)
-                        .AddField(p => p.Email).SetValidationRegex("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+")
-                        .AddField(p => p.Telephone).SetDescription("inc area code")
-                    )
-                    .AddFieldset("Media", fieldsetConfig => fieldsetConfig
-                        .AddField(p => p.Avatar).SetDataType("Upload File")
+        .Tree(treeConfig => treeConfig
+            .AddCollection<Person>(x => x.Id, "Person", "People", "A person entity", "icon-umb-users", "icon-umb-users", collectionConfig => collectionConfig
+                .SetNameProperty(p => p.Name)
+                .ListView(listViewConfig => listViewConfig
+                    .AddField(p => p.JobTitle).SetHeading("Job Title")
+                    .AddField(p => p.Email)
+                ) 
+                .Editor(editorConfig => editorConfig
+                    .AddTab("General", tabConfig => tabConfig
+                        .AddFieldset("General", fieldsetConfig => fieldsetConfig
+                            .AddField(p => p.JobTitle).MakeRequired()
+                            .AddField(p => p.Age)
+                            .AddField(p => p.Email).SetValidationRegex("[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+")
+                            .AddField(p => p.Telephone).SetDescription("inc area code")
+                        )
+                        .AddFieldset("Media", fieldsetConfig => fieldsetConfig
+                            .AddField(p => p.Avatar).SetDataType("Upload File")
+                        )
                     )
                 )
             )
