@@ -63,7 +63,7 @@ Sets the list views data views builder which allows you to define the data views
 listViewConfig.SetDataViewsBuilder<PersonDataViewsBuilder>();
 ````
 
-## Adding a bulk action
+## Defining a bulk action
 
 #### **AddBulkAction&lt;TBulkActionType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 

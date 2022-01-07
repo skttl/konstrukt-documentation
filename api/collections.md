@@ -202,11 +202,10 @@ collectionConfig.SetFilter(p => p.Current);
 ````
 
 ## Defining menu items
-See [Menu Items API documentation](menu-items.md) for more info.
 
 #### **AddContainerMenuItem&lt;TMenuItemType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a menu item of the given type to the collection tree node right click menu as well as the list view actions menu.
+Adds a menu item of the given type to the collection tree node right click menu as well as the list view actions menu. See [Menu Items API documentation](menu-items.md) for more info.
 
 ````csharp
 // Example
@@ -215,7 +214,7 @@ collectionConfig.AddContainerMenuItem<ExportMenuItem>();
 
 #### **AddContainerMenuItem(MenuItem menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds the provided menu item to the collection tree node right click menu as well as the list view actions menu.
+Adds the provided menu item to the collection tree node right click menu as well as the list view actions menu. See [Menu Items API documentation](menu-items.md) for more info.
 
 ````csharp
 // Example
@@ -224,7 +223,7 @@ collectionConfig.AddContainerMenuItem(new ExportMenuItem());
 
 #### **AddEntityMenuItem&lt;TMenuItemType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a menu item of the given type to the entity tree node right click menu as well as the entity editor actions menu.
+Adds a menu item of the given type to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Items API documentation](menu-items.md) for more info.
 
 ````csharp
 // Example
@@ -233,7 +232,7 @@ collectionConfig.AddEntityMenuItem<ExportMenuItem>();
 
 #### **AddEntityMenuItem(MenuItem menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds the provided menu item to the entity tree node right click menu as well as the entity editor actions menu.
+Adds the provided menu item to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Items API documentation](menu-items.md) for more info.
 
 ````csharp
 // Example
