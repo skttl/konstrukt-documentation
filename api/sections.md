@@ -12,7 +12,7 @@ Each section defined via the Konstrukt API will also include a tree in the UI un
 
 You define a section by calling one of the `AddSection` methods on the root level `KonstruktConfigBuilder` instance.
 
-#### AddSection(string name, Lambda sectionConfig = null) : *KonstruktSectionConfigBuilder*
+### AddSection(string name, Lambda sectionConfig = null) : *KonstruktSectionConfigBuilder*
 
 Adds a section to the Umbraco menu with the given name.
 
@@ -23,7 +23,7 @@ config.AddSection("Repositories", sectionConfig => {
 });
 ```
 
-#### AddSectionBefore(string beforeAlias, string name, Lambda sectionConfig = null) : *KonstruktSectionConfigBuilder*
+#### **AddSectionBefore(string beforeAlias, string name, Lambda sectionConfig = null) : KonstruktSectionConfigBuilder**
 
 Adds a section to the Umbraco menu with the given name before the section with the given alias.
 
