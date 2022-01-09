@@ -22,14 +22,6 @@ public class PersonRepository : KonstruktRepository<Person, int> {
         ...
     }
 
-    protected override IEnumerable<Person> GetAllImpl() {
-        ...
-    }
-
-    protected override PagedResult<Person> GetPagedImpl(int pageNumber, int pageSize, Expression<Func<Person, bool>> whereClause, Expression<Func<Person, object>> orderBy, SortDirection orderDirection) {
-        ...
-    }
-
     protected override Person SaveImpl(Person entity) {
         ...
     }
@@ -38,37 +30,21 @@ public class PersonRepository : KonstruktRepository<Person, int> {
         ...
     }
 
-    protected override long GetTotalRecordCountImpl() {
+    protected override IEnumerable<Person> GetAllImpl(Expression<Func<Person, bool>> whereClause, Expression<Func<Person, object>> orderBy, SortDirection orderByDirection) {
+        ...
+    }
+
+    protected override PagedResult<Person> GetPagedImpl(int pageNumber, int pageSize, Expression<Func<Person, bool>> whereClause, Expression<Func<Person, object>> orderBy, SortDirection orderByDirection) {
+        ...
+    }
+
+    protected override long GetCountImpl(Expression<Func<Person, bool>> whereClause) {
         ...
     }
 }
 ````
 
 **Note:** For all `Impl` methods there are public alternatives without the `Impl` suffix, however we have separate implementation methods in order to ensure all repositories fire the relevant Konstrukt events whether triggered via the Konstrukt UI or not.
-
-## Defining a child repository
-
-To define a repository for a child collection you create a class that inherits from the base class `KonstruktChildRepository<TEntity, TId, TFk>` and implements all of the same abstract methods of the `KonstruktRepository<TEntity, TId>` class as defined above, along with the following additional methods.
-
-````csharp
-// Example
-public class ChildRepository : KonstruktChildRepository<Child, int, int> {
-
-    ...
-
-    protected int GetForeignKeyImpl(Child entity){
-        return entity.ParentId;
-    }
-
-    protected IEnumerable<Child> GetAllImpl(int foreignKey) {
-        ...
-    }
-
-    protected long GetTotalRecordCountImpl(int foreignKey) {
-        ...
-    }
-}
-````
 
 ## Changing the repository implementation of a collection
 
