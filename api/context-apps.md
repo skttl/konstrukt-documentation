@@ -19,6 +19,7 @@ Adds a contextApp with the given name and default icon.
 config.AddContextApp("Comments", contextAppConfig => {
     ...
 });
+```
 
 #### **AddContextApp(string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
 
@@ -29,6 +30,7 @@ Adds a contextApp to the Umbraco menu with the given name and icon.
 config.AddContextApp("Comments", "icon-chat", contextAppConfig => {
     ...
 });
+```
 
 ## Changing a context app alias
 
