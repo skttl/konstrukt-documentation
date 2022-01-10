@@ -243,6 +243,11 @@ collectionConfig.AddEntityMenuItem(new ExportMenuItem());
 
 When navigating to a Konstrukt section you are automatically presented with a dashboard interface on which you can add your collections to. This dashboard gives a quick entry point to frequently used collections showing the number of items in the collection as well as links to it's list view as well as a quick create link (if the collection isn't read only).
 
+{% hint style="info" %}
+**NB:** Only section root level collections can be shown on the section dashboard.
+{% endhint %}
+
+
 #### **ShowOnDashboard() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Sets the collection to display on the section dashboard.
