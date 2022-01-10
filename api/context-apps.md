@@ -82,7 +82,7 @@ Sets the context app visibility delegate.
 contextAppConfig.SetVisibility(appCtx => appCtx.Source is IContent content && content.ContentType.Alias == "blogPost");
 ````
 
-# Adding a collection to a context app
+## Adding a collection to a context app
 
 Context apps can consist of one or more collections. If a context app contains multiple collections, the collection list views will be displayed in tabs within the context app.
 
