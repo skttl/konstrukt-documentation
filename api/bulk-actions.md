@@ -47,8 +47,8 @@ The actual logic for a bulk action needs to be encapsulated in an angular servic
 
         return {
             
-            performAction: function(section, collection, id) {
-                return KonstruktResource.deleteEntity(section, collection, id);
+            performAction: function(collection, id) {
+                return KonstruktResource.deleteEntity(collection, id);
             },
 
             getConfirmMessage: function (count) {

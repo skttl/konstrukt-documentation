@@ -73,9 +73,9 @@ public class MyController : Controller
 }
 ````
 
-#### **IKonstruktRepositoryFactory.GetRepository&lt;TEntity, TId&gt;(string sectionAlias, string collectionAlias) : KonstruktRepository&lt;TEntity, TId&gt;**
+#### **IKonstruktRepositoryFactory.GetRepository&lt;TEntity, TId&gt;(string collectionAlias) : KonstruktRepository&lt;TEntity, TId&gt;**
 
-Creates a repository for the given entity type from the given section / collection configuration.
+Creates a repository for the given entity type from the given collection configuration.
 
 ````csharp
 // Example
@@ -85,7 +85,7 @@ public class MyController : Controller
 
     public MyController(IKonstruktRepositoryFactory repoFactory) 
     {
-        _repo = repoFactory.GetRepository<Person, int>("repositories", "person");
+        _repo = repoFactory.GetRepository<Person, int>("person");
     }
 }
 ````
