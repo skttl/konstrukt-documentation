@@ -8,11 +8,34 @@ In a number of places in the Konstrukt API you are required to know the aliases 
 
 ## Dashboard aliases
 
-**Content**
+#### **Content**
 
 | Name | Alias |
 | -- | -- |
 | Getting Started | `contentIntro` |
+| Redirect URL Management | `contentRedirectManager` |
+
+#### **Media**
+
+| Name | Alias |
+| -- | -- |
+| Content | `mediaFolderBrowser` |
+
+#### **Settings**
+
+| Name | Alias |
+| -- | -- |
+| Welcome | `settingsWelcome` |
+| Examine Management | `settingsExamine` |
+| Published Status | `settingsPublishedStatus` |
+| Models Builder | `settingsModelsBuilder` |
+| Health Check | `settingsHealthCheck` |
+
+#### **Members**
+
+| Name | Alias |
+| -- | -- |
+| Getting Started | `memberIntro` |
 
 ## Content App aliases
 
