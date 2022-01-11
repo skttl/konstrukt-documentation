@@ -12,7 +12,7 @@ You define a context app by calling one of the `AddContextApp` methods on the ro
 
 #### **AddContextApp(string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
 
-Adds a contextApp with the given name and default icon.
+Adds a context app with the given name and default icon.
 
 ```csharp
 // Example
@@ -23,7 +23,7 @@ config.AddContextApp("Comments", contextAppConfig => {
 
 #### **AddContextApp(string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
 
-Adds a contextApp to the Umbraco menu with the given name and icon.
+Adds a context app to the Umbraco menu with the given name and icon.
 
 ```csharp
 // Example
@@ -36,7 +36,7 @@ config.AddContextApp("Comments", "icon-chat", contextAppConfig => {
 
 #### **SetAlias(string alias) : KonstruktContextAppConfigBuilder**
 
-Sets the alias of the contextApp.
+Sets the alias of the context app.
 
 **Optional:** When adding a new context app, an alias is automatically generated from the supplied name for you, however you can use the `SetAlias` method to override this should you need a specific alias.
 
@@ -88,7 +88,7 @@ Context apps can consist of one or more collections. If a context app contains m
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktContextAppConfigBuilder**
 
-Adds a collection to the current tree with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](collections.md) for more info.
+Adds a collection to the current contect app with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](collections.md) for more info.
 
 ```csharp
 // Example
@@ -99,11 +99,11 @@ contextAppConfig.AddCollection<Comment>(p => p.Id, p=> "Comment", "Comments", "A
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : KonstruktContextAppConfigBuilder**
 
-Adds a collection to the current tree with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](collections.md) for more info.
+Adds a collection to the current context app with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](collections.md) for more info.
 
 ```csharp
 // Example
-contextAppConfig.AddCollection<Comment>(p => p.Id, "Comment", "People", "A collection of comments", "icon-chat", "icon-chat", collectionConfig => {
+contextAppConfig.AddCollection<Comment>(p => p.Id, "Comment", "Comments", "A collection of comments", "icon-chat", "icon-chat", collectionConfig => {
     ...
 });
 ```
