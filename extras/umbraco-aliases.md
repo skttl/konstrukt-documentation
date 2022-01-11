@@ -39,4 +39,45 @@ In a number of places in the Konstrukt API you are required to know the aliases 
 
 ## Content App aliases
 
+#### **Content**
+
+| Name | Alias |
+| -- | -- |
+| Content | `umbContent` |
+| Info | `umbInfo` |
+
+#### **Media**
+
+| Name | Alias |
+| -- | -- |
+| Content | `umbContent` |
+| Info | `umbInfo` |
+
+#### **Members**
+
+| Name | Alias |
+| -- | -- |
+| Content | `umbContent` |
+| Info | `umbInfo` |
+
+#### **ContentTypes**
+
+| Name | Alias |
+| -- | -- |
+| Design | `design` |
+| List View | `listView` |
+| Permissions | `permissions` |
+| Templates | `templates` |
+
 ## Section aliases
+
+| Name | Alias |
+| -- | -- |
+| Content | `content` |
+| Media | `media` |
+| Settings | `settings` |
+| Packages | `packages` |
+| Users | `users` |
+| Members | `member` |
+| Forms | `forms` |
+| Translation | `translation` |
