@@ -21,6 +21,29 @@ config.AddDashboard("Team", dashboardConfig => {
 });
 ```
 
+
+#### **AddDashboardBefore(string beforeAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name before the dashboard with the given alias.
+
+```csharp
+// Example
+config.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardAfter(string afterAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name after the dashboard with the given alias.
+
+```csharp
+// Example
+config.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
 ## Changing a dashboard alias
 
 #### **SetAlias(string alias) : KonstruktDashboardConfigBuilder**
@@ -33,19 +56,6 @@ Sets the alias of the dashboard.
 // Example
 dashboardConfig.SetAlias("team");
 ```
-
-## Changing the position of a dashboard
-
-Changing the position of a dashboard in the UI is done by modiying it's weight.
-
-#### **SetWeight(int weight) : KonstruktDashboardConfigBuilder**
-
-Sets the dashboard weight to the given value. 
-
-````csharp
-// Example
-dashboardConfig.SetWeight(10);
-````
 
 ## Changing when a dashboard should display
 
