@@ -32,6 +32,50 @@ config.AddContextApp("Comments", "icon-chat", contextAppConfig => {
 });
 ```
 
+#### **AddContextAppBefore(string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app with the given name and default icon before the context app with the given alias.
+
+```csharp
+// Example
+config.AddContextAppBefore("umbContent", "Comments", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppBefore(string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app to the Umbraco menu with the given name and icon before the context app with the given alias.
+
+```csharp
+// Example
+config.AddContextAppBefore("umbContent", "Comments", "icon-chat", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppAfter(string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app with the given name and default icon after the context app with the given alias.
+
+```csharp
+// Example
+config.AddContextAppAfter("umbContent", "Comments", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppAfter(string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app to the Umbraco menu with the given name and icon after the context app with the given alias.
+
+```csharp
+// Example
+config.AddContextAppAfter("umbContent", "Comments", "icon-chat", contextAppConfig => {
+    ...
+});
+```
+
 ## Changing a context app alias
 
 #### **SetAlias(string alias) : KonstruktContextAppConfigBuilder**
@@ -54,19 +98,6 @@ Sets the context app icon color to the given color.  Possible options are `black
 ````csharp
 // Example
 contextAppConfig.SetIconColor("blue");
-````
-
-## Changing the position of a context app
-
-Changing the position of a context app in the UI is done by modiying it's weight. Default content apps `Content` and `Info` have the weights `-100` and `100` respectively.
-
-#### **SetWeight(int weight) : KonstruktContextAppConfigBuilder**
-
-Sets the context app weight to the given value. 
-
-````csharp
-// Example
-contextAppConfig.SetWeight(10);
 ````
 
 ## Changing when a context app should display

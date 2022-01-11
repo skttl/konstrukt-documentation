@@ -75,7 +75,7 @@ dashboardConfig.SetVisibility(visibilityConfig => visibilityConfig
 );
 ````
 
-## Setting the collection to a dashboard
+## Setting the collection of a dashboard
 
 Dashboards are only able to display a single collection. If you need to display multiple collections, then you need to configure multiple dashboards.
 
