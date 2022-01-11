@@ -75,7 +75,7 @@ public class MyController : Controller
 
 #### **IKonstruktRepositoryFactory.GetRepository&lt;TEntity, TId&gt;(string collectionAlias) : KonstruktRepository&lt;TEntity, TId&gt;**
 
-Creates a repository for the given entity type from the given collection configuration.
+Creates a repository for the given entity type from the collection with the given alias.
 
 ````csharp
 // Example
