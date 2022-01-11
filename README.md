@@ -8,7 +8,7 @@ Konstrukt is a rapid Umbraco back office UI builder for custom data structures c
 
 If you have a custom data store that you’d like to be able to content manage from within Umbraco then Konstrukt will allow you to quickly configure a custom administration UI, reusing many core components and with a consistent look and feel, in just a few lines of code.
 
-With Konstrukt, custom adminisration panel UI's can now take a matter of minutes, rather than days.
+With Konstrukt, custom back office integrations can now take a matter of minutes, rather than days.
 
 ## Using These Docs
 
