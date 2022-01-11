@@ -8,10 +8,10 @@ In a number of places in the Konstrukt API you are required to know the aliases 
 
 ## Dashboard aliases
 
-### Content
+**Content**
 
 | Name | Alias |
-----------------
+| -- | -- |
 | Getting Started | `contentIntro` |
 
 ## Content App aliases
