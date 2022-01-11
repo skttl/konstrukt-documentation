@@ -4,7 +4,7 @@ description: Configuring context apps in Konstrukt, the fluent back office UI bu
 
 # Context Apps
 
-Context Apps in Konstrukt are analogous with Content Apps in Umbraco and they allow you provide contextual apps that appear in the editor of other contextApps of the Umbraco CMS. From a Konstrukt perspective, defining context apps allows you to expose collections as content app where a collection has a relation to the content in question. An example could be something like blog post comments which are linked to individual blog posts. By exposing these as a content app allows them to be managed in context next to the blog post they are linked to.
+Context Apps in Konstrukt are analogous with Content Apps in Umbraco and they allow you to provide contextual apps that appear in the editor of other contextApps of the Umbraco CMS. From a Konstrukt perspective, defining context apps allows you to expose collections as content app where a collection has a relation to the content in question. An example could be something like blog post comments which are linked to individual blog posts. By exposing these as a content app allows them to be managed in context next to the blog post they are linked to.
 
 ## Defining a context app
 
