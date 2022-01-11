@@ -1,5 +1,5 @@
 ---
-description: Configuring collections in Konstrukt, the fluent back office UI builder for Umbraco.
+description: Configuring collections in Konstrukt, the back office UI builder for Umbraco.
 ---
 
 # Collections

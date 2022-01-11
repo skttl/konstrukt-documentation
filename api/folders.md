@@ -1,5 +1,5 @@
 ---
-description: Configuring folders to organise trees in Konstrukt, the fluent back office UI builder for Umbraco.
+description: Configuring folders to organise trees in Konstrukt, the back office UI builder for Umbraco.
 ---
 
 # Folders

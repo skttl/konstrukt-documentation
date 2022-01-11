@@ -1,5 +1,5 @@
 ---
-description: Configuring menu items in Konstrukt, the fluent back office UI builder for Umbraco.
+description: Configuring menu items in Konstrukt, the back office UI builder for Umbraco.
 ---
 
 # Menu Items

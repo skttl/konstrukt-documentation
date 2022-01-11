@@ -1,5 +1,5 @@
 ---
-description: Configuring context apps in Konstrukt, the fluent back office UI builder for Umbraco.
+description: Configuring context apps in Konstrukt, the back office UI builder for Umbraco.
 ---
 
 # Context Apps

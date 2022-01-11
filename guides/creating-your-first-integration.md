@@ -1,5 +1,5 @@
 ---
-description: Creating your first integration with Konstrukt, the fluent back office UI builder for Umbraco.
+description: Creating your first integration with Konstrukt, the back office UI builder for Umbraco.
 ---
 
 # Creating your first integration

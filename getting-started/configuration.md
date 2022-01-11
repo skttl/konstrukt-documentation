@@ -1,5 +1,5 @@
 ---
-description: Configuring Konstrukt, the fluent back office UI builder for Umbraco.
+description: Configuring Konstrukt, the back office UI builder for Umbraco.
 ---
 
 # Configuration
