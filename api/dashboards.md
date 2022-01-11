@@ -1,5 +1,5 @@
 ---
-description: Configuring dashboards in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring dashboards in Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Dashboards

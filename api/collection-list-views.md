@@ -1,5 +1,5 @@
 ---
-description: Configuring the list view of a collection in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring the list view of a collection in Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # List Views

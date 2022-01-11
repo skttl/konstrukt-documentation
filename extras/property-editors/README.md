@@ -1,5 +1,5 @@
 ---
-description: Property Editors available with Konstrukt, the fluent administration panel builder for Umbraco.
+description: Property Editors available with Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Property Editors

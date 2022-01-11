@@ -1,5 +1,5 @@
 ---
-description: Using the entity picker property editor with Konstrukt, the fluent administration panel builder for Umbraco.
+description: Using the entity picker property editor with Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Entity Picker

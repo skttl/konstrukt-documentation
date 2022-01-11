@@ -1,10 +1,10 @@
 ---
-description: Documentation for Konstrukt, the fluent administration panel builder for Umbraco.
+description: Documentation for Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Konstrukt
 
-Konstrukt is a rapid Umbraco administration panel builder for custom data structures configured via a fluent API.
+Konstrukt is a rapid Umbraco back office UI builder for custom data structures configured via a fluent API.
 
 If you have a custom data store that you’d like to be able to content manage from within Umbraco then Konstrukt will allow you to quickly configure a custom administration UI, reusing many core components and with a consistent look and feel, in just a few lines of code.
 

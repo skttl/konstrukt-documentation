@@ -1,5 +1,5 @@
 ---
-description: Installing Konstrukt, the fluent administration panel builder for Umbraco.
+description: Installing Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Installation

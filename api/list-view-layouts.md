@@ -1,5 +1,5 @@
 ---
-description: Configuring list view layouts in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring list view layouts in Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # List View Layouts

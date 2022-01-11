@@ -1,5 +1,5 @@
 ---
-description: Configuring child collections in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring child collections in Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Child Collections

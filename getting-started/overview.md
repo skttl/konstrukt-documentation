@@ -1,5 +1,5 @@
 ---
-description: Getting Started with Konstrukt, the fluent administration panel builder for Umbraco.
+description: Getting Started with Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Getting Started

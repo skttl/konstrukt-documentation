@@ -1,5 +1,5 @@
 ---
-description: A list of useful Umbraco aliases for use with Konstrukt, the fluent administration panel builder for Umbraco.
+description: A list of useful Umbraco aliases for use with Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Umbraco Aliases

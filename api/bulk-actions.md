@@ -1,5 +1,5 @@
 ---
-description: Configuring bulk actions in Konstrukt, the fluent administration panel builder for Umbraco.
+description: Configuring bulk actions in Konstrukt, the fluent back office UI builder for Umbraco.
 ---
 
 # Bulk Actions
