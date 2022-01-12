@@ -12,7 +12,7 @@ You define a dashboard by calling one of the `AddDashboard` methods on the root 
 
 #### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
 
-Adds a dashboard with the given name and default icon.
+Adds a dashboard with the given name.
 
 ```csharp
 // Example
