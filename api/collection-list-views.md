@@ -63,22 +63,22 @@ Sets the list views data views builder which allows you to define the data views
 listViewConfig.SetDataViewsBuilder<PersonDataViewsBuilder>();
 ````
 
-#### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+#### **SetDataViewsBuilder(Type dataViewsBuilderType) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
 Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
 
 ````csharp
 // Example
-listViewConfig.SetDataViewsBuilder(Type dataViewsBuilderType);
+listViewConfig.SetDataViewsBuilder(typeof(PersonDataViewsBuilder));
 ````
 
-#### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+#### **SetDataViewsBuilder(IKonstruktDataViewsBuilder dataViewsBuilder) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
 Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
 
 ````csharp
 // Example
-listViewConfig.SetDataViewsBuilder(IKonstruktDataViewsBuilder dataViewsBuilder);
+listViewConfig.SetDataViewsBuilder(new PersonDataViewsBuilder());
 ````
 
 ## Defining a bulk action
