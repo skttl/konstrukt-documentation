@@ -72,7 +72,7 @@ Sets the list views data views builder which allows you to define the data views
 listViewConfig.SetDataViewsBuilder(typeof(PersonDataViewsBuilder));
 ````
 
-#### **SetDataViewsBuilder(IKonstruktDataViewsBuilder dataViewsBuilder) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+#### **SetDataViewsBuilder(KonstruktDataViewsBuilder&lt;TEntityType&gt; dataViewsBuilder) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
 Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
 
