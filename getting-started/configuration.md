@@ -8,7 +8,7 @@ Konstrukt can be configured in two ways, either directly via the `AddKonstrukt` 
 
 ## AddKonstrukt
 
-To configure Konstrukt via the `AddKonstrukt` extension method, you extend the `ConfigureServices` method found in the `Startup.cs` file in the root of your web project. From within this method, between the call to `AddComposers()` and `Build()` we can add our `AddKonstrukt` configuration.
+To configure Konstrukt via the `AddKonstrukt` extension method, you extend the `ConfigureServices` method found in the `Startup.cs` file in the root of your web project. From within this method, before the call to `AddComposers()` we can add our `AddKonstrukt` configuration.
 
 ```csharp
 public class Startup
@@ -19,10 +19,10 @@ public class Startup
         services.AddUmbraco(_env, _config)
             .AddBackOffice()
             .AddWebsite()
-            .AddComposers()
             .AddKonstrukt(cfg => {
                 // Apply your configuration here
             })
+            .AddComposers()
             .Build();
     }
     ...

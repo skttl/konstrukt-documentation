@@ -57,10 +57,10 @@ public class Startup
         services.AddUmbraco(_env, _config)
             .AddBackOffice()
             .AddWebsite()
-            .AddComposers()
             .AddKonstrukt(cfg => {
                 // Apply your configuration here
             })
+            .AddComposers()
             .Build();
     }
     ...
