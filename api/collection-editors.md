@@ -179,6 +179,15 @@ Set the value mapper for the current field. See [Value Mapper API documentation]
 fieldConfig.SetValueMapper<MyValueMapper>();
 ````
 
+#### **SetValueMapper(Type mapperType) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Set the value mapper for the current field. See [Value Mapper API documentation](value-mappers.md) for more info.
+
+````csharp
+// Example
+fieldConfig.SetValueMapper(typeof(MyValueMapper));
+````
+
 #### **SetValueMapper(KonstruktMapper mapper) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
 Set the value mapper for the current field. See [Value Mapper API documentation](value-mappers.md) for more info.
