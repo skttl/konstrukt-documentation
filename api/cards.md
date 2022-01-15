@@ -2,13 +2,13 @@
 description: Configuring cards in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Cards 
+# Cards
 
 Cards provide an API to display simple summary info on the list view UI.
 
 When Konstrukt resolves a card it will attempt to do so from the global DI container which means you can inject amy dependencies that you require for your card to calculate it's value. If there is no such type defined in the DI container, Konstrukt will then fallback to maually instantiating a new instance of the card.
 
-# Defining a card
+## Defining a card
 
 To define a card you create a class that inherits from the base class `KonstruktCard` and configure it within the constructor like so.
 
