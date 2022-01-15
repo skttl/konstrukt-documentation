@@ -4,7 +4,7 @@ description: Configuring cards in Konstrukt, the back office UI builder for Umbr
 
 # Cards
 
-Cards provide an API to display simple summary info on the list view UI.
+Cards provide an API to display simple summary info on the list view UI. Simple cards can be defined inline as part of the [List View API](collection-list-views.md#adding-a-card-to-a-list-view) or can be defined using a `KonstruktCard` type to allow more control over the card value calculation.
 
 When Konstrukt resolves a card it will attempt to do so from the global DI container which means you can inject amy dependencies that you require for your card to calculate it's value. If there is no such type defined in the DI container, Konstrukt will then fallback to maually instantiating a new instance of the card.
 
