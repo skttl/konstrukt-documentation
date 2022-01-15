@@ -46,4 +46,4 @@ Additional optional configuration options are:
 
 ## Adding a card to a list view
 
-A card is assigned to a list view as part of the list view configuration. See [List View API Documentation](collection-list-view.md#adding-a-card-to-a-list-view) for more info.
+A card is assigned to a list view as part of the list view configuration. See [List View API Documentation](collection-list-views.md#adding-a-card-to-a-list-view) for more info.
