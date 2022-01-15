@@ -125,7 +125,7 @@ listViewConfig.AddLayout(new MyCustomListViewLayout());
 
 ## Adding a field to the list view
 
-#### **AddField(Lambda propertyExpression, Lambda propertyConfig = null) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+#### **AddField(Lambda propertyExpression, Lambda fieldConfig = null) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
 Adds the given property to the list view.
 
@@ -156,4 +156,81 @@ Sets the format expression for the list view field.
 ````csharp
 // Example
 fieldConfig.SetFormat((v, p) => $"{v} years old");
+````
+
+## Adding a card to a list view
+
+Cards allow you to provide simple summaries above the list view for key information that may be useful to the editor.
+
+#### **AddCard(string name, Lambda whereClauseExpression, Lambda fieldConfig = null) : KonstruktCardConfigBuilder**
+
+Adds a card with the given name and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+listViewConfig.AddCard("Older than 30", p => p.Age > 30, cardConfig => {
+    ...
+});
+````
+
+#### **AddCard(string name, string icon, Lambda whereClauseExpression, Lambda fieldConfig = null) : KonstruktCardConfigBuilder**
+
+Adds a card with the given name + icon and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+listViewConfig.AddCard("Older than 30", "icon-umb-users", p => p.Age > 30, cardConfig => {
+    ...
+});
+````
+
+#### **AddCard<TCardType>() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+
+Adds a card of the given type to the list view. See [Card API documentation](cards.md) for more info.
+
+````csharp
+// Example
+listViewConfig.AddCard<AvgPersonAgeCard>();
+````
+
+#### **AddCard(Type cardType) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+
+Adds a card of the given type to the list view. See [Card API documentation](cards.md) for more info.
+
+````csharp
+// Example
+listViewConfig.AddCard(typeof(AvgPersonAgeCard));
+````
+
+## Change the color of a card
+
+#### **SetColor(string color) : KonstruktCardConfigBuilder**
+
+Sets the color of the card.
+
+````csharp
+// Example
+cardConfig.SetColor("blue");
+````
+
+## Add a suffix to a card value
+
+#### **SetSuffix(string suffix) : KonstruktCardConfigBuilder**
+
+Sets the suffix of the card value.
+
+````csharp
+// Example
+cardConfig.SetSuffix("years");
+````
+
+## Formatting the value of a card
+
+#### **SetFormat(Lambda formatExpression) : KonstruktCardConfigBuilder**
+
+Sets the format expression for the card.
+
+````csharp
+// Example
+cardConfig.SetFormat((v) => $"{v}%");
 ````
