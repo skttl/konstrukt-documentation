@@ -2,7 +2,7 @@
 description: Configuring cards in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Cards
+# Cards 
 
 Cards provide an API to display simple summary info on the list view UI.
 
