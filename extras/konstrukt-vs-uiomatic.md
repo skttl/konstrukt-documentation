@@ -60,3 +60,4 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Our Umbraco Forum | Yes | No |
 | Email Support | Yes - Commercial | Yes - Personal |
 | Issue Tracker | Yes | Yes |
+| Documentation | Yes | Yes |
