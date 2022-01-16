@@ -40,5 +40,5 @@
 * [Property Editors](extras/property-editors/README.md)
   * [Entity Picker](extras/property-editors/entity-picker.md)
 * [Umbraco Aliases](extras/umbraco-aliases.md)
-* [Konstrukt vs UI-O-Matic](extras/known-issues.md)
+* [Konstrukt vs UI-O-Matic](extras/konstrukt-vs-uiomatic.md)
 * [Known Issues](extras/known-issues.md)
