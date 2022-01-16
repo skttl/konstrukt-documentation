@@ -8,7 +8,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 
 ## API
 
-| | Konstrukt | UI-O-Matic|
+| Feature | Konstrukt | UI-O-Matic|
 | -- | -- | -- |
 | Style | Fluent API | Attribute based API |
 | Strongly Typed | Yes | No |
@@ -20,7 +20,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 
 ## Features
 
-| | Konstrukt | UI-O-Matic |
+| Feature | Konstrukt | UI-O-Matic |
 | -- | -- | -- |
 | Dashboards | Yes | No |
 | Context Apps | Yes | Ish - There is an API to define context apps, but it's just a shortcut for Umbraco's Content Apps API, so doesn't support associating a collection with the context app |
@@ -46,7 +46,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 
 ## License
 
-| | Konstrukt | UI-O-Matic |
+| Feature | Konstrukt | UI-O-Matic |
 | -- | -- | -- |
 | Open Source | No | Yes |
 | Can be used on Umbraco Cloud | Yes | No |
@@ -54,7 +54,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 
 ## Support
 
-| | Konstrukt | UI-O-Matic |
+| Feature| Konstrukt | UI-O-Matic |
 | -- | -- | -- |
 | Our Umbraco Forum | Yes | No |
 | Email Support | Yes - Commercial | Yes - Personal |
