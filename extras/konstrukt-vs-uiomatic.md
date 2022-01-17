@@ -56,7 +56,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 
 | Feature| Konstrukt | UI-O-Matic |
 | -- | -- | -- |
-| Backed by | Outfield Digital Ltd + Community | Community |
+| Supported by | Outfield Digital Ltd + Community | Community |
 | Our Umbraco Forum | Yes | No |
 | Email Support | Yes - Commercial | Yes - Personal |
 | Issue Tracker | Yes | Yes |
