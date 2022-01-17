@@ -42,7 +42,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Events | CRUD + Startup events | CRUD + Query events |
 | Property Editors | Entity Picker | Dropdown + Multi Picker |
 | Localized | No | Yes |
-| Supported Umbraco Versions | v9+ | v7-8, v9 pending |
+| Supported Umbraco Versions | v9+ | v7+ |
 
 ## License
 
