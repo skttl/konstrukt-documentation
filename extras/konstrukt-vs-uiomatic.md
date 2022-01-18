@@ -39,7 +39,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Value Mappers | Yes | No |
 | Child Collections | Yes | Yes - Requires a convoluted config of hidden collections + list view properties on the parent poco model |
 | Custom Repositories | Yes | Yes |
-| Events | CRUD + Startup events | CRUD + Query events |
+| Events | CRUD + Query + Startup events | CRUD + Query events |
 | Property Editors | Entity Picker | Dropdown + Multi Picker |
 | Localized | No | Yes |
 | Supported Umbraco Versions | v9+ | v7+ |
