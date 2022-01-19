@@ -4,10 +4,16 @@ description: Installing Konstrukt, the back office UI builder for Umbraco.
 
 # Installation
 
-Konstrukt is installed via the NuGet package manager by issuing the following command.
+Konstrukt is installed via the NuGet package manager by issuing the following command in your web project.
 
 ```bash
 dotnet add package Konstrukt
+```
+
+If you wish to install Konstrukt into a class library without the UI elements, you can add a reference to the `Konstrukt.Startup` package instead.
+
+```bash
+dotnet add package Konstrukt.Startup
 ```
 
 Alternatively, you can also find and install the NuGet package via the NuGet Package Manager GUI in Visual Studio.
