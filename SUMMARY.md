@@ -42,4 +42,4 @@
 * [Umbraco Aliases](extras/umbraco-aliases.md)
 * [Konstrukt vs UI-O-Matic](extras/konstrukt-vs-uiomatic.md)
 * [Known Issues](extras/known-issues.md)
-* [Changelog](changelog.md)
+* [Changelog](extras/changelog.md)
