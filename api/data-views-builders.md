@@ -1,8 +1,8 @@
 ---
-description: Configuring data view builders in Konstrukt, the back office UI builder for Umbraco.
+description: Configuring data views builders in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Data View Builders
+# Data Views Builders
 
 Data views builders allow you to create a collection list views data views list dynamically at run time. By default Konstrukt will use the hard coded data views defined in your Konstrukt config, however if you need to build your data views list dynamically, then is is when you'd use a data views builder.
 
