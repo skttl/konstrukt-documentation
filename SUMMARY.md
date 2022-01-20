@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Konstrukt Documentation](README.md)
-* [Changelog](changelog.md)
 
 ## Getting Started
 
@@ -43,3 +42,4 @@
 * [Umbraco Aliases](extras/umbraco-aliases.md)
 * [Konstrukt vs UI-O-Matic](extras/konstrukt-vs-uiomatic.md)
 * [Known Issues](extras/known-issues.md)
+* [Changelog](changelog.md)
