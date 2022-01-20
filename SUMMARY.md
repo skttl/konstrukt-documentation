@@ -29,7 +29,7 @@
 * [Menu Items](api/menu-items.md)
 * [Bulk Actions](api/bulk-actions.md)
 * [Cards](api/cards.md)
-* [Data View Builders](api/data-views-builders.md)
+* [Data Views Builders](api/data-views-builders.md)
 * [List View Layouts](api/list-view-layouts.md)
 * [Value Mappers](api/value-mappers.md)
 * [Repositories](api/repositories.md)
