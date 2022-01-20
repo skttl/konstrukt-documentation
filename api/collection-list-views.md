@@ -56,7 +56,7 @@ listViewConfig.AddDataView("Status", "Active", p => p.IsActive);
 
 #### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
-Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-view-builders.md) for more info.
 
 ````csharp
 // Example
@@ -65,7 +65,7 @@ listViewConfig.SetDataViewsBuilder<PersonDataViewsBuilder>();
 
 #### **SetDataViewsBuilder(Type dataViewsBuilderType) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
-Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-view-builders.md) for more info.
 
 ````csharp
 // Example
@@ -74,7 +74,7 @@ listViewConfig.SetDataViewsBuilder(typeof(PersonDataViewsBuilder));
 
 #### **SetDataViewsBuilder(KonstruktDataViewsBuilder&lt;TEntityType&gt; dataViewsBuilder) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
-Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+Sets the list views data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-view-builders.md) for more info.
 
 ````csharp
 // Example
@@ -85,7 +85,7 @@ listViewConfig.SetDataViewsBuilder(new PersonDataViewsBuilder());
 
 #### **AddBulkAction&lt;TBulkActionType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
-Adds a bulk action of the given type to the list view. See [Bulk Actions API documentation](bulk-actions/) for more info.
+Adds a bulk action of the given type to the list view. See [Bulk Actions API documentation](bulk-actions.md) for more info.
 
 ````csharp
 // Example
