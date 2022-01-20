@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Konstrukt Documentation](README.md)
+* [Changelog](changelog.md)
 
 ## Getting Started
 
