@@ -50,7 +50,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | -- | -- | -- |
 | Open Source | No | Yes |
 | Can be used on Umbraco Cloud | Yes | No |
-| Fee | Free for one collection, then £450 exc VAT per install | Free unless you are a paid Umbraco Partner then you are required to negotiate a fee or face a $15,000+ penilty  |
+| Fee | Free for one collection, then £450 exc VAT per install | Free unless you are a paid Umbraco Partner then you are required to negotiate a fee or face a $15,000+ penalty  |
 
 ## Support
 
