@@ -113,3 +113,35 @@ public class MyEntityDeletedEventHandler :  INotificationHandler<KonstruktEntity
 
 }
 ````
+
+### **KonstruktSqlQueryBuildingNotification**
+
+Raised when the repository is preparing a SQL query. The notification contains the collection alias + type, the NPoco `Sql<ISqlContext>` object and the where clause / order by clauses that will be used to generate the SQL query. 
+
+````csharp
+// Example
+public class MySqlQueryBuildingEventHandler :  INotificationHandler<KonstruktSqlQueryBuildingNotification> {
+
+    public void Handle(KonstruktSqlQueryBuildingNotification notification)
+    {
+        notification.Sql = notification.Sql.Append("WHERE MyId = @0", 1);
+    }
+
+}
+````
+
+### **KonstruktSqlQueryBuiltNotification**
+
+Raised when the repository has repaired a SQL query. The notification contains the collection alias + type, the NPoco `Sql<ISqlContext>` object and the where clause / order by clauses that was used to generate the SQL query. 
+
+````csharp
+// Example
+public class MySqlQueryBuildtEventHandler :  INotificationHandler<KonstruktSqlQueryBuiltNotification> {
+
+    public void Handle(KonstruktSqlQueryBuiltNotification notification)
+    {
+        notification.Sql = notification.Sql.Append("WHERE MyId = @0", 1);
+    }
+
+}
+````
