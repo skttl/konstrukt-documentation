@@ -136,7 +136,7 @@ Raised when the repository has repaired a SQL query. The notification contains t
 
 ````csharp
 // Example
-public class MySqlQueryBuildtEventHandler :  INotificationHandler<KonstruktSqlQueryBuiltNotification> {
+public class MySqlQueryBuiltEventHandler :  INotificationHandler<KonstruktSqlQueryBuiltNotification> {
 
     public void Handle(KonstruktSqlQueryBuiltNotification notification)
     {
