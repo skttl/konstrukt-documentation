@@ -8,7 +8,7 @@ Before you get to know Konstrukt, you need to become familiar with the Umbraco U
 
 ![Sections, Trees and Dashboards](../images/ui_01.png)
 
-**1. Section** A distinct aread of the Umbraco backoffice.  
+**1. Section** A distinct area of the Umbraco backoffice.  
 **2. Tree** A hierarchical structure to help organise a section.  
 **3. Dashboard** An intro screen for a section, usually with useful links for that section.  
 
