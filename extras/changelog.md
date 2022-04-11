@@ -4,6 +4,16 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.0.2
+**Date:** 2022-04-11  
+**Description:** Minor patch release with non breaking changes
+
+- Fixed OrderBy not handling name field correctly
+- Updated license warning to only display if the number of "editable" collections is exceeded
+- Fixed custom connection strings not working by implementing a DB factory pattern
+- Introduced `IKonstruktNodeUdiResolver` to allow content apps to resolve a different node UDI than the current page
+- Fixed error being thrown by menu actions because the current section wasn't being passed through to the menu
+
 ## v1.0.1
 **Date:** 2022-01-27  
 **Description:** Minor patch release with non breaking changes
