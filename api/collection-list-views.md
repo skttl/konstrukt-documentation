@@ -164,6 +164,8 @@ fieldConfig.SetFormat((v, p) => $"{v} years old");
 
 ## Setting the renderer of a field
 
+Field renderers allow you to customize the markup of the field in the list view table so that you can show more rich visualizations of the fields content.
+
 #### **SetRenderer(string viewComponentName) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
 Sets the renderer view component for the list view field.
