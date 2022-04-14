@@ -31,7 +31,7 @@
 * [Cards](api/cards.md)
 * [Data Views Builders](api/data-views-builders.md)
 * [List View Layouts](api/list-view-layouts.md)
-* [Field Renderers](api/field-renderers.md)
+* [Field Views](api/field-views.md)
 * [Value Mappers](api/value-mappers.md)
 * [Repositories](api/repositories.md)
 * [Events](api/events.md)

@@ -162,26 +162,26 @@ Sets the format expression for the list view field.
 fieldConfig.SetFormat((v, p) => $"{v} years old");
 ````
 
-## Setting the renderer of a field
+## Setting the view of a field
 
-Field renderers allow you to customize the markup of the field in the list view table so that you can show more rich visualizations of the fields content.
+Field views allow you to customize the markup of the field in the list view so that you can show more rich visualizations of the fields content.
 
-#### **SetRenderer(string viewComponentName) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+#### **SetView(string viewComponentName) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
-Sets the renderer view component for the list view field.
+Sets the view component for the list view field.
 
 ````csharp
 // Example
-fieldConfig.SetRenderer("ImageFieldRenderer");
+fieldConfig.SetView("ImageFieldView");
 ````
 
-#### **SetRenderer&lt;TRenderer&gt;() : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+#### **SetView&lt;TView&gt;() : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
-Sets the renderer view component for the list view field.
+Sets the view component for the list view field.
 
 ````csharp
 // Example
-fieldConfig.SetRenderer<ImageFieldRendererViewComponent>();
+fieldConfig.SetView<ImageFieldView>();
 ````
 
 ## Adding a card to a list view
