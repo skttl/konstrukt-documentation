@@ -14,7 +14,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Strongly Typed | Yes | No |
 | Seperation of Concerns | Yes - Config is seperate to poco models | No - Config is combined with the poco models |
 | Manage 3rd Party Models | Yes - As config is seperate to poco models, Konstrukt can manage any poco models | No - As config is attribute based, you need to have full control of poco models to add attributes to |
-| Configuration Context | Config is always in the context of the poco model with Konstrukt atuomatically converting between properties and DB columns | Config switches between poco model properties and DB columns so can be confusing if you aren't aware of the context |
+| Configuration Context | Config is always in the context of the poco model with Konstrukt automatically converting between properties and DB columns | Config switches between poco model properties and DB columns so can be confusing if you aren't aware of the context |
 | Supports Dependency Injection | Yes - Where types are passed to the API, the service provider is used to resolve those types allowing for dependency injection of depdendencies | No |
 
 
