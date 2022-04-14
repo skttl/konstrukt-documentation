@@ -54,8 +54,8 @@ public class KonstruktFieldRendererContext
 {
     public string FieldRenderer { get; set; }
     public object Entity { get; set; }
-    public string PropName { get; set; }
-    public object PropValue { get; set; }
+    public string PropertyName { get; set; }
+    public object PropertyValue { get; set; }
 }
 ````
 
