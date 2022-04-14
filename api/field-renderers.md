@@ -45,6 +45,20 @@ For the view element of your component, based on the example above, you would pl
 <!-- Insert your markup here -->
 ````
 
+## KonstruktFieldRendererContext
+
+Field renderer view components are passed a `KonstruktFieldRendererContext` context object with the following information.
+
+````csharp
+public class KonstruktFieldRendererContext
+{
+    public string FieldRenderer { get; set; }
+    public object Entity { get; set; }
+    public string PropName { get; set; }
+    public object PropValue { get; set; }
+}
+````
+
 ## Setting the field renderer of a list view field
 
 A field renderer is assigned to a list view field as part of the list view configuration. See [List View API Documentation](collection-list-views.md#setting-the-renderer-of-a-field) for more info.
