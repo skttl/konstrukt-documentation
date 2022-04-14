@@ -45,7 +45,7 @@ For the view element of your component, based on the example above, you would pl
 <!-- Insert your markup here -->
 ````
 
-## KonstruktFieldRendererContext
+## The field renderer context
 
 Field renderer view components are passed a `KonstruktFieldRendererContext` context object with the following information.
 
