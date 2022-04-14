@@ -4,6 +4,13 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.1.0
+**Date:** TBC  
+**Description:** Minor release with non breaking additional features
+
+- Added Field Renderer support for custom field markup in list views
+- Deprecated List View Layout support
+
 ## v1.0.2
 **Date:** 2022-04-11  
 **Description:** Minor patch release with non breaking changes

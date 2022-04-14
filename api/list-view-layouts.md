@@ -4,6 +4,10 @@ description: Configuring list view layouts in Konstrukt, the back office UI buil
 
 # List View Layouts
 
+{% hint style="danger" %}
+**List View Layouts** in Konstrukt are now concidered depricated. Moving forward, only the table list view will be supported. Whilst you can continue to use this feature for the time being, it will be removed in a future release.
+{% endhint %}
+
 List view layouts allow you to provide custom angular views to be used by the list view UI. By default there are two build in layouts, `KonstruktTableListViewLayout` which displays results in a tabular layout and `KonstruktGridListViewLayout` which displays results in a tiled grid layout.
 
 ## Defining a list view layout

@@ -103,6 +103,10 @@ listViewConfig.AddBulkAction(new ExportBulkAction());
 
 ## Changing the list view layout
 
+{% hint style="danger" %}
+**List View Layouts** in Konstrukt are now concidered depricated. Moving forward, only the table list view will be supported. Whilst you can continue to use this feature for the time being, it will be removed in a future release.
+{% endhint %}
+
 By default the list view will use the built in Umbraco table and grid list view layouts however you can provide your own custom layouts. If you provide a layout, then it will replace the defaults, so if you still want the defaults as options, you'll need to add these again explicitly. To do this, you'll need to call `AddLayout<TListViewLayoutType>` for each one you want to add with a `TListViewLayoutType` parameter of `KonstruktTableListViewLayout` or `KonstruktGridListViewLayout`.
 
 #### **AddLayout&lt;TListViewLayoutType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
@@ -156,6 +160,26 @@ Sets the format expression for the list view field.
 ````csharp
 // Example
 fieldConfig.SetFormat((v, p) => $"{v} years old");
+````
+
+## Setting the renderer of a field
+
+#### **SetRenderer(string viewComponentName) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Sets the renderer view component for the list view field.
+
+````csharp
+// Example
+fieldConfig.SetRenderer("ImageFieldRenderer");
+````
+
+#### **SetRenderer&gt;TRenderer&lt;() : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Sets the renderer view component for the list view field.
+
+````csharp
+// Example
+fieldConfig.SetRenderer<ImageFieldRendererViewComponent>();
 ````
 
 ## Adding a card to a list view
