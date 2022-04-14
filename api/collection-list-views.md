@@ -173,7 +173,7 @@ Sets the renderer view component for the list view field.
 fieldConfig.SetRenderer("ImageFieldRenderer");
 ````
 
-#### **SetRenderer&gt;TRenderer&lt;() : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+#### **SetRenderer&lt;TRenderer&gt;() : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
 Sets the renderer view component for the list view field.
 
