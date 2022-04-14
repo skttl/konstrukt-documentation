@@ -56,7 +56,7 @@ Field view components are passed a `KonstruktFieldViewContext` object with the f
 ````csharp
 public class KonstruktFieldViewContext
 {
-    public string View { get; set; }
+    public string ViewName { get; set; }
     public object Entity { get; set; }
     public string PropertyName { get; set; }
     public object PropertyValue { get; set; }
