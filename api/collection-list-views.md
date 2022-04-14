@@ -107,7 +107,7 @@ listViewConfig.AddBulkAction(new ExportBulkAction());
 **List View Layouts** in Konstrukt are now concidered depricated. Moving forward, only the table list view will be supported. Whilst you can continue to use this feature for the time being, it will be removed in a future release.
 {% endhint %}
 
-By default the list view will use the built in Umbraco table and grid list view layouts however you can provide your own custom layouts. If you provide a layout, then it will replace the defaults, so if you still want the defaults as options, you'll need to add these again explicitly. To do this, you'll need to call `AddLayout<TListViewLayoutType>` for each one you want to add with a `TListViewLayoutType` parameter of `KonstruktTableListViewLayout` or `KonstruktGridListViewLayout`.
+By default the list view will use the built in Umbraco table list view layout however you can provide your own custom layouts. If you provide a layout, then it will replace the defaults, so if you still want the default one as an option, you'll need to add it again explicitly. To do this, you'll need to call `AddLayout<TListViewLayoutType>` with a `TListViewLayoutType` parameter of `KonstruktTableListViewLayout`.
 
 #### **AddLayout&lt;TListViewLayoutType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
