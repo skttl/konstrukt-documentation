@@ -10,7 +10,7 @@ Field Renderers allow you to customize the markup used by a field in a list view
 
 You can define a field renderer in one of two ways.
 
-### 1. A simple view file for the built in `KonstruktFieldRendererViewComponent` view component
+#### **1. A simple view file for the built in `KonstruktFieldRendererViewComponent` view component**
 
 The simplest way to define a field renderer for non-complex renderers is to place a view file in the `/Views/Shared/Components/KonstruktFieldRenderer` folder with the following markup.
 
@@ -21,7 +21,7 @@ The simplest way to define a field renderer for non-complex renderers is to plac
 
 When registering a simple view file renderer you pass the name of the view file (excluding the `.cshtml` file extension) to the relevant API method.
 
-### 2. A completely custom view component
+#### **2. A completely custom view component**
 
 To define a more complex field renderer you can create your own view component class (which can use dependency injection for any required dependencies) with the following signature
 
