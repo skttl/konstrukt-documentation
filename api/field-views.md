@@ -38,6 +38,10 @@ public class MyComplexFieldViewViewComponent : ViewComponent
 }
 ````
 
+{% hint style="info" %}
+It's important to node that the `KonstruktFieldViewContext` parameter to the `InvokeAsync` method **MUST** be named `context`.
+{% endhint %}
+
 For the view element of your component, based on the example above, you would place a file `Default.cshtml` into the  `/Views/Shared/Components/MyComplexFieldView` folder with the following markup
 
 ````csharp
