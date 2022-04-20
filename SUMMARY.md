@@ -28,6 +28,7 @@
 * [Editors](api/collection-editors.md)
 * [Menu Items](api/menu-items.md)
 * [Bulk Actions](api/bulk-actions.md)
+* [Row Actions](api/row-actions.md)
 * [Cards](api/cards.md)
 * [Data Views Builders](api/data-views-builders.md)
 * [List View Layouts](api/list-view-layouts.md)

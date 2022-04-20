@@ -92,6 +92,15 @@ Adds a bulk action of the given type to the list view. See [Bulk Actions API doc
 listViewConfig.AddBulkAction<ExportBulkAction>();
 ````
 
+#### **AddBulkAction(Type bulkActionType) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+
+Adds a bulk action of the given type to the list view. See [Bulk Actions API documentation](bulk-actions.md) for more info.
+
+````csharp
+// Example
+listViewConfig.AddBulkAction(bulkActionType);
+````
+
 #### **AddBulkAction(KonstruktBulkAction bulkAction) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
 Adds the provided bulk action to the list view. See [Bulk Actions API documentation](bulk-actions.md) for more info.
@@ -99,6 +108,35 @@ Adds the provided bulk action to the list view. See [Bulk Actions API documentat
 ````csharp
 // Example
 listViewConfig.AddBulkAction(new ExportBulkAction());
+````
+
+## Defining a row action
+
+#### **AddRowAction&lt;TRowActionType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+
+Adds a row action of the given type to the list view. See [Row Actions API documentation](row-actions.md) for more info.
+
+````csharp
+// Example
+listViewConfig.AddRowAction<ExportRowAction>();
+````
+
+#### **AddRowAction(Type rowActionType) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+
+Adds a row action of the given type to the list view. See [Row Actions API documentation](row-actions.md) for more info.
+
+````csharp
+// Example
+listViewConfig.AddRowAction(rowActionType);
+````
+
+#### **AddRowAction(KonstruktRowAction rowAction) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+
+Adds the provided row action to the list view. See [Row Actions API documentation](row-actions.md) for more info.
+
+````csharp
+// Example
+listViewConfig.AddRowAction(new ExportRowAction());
 ````
 
 ## Changing the list view layout
