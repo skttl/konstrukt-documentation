@@ -81,7 +81,7 @@ Sets the list views data views builder which allows you to define the data views
 listViewConfig.SetDataViewsBuilder(new PersonDataViewsBuilder());
 ````
 
-## Defining a bulk action
+## Adding a bulk action
 
 #### **AddBulkAction&lt;TBulkActionType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
@@ -110,7 +110,7 @@ Adds the provided bulk action to the list view. See [Bulk Actions API documentat
 listViewConfig.AddBulkAction(new ExportBulkAction());
 ````
 
-## Defining a row action
+## Adding a row action
 
 #### **AddRowAction&lt;TRowActionType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
