@@ -16,14 +16,11 @@ To define a card you create a class that inherits from the base class `Konstrukt
 // Example
 public class AvgPersonAgeCard : KonstruktCard
 {
-    public AvgPersonAgeCard()
-    {
-        Alias = "avgPersonAge";
-        Name = "Average Age";
-        Icon = "icon-calendar";
-        Color = "green";
-        Suffix = "yrs";
-    }
+    public override string Alias => "avgPersonAge";
+    public override string Name => "Average Age";
+    public override string Icon => "icon-calendar";
+    public override string Color => "green";
+    public override string Suffix => "yrs";
         
     public override object GetValue(object parentId = null)
     {
