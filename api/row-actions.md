@@ -14,13 +14,11 @@ To define a row action you create a class that inherits from the base class `Kon
 // Example
 public class DeleteRowAction : KonstruktRowAction
 {
-    // Configure row action meta data
     public override string Icon => "icon-trash";
     public override string Alias => "delete";
     public override string Name => "Delete";
     public override bool ConfirmAction => true;
 
-    // Configure row action method
     public override void Execute(string collectionAlias, object entityId)
     {
         // Perform operation here...
