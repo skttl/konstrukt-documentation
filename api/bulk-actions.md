@@ -19,7 +19,7 @@ public class DeleteBulkAction : KonstruktBulkAction
     public override string Name => "Delete";
     public override bool ConfirmAction => true;
 
-    public override KonstruktActionResult Execute(string collectionAlias, object entityId)
+    public override KonstruktActionResult Execute(string collectionAlias, object[] entityIds)
     {
         // Perform operation here...
     }
