@@ -38,13 +38,11 @@ To save the value either save or save and publish the current document.
 
 ## Getting the value of an entity picker
  
-The entity picker property editor comes with a built in [value converter](https://our.umbraco.org/documentation/extending/property-editors/value-converters) meaning that whenever you retrieve the property value from Umbraco it will return the actual selected entities.
+The entity picker property editor comes with a built in [value converter](https://our.umbraco.org/documentation/extending/property-editors/value-converters) meaning that whenever you retrieve the property value from Umbraco it will return the actual selected entities, even converting them to the relevant type.
 
 ````csharp
 // Example
-foreach(var p in Model.Content.People.Cast<Person>()){
+foreach(var p in Model.People){
     ...
 }
 ````
-
-**Note:** Due to the fact that the property editor can link to any entity type, the returned value type from the value converter will be `IEnumerable<object>` and so will require the entities to be cast to the desired concrete type.
