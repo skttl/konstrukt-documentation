@@ -36,10 +36,17 @@ The required configuration options are:
 Additional optional configuration options are:
 
 * **ConfirmAction:** Set whether a confirm dialog should display before performing this action.
+* **ResultType:** Set the type of the result returned by the Execute method. See "controlling the action result" below.
 
 {% hint style="info" %}
 You can use dependency injection to inject any services you require to perform your specific task. When injecting dependencies, it's always recomended that you inject `Lazy<YourService>` implementations of the required services to ensure they are only resolved when needed.
 {% endhint %}
+
+## Controlling the action result
+
+My default, actions will return a basic `KonstruktActionResult` which has a simple boolean `Success` property, but you can return other types depending on the behaviour your require.
+
+* **`KonstruktFileActionResult`** - Returns a file stream / bytes and triggers a download dialog.
 
 ## Adding a row action to a list view
 
