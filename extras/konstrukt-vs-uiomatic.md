@@ -34,7 +34,8 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Editor Organisation Structures | Tabs + Fieldsets | Tabs |
 | Editor Validation | Yes | Yes |
 | Menu Actions | Yes | Yes |
-| Bulk Actions | Yes | No |
+| Bulk Actions | Yes - C# based | No |
+| Row Actions | Yes - C# based | No |
 | Encrypted Properties | Yes | No |
 | Value Mappers | Yes | No |
 | Child Collections | Yes | Yes - Requires a convoluted config of hidden collections + list view properties on the parent poco model |

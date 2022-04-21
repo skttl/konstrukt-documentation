@@ -19,7 +19,7 @@ public class DeleteBulkAction : KonstruktBulkAction
     public override string Name => "Delete";
     public override bool ConfirmAction => true;
 
-    public override void Execute(string collectionAlias, object entityId)
+    public override KonstruktActionResult Execute(string collectionAlias, object entityId)
     {
         // Perform operation here...
     }
@@ -31,7 +31,7 @@ The required configuration options are:
 * **Name:** The name of the bulk action.
 * **Alias:** A unique alias for the bulk action.
 * **Icon:** An icon to display next to the name in the bulk action button.
-* **Execute:** The method to run against a given entity.
+* **Execute:** The method to run against a given list of entities.
 
 Additional optional configuration options are:
 

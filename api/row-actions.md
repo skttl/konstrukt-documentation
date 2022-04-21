@@ -19,7 +19,7 @@ public class DeleteRowAction : KonstruktRowAction
     public override string Name => "Delete";
     public override bool ConfirmAction => true;
 
-    public override void Execute(string collectionAlias, object entityId)
+    public override KonstruktActionResult Execute(string collectionAlias, object entityId)
     {
         // Perform operation here...
     }
