@@ -37,7 +37,7 @@ Additional optional configuration options are:
 
 * **ConfirmAction:** Set whether a confirm dialog should display before performing this action.
 
-The generic argument is a return type for the action (See "controlling the action result" below).
+The generic argument is a return type for the action. See [Controlling the action result](#controlling-the-action-result) below.
 
 {% hint style="info" %}
 You can use dependency injection to inject any services you require to perform your specific task. When injecting dependencies, it's always recomended that you inject `Lazy<YourService>` implementations of the required services to ensure they are only resolved when needed.
