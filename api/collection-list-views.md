@@ -139,32 +139,6 @@ Adds the provided row action to the list view. See [Row Actions API documentatio
 listViewConfig.AddRowAction(new ExportRowAction());
 ````
 
-## Changing the list view layout
-
-{% hint style="danger" %}
-**List View Layouts** in Konstrukt are now concidered depricated. Moving forward, only the table list view will be supported. Whilst you can continue to use this feature for the time being, it will be removed in a future release.
-{% endhint %}
-
-By default the list view will use the built in Umbraco table list view layout however you can provide your own custom layouts. If you provide a layout, then it will replace the defaults, so if you still want the default one as an option, you'll need to add it again explicitly. To do this, you'll need to call `AddLayout<TListViewLayoutType>` with a `TListViewLayoutType` parameter of `KonstruktTableListViewLayout`.
-
-#### **AddLayout&lt;TListViewLayoutType&gt;() : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
-
-Adds a list view layout of the given type to the list view. See [List View Layouts API documentation](list-view-layouts.md) for more info.
-
-````csharp
-// Example
-listViewConfig.AddLayout<MyCustomListViewLayout>();
-````
-
-#### **AddLayout(KonstruktListViewLayout listViewLayout) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
-
-Adds the provided list view layout to the list view. See [List View Layouts API documentation](list-view-layouts.md) for more info.
-
-````csharp
-// Example
-listViewConfig.AddLayout(new MyCustomListViewLayout());
-````
-
 ## Adding a field to the list view
 
 #### **AddField(Lambda propertyExpression, Lambda fieldConfig = null) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
