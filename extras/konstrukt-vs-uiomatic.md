@@ -40,6 +40,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Child Collections | Yes | Yes - Requires a convoluted config of hidden collections + list view properties on the parent poco model |
 | Custom Repositories | Yes | Yes |
 | Events | CRUD + Query + Startup events | CRUD + Query events |
+| Data Export | Export Bulk/Row action available OOTB | Via 3rd party add-on |
 | Property Editors | Entity Picker | Dropdown + Multi Picker |
 | Localized | No | Yes |
 | Supported Umbraco Versions | v9+ | v7+ |
