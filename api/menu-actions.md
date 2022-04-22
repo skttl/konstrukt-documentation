@@ -1,18 +1,18 @@
 ---
-description: Configuring row actions in Konstrukt, the back office UI builder for Umbraco.
+description: Configuring menu actions in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Row Actions
+# Menu Actions
 
-Row actions provides an API to perform operations against individual items within a collections list view UI.
+Menu actions provides an API to perform operations from either a sections tree context menu or the actions menu of the list view / editor UI.
 
-## Defining a row action
+## Defining a menu action
 
-To define a row action you create a class that inherits from the base class `KonstruktRowAction<>` and configure it like so.
+To define a menu action you create a class that inherits from the base class `KonstruktMenuAction<>` and configure it like so.
 
 ````csharp
 // Example
-public class MyRowAction : KonstruktRowAction<KonstruktActionResult>
+public class MyMenuAction : KonstruktMenuAction<KonstruktActionResult>
 {
     public override string Icon => "icon-settings";
     public override string Alias => "myaction";
@@ -28,9 +28,9 @@ public class MyRowAction : KonstruktRowAction<KonstruktActionResult>
 
 The required configuration options are:
 
-* **Name:** The name of the row action.
-* **Alias:** A unique alias for the row action.
-* **Icon:** An icon to display next to the name in the row action button.
+* **Name:** The name of the menu action.
+* **Alias:** A unique alias for the menu action.
+* **Icon:** An icon to display next to the name in the menu action button.
 * **Execute:** The method to run against a given entity.
 
 Additional optional configuration options are:
@@ -45,38 +45,38 @@ You can use dependency injection to inject any services you require to perform y
 
 ## Controlling the action result
 
-My default, actions will return a `KonstruktActionResult` but you can return other types of result by swapping the `KonstruktRowAction<>` generic argument.
+My default, actions will return a `KonstruktActionResult` but you can return other types of result by swapping the `KonstruktMenuAction<>` generic argument.
 
 * **`KonstruktActionResult`** - Standard result with a simple boolean `Success` value.
 * **`KonstruktFileActionResult`** - Returns a file stream / bytes and triggers a download dialog.
 
 ## Capturing settings for an action
 
-Sometimes you may need to collect further user input before you can perform an action. To achieve this you can use the `KonstruktRowAction<>` base class that accepts an additional `TSetting` generic argument. 
+Sometimes you may need to collect further user input before you can perform an action. To achieve this you can use the `KonstruktMenuAction<>` base class that accepts an additional `TSetting` generic argument. 
 
 ````csharp
 // Example
-public class MyRowAction : KonstruktRowAction<MyRowActionSettings, KonstruktActionResult>
+public class MyMenuAction : KonstruktMenuAction<MyMenuActionSettings, KonstruktActionResult>
 {
     public override string Icon => "icon-settings";
     public override string Alias => "myaction";
     public override string Name => "My Action";
     public override bool ConfirmAction => true;
 
-    public override void Configure(KonstruktSettingsConfigBuilder<MyRowActionSettings> settingsConfig)
+    public override void Configure(KonstruktSettingsConfigBuilder<MyMenuActionSettings> settingsConfig)
     {
         settingsConfig.AddFielset("General", fieldsetConfig => fieldsetConfig
             .AddField(s => s.RecipientName).SetLabel("Recipient Name")
             .AddField(s => s.ReceipientEmail).SetLabel("Recipient Email"))
     }
 
-    public override KonstruktActionResult Execute(string collectionAlias, object entityId, MyRowActionSettings settings)
+    public override KonstruktActionResult Execute(string collectionAlias, object entityId, MyMenuActionSettings settings)
     {
         // Perform operation here...
     }
 }
 
-public class MyRowActionSettings
+public class MyMenuActionSettings
 {
     public string ReceipientName { get; set; }
     public string ReceipientEmail { get; set; }
@@ -87,6 +87,6 @@ By implementing this base class you are required to implement an additional `Con
 
 In addition to this `Configure` method, your `Execute` method will also now accept an additional `settings` parameter of the settings type which will be pre-populated by Konstrukt with the value entered by the user allowing you to alter your actions behaviour accordingly.
 
-## Adding a row action to a list view
+## Adding a menu action to a collection
 
-Row actions are added to a list view as part of the list view configuration. See [List View API documentation](collection-list-views.md#adding-a-row-action) for more info.
+Menu actions are added to a collection as part of the collection configuration. See [Collection API documentation](collections.md#adding-menu-actions) for more info.

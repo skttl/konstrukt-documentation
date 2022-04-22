@@ -201,42 +201,60 @@ Sets the filter where clause expression. Expression must be a `boolean` expressi
 collectionConfig.SetFilter(p => p.Current);
 ````
 
-## Defining menu items
+## Adding menu actions
 
-#### **AddContainerMenuItem&lt;TMenuItemType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+#### **AddContainerMenuAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a menu item of the given type to the collection tree node right click menu as well as the list view actions menu. See [Menu Items API documentation](menu-items.md) for more info.
+Adds a menu action of the given type to the collection tree node right click menu as well as the list view actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
 
 ````csharp
 // Example
-collectionConfig.AddContainerMenuItem<ExportMenuItem>();
+collectionConfig.AddContainerMenuAction<ExportMenuAction>();
 ````
 
-#### **AddContainerMenuItem(MenuItem menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+#### **AddContainerMenuAction(Type menuActionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds the provided menu item to the collection tree node right click menu as well as the list view actions menu. See [Menu Items API documentation](menu-items.md) for more info.
+Adds a menu action of the given type to the collection tree node right click menu as well as the list view actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
 
 ````csharp
 // Example
-collectionConfig.AddContainerMenuItem(new ExportMenuItem());
+collectionConfig.AddContainerMenuAction(typeof(ExportMenuAction));
 ````
 
-#### **AddEntityMenuItem&lt;TMenuItemType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+#### **AddContainerMenuAction(MenuAction menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a menu item of the given type to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Items API documentation](menu-items.md) for more info.
+Adds the provided menu action to the collection tree node right click menu as well as the list view actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
 
 ````csharp
 // Example
-collectionConfig.AddEntityMenuItem<ExportMenuItem>();
+collectionConfig.AddContainerMenuAction(new ExportMenuAction());
 ````
 
-#### **AddEntityMenuItem(MenuItem menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+#### **AddEntityMenuAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds the provided menu item to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Items API documentation](menu-items.md) for more info.
+Adds a menu action of the given type to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
 
 ````csharp
 // Example
-collectionConfig.AddEntityMenuItem(new ExportMenuItem());
+collectionConfig.AddEntityMenuAction<ExportMenuAction>();
+````
+
+#### **AddEntityMenuAction(Type menuActionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a menu action of the given type to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddEntityMenuAction(typeof(ExportMenuAction));
+````
+
+#### **AddEntityMenuAction(MenuAction menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds the provided menu action to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddEntityMenuAction(new ExportMenuAction());
 ````
 
 ## Showing a collection on the section dashboard

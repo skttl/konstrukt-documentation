@@ -12,11 +12,11 @@ To define a bulk action you create a class that inherits from the base class `Ko
 
 ````csharp
 // Example
-public class DeleteBulkAction : KonstruktBulkAction<KonstruktActionResult>
+public class MyBulkAction : KonstruktBulkAction<KonstruktActionResult>
 {
-    public override string Icon => "icon-trash";
-    public override string Alias => "delete";
-    public override string Name => "Delete";
+    public override string Icon => "icon-settings";
+    public override string Alias => "myaction";
+    public override string Name => "My Action";
     public override bool ConfirmAction => true;
 
     public override KonstruktActionResult Execute(string collectionAlias, object[] entityIds)
@@ -25,7 +25,6 @@ public class DeleteBulkAction : KonstruktBulkAction<KonstruktActionResult>
     }
 }
 ````
-
 
 The required configuration options are:
 
@@ -46,9 +45,47 @@ You can use dependency injection to inject any services you require to perform y
 
 ## Controlling the action result
 
-My default, actions will return a basic `KonstruktActionResult` which has a simple boolean `Success` property, but you can return other types depending on the behaviour your require.
+My default, actions will return a `KonstruktActionResult` but you can return other types of result by swapping the `KonstruktBulkAction<>` generic argument.
 
+* **`KonstruktActionResult`** - Standard result with a simple boolean `Success` value.
 * **`KonstruktFileActionResult`** - Returns a file stream / bytes and triggers a download dialog.
+
+## Capturing settings for an action
+
+Sometimes you may need to collect further user input before you can perform an action. To achieve this you can use the `KonstruktBulkAction<>` base class that accepts an additional `TSetting` generic argument. 
+
+````csharp
+// Example
+public class MyBulkdAction : KonstruktBulkAction<MyBulkdActionSettings, KonstruktActionResult>
+{
+    public override string Icon => "icon-settings";
+    public override string Alias => "myaction";
+    public override string Name => "My Action";
+    public override bool ConfirmAction => true;
+
+    public override void Configure(KonstruktSettingsConfigBuilder<MyBulkdActionSettings> settingsConfig)
+    {
+        settingsConfig.AddFielset("General", fieldsetConfig => fieldsetConfig
+            .AddField(s => s.RecipientName).SetLabel("Recipient Name")
+            .AddField(s => s.ReceipientEmail).SetLabel("Recipient Email"))
+    }
+
+    public override KonstruktActionResult Execute(string collectionAlias, object[] entityIds, MyBulkdActionSettings settings)
+    {
+        // Perform operation here...
+    }
+}
+
+public class MyBulkdActionSettings
+{
+    public string ReceipientName { get; set; }
+    public string ReceipientEmail { get; set; }
+}
+````
+
+By implementing this base class you are required to implement an additional `Configure` method which accepts a `KonstruktSettingsConfigBuilder<>` parameter. You should use this parameter calling the builders fluent API to define the settings dialog UI and how it maps to the settings type. With the settings config builder you are able to create fieldsets and fields with the same fluent API as defined in the [editor section](collection-editors.md#adding-a-fieldset-to-a-tab).
+
+In addition to this `Configure` method, your `Execute` method will also now accept an additional `settings` parameter of the settings type which will be pre-populated by Konstrukt with the value entered by the user allowing you to alter your actions behaviour accordingly.
 
 ## Adding a bulk action to a list view
 
