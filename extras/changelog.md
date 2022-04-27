@@ -14,8 +14,8 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 - Added filterable properties support
 - Fixed entity picker value converter not working
 - Depricated List View Layout support
-- **[Breaking Change]** - Obsoleted bulk actions and menu items in favour of new actions API 
-- **[Breaking Change]** - Moved actions, data views and cards configuration out of list views onto collection
+- **[Breaking]** - Obsoleted bulk actions and menu items in favour of new actions API 
+- **[Breaking]** - Moved actions, data views and cards configuration out of list views onto collection
 
 ## v1.0.2
 **Date:** 2022-04-11  
