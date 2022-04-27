@@ -21,6 +21,19 @@ collectionConfig.ListView(listViewConfig => {
 });
 ````
 
+## Adding a field to the list view
+
+#### **AddField(Lambda propertyExpression, Lambda fieldConfig = null) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Adds the given property to the list view.
+
+````csharp
+// Example
+listViewConfig.AddField(p => p.FirstName, fieldConfig => {
+    ...
+});
+````
+
 ## Changing the heading of a field
 
 #### **SetHeading(string heading) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
@@ -75,4 +88,3 @@ Sets the number of items to display per page for the given list view.
 // Example
 listViewConfig.SetPageSize(20);
 ````
-

@@ -378,19 +378,6 @@ Sets the collections data views builder which allows you to define the data view
 collectionConfig.SetDataViewsBuilder(new PersonDataViewsBuilder());
 ````
 
-## Adding a field to the collection
-
-#### **AddField(Lambda propertyExpression, Lambda fieldConfig = null) : KonstruktCollectionFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
-
-Adds the given property to the collection.
-
-````csharp
-// Example
-collectionConfig.AddField(p => p.FirstName, fieldConfig => {
-    ...
-});
-````
-
 ## Adding an action
 
 Actions allow you to perform custom tasks on one more entities in your collection. Actions can be accessed from a number of locations including the container / entity actions menu, the bulk actions bar and in indivdidual tables rows of a list view depending on the actions visibility.
