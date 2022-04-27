@@ -409,7 +409,7 @@ Adds the given action to the collection. See [Actions API documentation](actions
 collectionConfig.AddAction(action);
 ````
 
-## Controlling an actions visibility
+### Controlling an actions visibility
 
 By default actions will be hidden unless they have a default visibility set on the action definition. You can also explicitly set an actions visibility as part of the `AddAction` API.
 
@@ -493,7 +493,7 @@ Adds a card of the given type to the collection. See [Card API documentation](ca
 collectionConfig.AddCard(typeof(AvgPersonAgeCard));
 ````
 
-## Change the color of a card
+### Change the color of a card
 
 #### **SetColor(string color) : KonstruktCardConfigBuilder**
 
@@ -504,7 +504,7 @@ Sets the color of the card.
 cardConfig.SetColor("blue");
 ````
 
-## Add a suffix to a card value
+### Add a suffix to a card value
 
 #### **SetSuffix(string suffix) : KonstruktCardConfigBuilder**
 
@@ -515,7 +515,7 @@ Sets the suffix of the card value.
 cardConfig.SetSuffix("years");
 ````
 
-## Formatting the value of a card
+### Formatting the value of a card
 
 #### **SetFormat(Lambda formatExpression) : KonstruktCardConfigBuilder**
 
