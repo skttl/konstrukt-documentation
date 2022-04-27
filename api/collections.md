@@ -192,7 +192,7 @@ collectionConfig.AddFilterableProperty(p => p.FirstName, filterConfig => filterC
 );
 ````
 
-## Changing the label of a filterable property
+### Changing the label of a filterable property
 
 #### **SetLabel(string label) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
 
@@ -201,7 +201,7 @@ collectionConfig.AddFilterableProperty(p => p.FirstName, filterConfig => filterC
 filterConfig.SetLabel("First Name");
 ````
 
-## Adding a description to a filterable property
+### Adding a description to a filterable property
 
 #### **SetDescription(string description) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
 
@@ -210,7 +210,7 @@ filterConfig.SetLabel("First Name");
 filterConfig.SetDescription("The first name of the person");
 ````
 
-## Defining basic options for a filterable property
+### Defining basic options for a filterable property
 
 #### **SetOptions(IDictionary&lt;TValueType, string&gt; options) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
 
@@ -222,7 +222,7 @@ filterConfig.SetOptions(new Dictionary<string, string> {
 });
 ````
 
-## Defining options with custom compare clauses for a filterable property
+### Defining options with custom compare clauses for a filterable property
 
 #### **AddOption(object key, string label, Lambda compareExpresion) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
 
@@ -231,7 +231,7 @@ filterConfig.SetOptions(new Dictionary<string, string> {
 filterConfig.AddOption("Option1", "Option One", (val) => val != "Option Two");
 ````
 
-## Configuring the mode of a filterable property
+### Configuring the mode of a filterable property
 
 For filterable properties with options you can configure whether the options should be multiple or single choice.
 
