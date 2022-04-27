@@ -27,7 +27,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Sections | Yes | Yes - Requies custom tree controller |
 | Section Dashboard | Yes | Yes |
 | Cards | Yes | No |
-| List View Filters | Yes | Yes |
+| List View Filters | Yes - Data Views and Property Filters | Yes - Dropdown filter only |
 | List View Field Views | Yes | Yes |
 | Field Editors | Konstrukt re-uses Umbraco property editors and so can use the full suite of core and community property editors | Limited to a set of UI-O-Matic provided editors |
 | Editor Organisation Structures | Tabs + Fieldsets | Tabs |

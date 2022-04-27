@@ -177,6 +177,71 @@ Adds the given property to the searchable properties collection. Property must b
 collectionConfig.AddSearchableProperty(p => p.FirstName);
 ````
 
+## Defining filterable properties
+
+Konstrukt will use filterable properties to dynamically build a filter dialog choosing an appropriate editor view for the property. Property of a number or date types will become range pickers, enums and properties with options defined will become select / checkbox lists and all other properties will become text input filters.
+
+#### **AddFilterableProperty(Lambda filterablePropertyExpression, Lambda filterConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds the given property to the filterable properties collection.
+
+````csharp
+// Example
+collectionConfig.AddFilterableProperty(p => p.FirstName, filterConfig => filterConfig 
+    // ...
+);
+````
+
+## Changing the label of a filterable property
+
+#### **SetLabel(string label) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+````csharp
+// Example
+filterConfig.SetLabel("First Name");
+````
+
+## Adding a description to a filterable property
+
+#### **SetDescription(string description) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+````csharp
+// Example
+filterConfig.SetDescription("The first name of the person");
+````
+
+## Defining basic options for a filterable property
+
+#### **SetOptions(IDictionary&lt;TValueType, string&gt; options) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+````csharp
+// Example
+filterConfig.SetOptions(new Dictionary<string, string> {
+    { "Option1", "Option One" },
+    { "Option2", "Option Two" }
+});
+````
+
+## Defining options with custom compare clauses for a filterable property
+
+#### **AddOption(object key, string label, Lambda compareExpresion) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+````csharp
+// Example
+filterConfig.AddOption("Option1", "Option One", (val) => val != "Option Two");
+````
+
+## Configuring the mode of a filterable property
+
+For filterable properties with options you can configure whether the options should be multiple or single choice.
+
+#### **SetMode(KonstruktFilterMode mode) : KonstruktFilterablePropertyConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+````csharp
+// Example
+filterConfig.SetMode(KonstruktFilterMode.MultipleChoice);
+````
+
 ## Defining encrypted properties
 
 #### **AddEncryptedProperty(Lambda encryptedPropertyExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
@@ -201,61 +266,6 @@ Sets the filter where clause expression. Expression must be a `boolean` expressi
 collectionConfig.SetFilter(p => p.Current);
 ````
 
-## Adding menu actions
-
-#### **AddContainerMenuAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Adds a menu action of the given type to the collection tree node right click menu as well as the list view actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
-
-````csharp
-// Example
-collectionConfig.AddContainerMenuAction<ExportMenuAction>();
-````
-
-#### **AddContainerMenuAction(Type menuActionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Adds a menu action of the given type to the collection tree node right click menu as well as the list view actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
-
-````csharp
-// Example
-collectionConfig.AddContainerMenuAction(typeof(ExportMenuAction));
-````
-
-#### **AddContainerMenuAction(MenuAction menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Adds the provided menu action to the collection tree node right click menu as well as the list view actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
-
-````csharp
-// Example
-collectionConfig.AddContainerMenuAction(new ExportMenuAction());
-````
-
-#### **AddEntityMenuAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Adds a menu action of the given type to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
-
-````csharp
-// Example
-collectionConfig.AddEntityMenuAction<ExportMenuAction>();
-````
-
-#### **AddEntityMenuAction(Type menuActionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Adds a menu action of the given type to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
-
-````csharp
-// Example
-collectionConfig.AddEntityMenuAction(typeof(ExportMenuAction));
-````
-
-#### **AddEntityMenuAction(MenuAction menuItem) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Adds the provided menu action to the entity tree node right click menu as well as the entity editor actions menu. See [Menu Actions API documentation](menu-actions.md) for more info.
-
-````csharp
-// Example
-collectionConfig.AddEntityMenuAction(new ExportMenuAction());
-````
 
 ## Showing a collection on the section dashboard
 
@@ -319,15 +329,225 @@ Disables the option to delete entities on the current collection. Useful if the 
 collectionConfig.DisableDelete();
 ````
 
+## Defining data views
+
+Data views allow you to define multiple, pre-filtered views of the same data source which can be toggled between via the collection UI. This can be useful when entities exist in different states and you want a way to toggle between them.
+
+#### **AddDataView(string name, Lambda whereClauseExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a data view with the given name and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+collectionConfig.AddDataView("Active", p => p.IsActive);
+````
+
+#### **AddDataView(string group, string name, Lambda whereClauseExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a data view with the given group, name and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+collectionConfig.AddDataView("Status", "Active", p => p.IsActive);
+````
+
+#### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+
+````csharp
+// Example
+collectionConfig.SetDataViewsBuilder<PersonDataViewsBuilder>();
+````
+
+#### **SetDataViewsBuilder(Type dataViewsBuilderType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+
+````csharp
+// Example
+collectionConfig.SetDataViewsBuilder(typeof(PersonDataViewsBuilder));
+````
+
+#### **SetDataViewsBuilder(KonstruktDataViewsBuilder&lt;TEntityType&gt; dataViewsBuilder) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+
+````csharp
+// Example
+collectionConfig.SetDataViewsBuilder(new PersonDataViewsBuilder());
+````
+
+## Adding a field to the collection
+
+#### **AddField(Lambda propertyExpression, Lambda fieldConfig = null) : KonstruktCollectionFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Adds the given property to the collection.
+
+````csharp
+// Example
+collectionConfig.AddField(p => p.FirstName, fieldConfig => {
+    ...
+});
+````
+
+## Adding an action
+
+Actions allow you to perform custom tasks on one more entities in your collection. Actions can be accessed from a number of locations including the container / entity actions menu, the bulk actions bar and in indivdidual tables rows of a list view depending on the actions visibility.
+
+#### **AddAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds an action of the given type to the collection. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction<ExportMenuAction>();
+````
+
+#### **AddAction(Type actionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds an action of the given type to the collection. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction(actionType);
+````
+
+#### **AddAction(IKonstruktAction action) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds the given action to the collection. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction(action);
+````
+
+## Controlling an actions visibility
+
+By default actions will be hidden unless they have a default visibility set on the action definition. You can also explicitly set an actions visibility as part of the `AddAction` API.
+
+#### **AddAction&lt;TMenuActionType&gt;(Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds an action of the given type to the collection with the given visibility. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction<ExportMenuAction>(actionConfig => actionConfig
+    .SetVisibility(x => x.ActionType == KonstruktActionType.Bulk 
+        || x.ActionType == KonstruktActionType.Row)
+);
+````
+
+#### **AddAction(Type actionType, Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds an action of the given type to the collection with the given visibility. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction(typeof(ExportMenuAction), actionConfig => actionConfig
+    .SetVisibility(x => x.ActionType == KonstruktActionType.Bulk 
+        || x.ActionType == KonstruktActionType.Row)
+);
+````
+
+#### **AddAction(IKonstruktAction action, Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds the given action to the collection with the given visibility. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction(action, actionConfig => actionConfig
+    .SetVisibility(x => x.ActionType == KonstruktActionType.Bulk 
+        || x.ActionType == KonstruktActionType.Row)
+);
+````
+
+## Adding a card to a collection
+
+Cards allow you to display simple summaries of key information that may be useful to the editor.
+
+#### **AddCard(string name, Lambda whereClauseExpression, Lambda cardConfig = null) : KonstruktCardConfigBuilder**
+
+Adds a card with the given name and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+collectionConfig.AddCard("Older than 30", p => p.Age > 30, cardConfig => {
+    ...
+});
+````
+
+#### **AddCard(string name, string icon, Lambda whereClauseExpression, Lambda cardConfig = null) : KonstruktCardConfigBuilder**
+
+Adds a card with the given name + icon and where clause filter expression. Expression must be a `boolean` expression.
+
+````csharp
+// Example
+collectionConfig.AddCard("Older than 30", "icon-umb-users", p => p.Age > 30, cardConfig => {
+    ...
+});
+````
+
+#### **AddCard<TCardType>() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a card of the given type to the collection. See [Card API documentation](cards.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddCard<AvgPersonAgeCard>();
+````
+
+#### **AddCard(Type cardType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a card of the given type to the collection. See [Card API documentation](cards.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddCard(typeof(AvgPersonAgeCard));
+````
+
+## Change the color of a card
+
+#### **SetColor(string color) : KonstruktCardConfigBuilder**
+
+Sets the color of the card.
+
+````csharp
+// Example
+cardConfig.SetColor("blue");
+````
+
+## Add a suffix to a card value
+
+#### **SetSuffix(string suffix) : KonstruktCardConfigBuilder**
+
+Sets the suffix of the card value.
+
+````csharp
+// Example
+cardConfig.SetSuffix("years");
+````
+
+## Formatting the value of a card
+
+#### **SetFormat(Lambda formatExpression) : KonstruktCardConfigBuilder**
+
+Sets the format expression for the card.
+
+````csharp
+// Example
+cardConfig.SetFormat((v) => $"{v}%");
+````
+
 ## Configuring the collection list view
 
-#### **ListView(Lambda listViewConfig = null) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
+#### **ListView(Lambda collectionConfig = null) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 
 Accesses the list view config of the current collection. See [List View API documentation](collection-list-views.md) for more info.
 
 ````csharp
 // Example
-collectionConfig.ListView(listViewConfig => {
+collectionConfig.ListView(collectionConfig => {
     ...
 });
 ````
