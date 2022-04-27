@@ -331,7 +331,7 @@ collectionConfig.DisableDelete();
 
 ## Defining data views
 
-Data views allow you to define multiple, pre-filtered views of the same data source which can be toggled between via the collection UI. This can be useful when entities exist in different states and you want a way to toggle between them.
+Data views allow you to define multiple, pre-filtered views of the same data source. This can be useful when entities exist in different states and you want a way to toggle between them.
 
 #### **AddDataView(string name, Lambda whereClauseExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
