@@ -4,7 +4,7 @@ description: Configuring data views builders in Konstrukt, the back office UI bu
 
 # Data Views Builders
 
-Data views builders allow you to create a collection list views data views list dynamically at run time. By default Konstrukt will use the hard coded data views defined in your Konstrukt config, however if you need to build your data views list dynamically, then is is when you'd use a data views builder.
+Data views builders allow you to create a collection data views list dynamically at run time. By default Konstrukt will use the hard coded data views defined in your Konstrukt config, however if you need to build your data views list dynamically, then is is when you'd use a data views builder.
 
 When Konstrukt resolves a data views builder it will attempt to do so from the global DI container which means you can inject amy dependencies that you require for your builder. If there is no such type defined in the DI container, Konstrukt will then fallback to maually instantiating a new instance of the data views builder.
 
@@ -33,6 +33,6 @@ The required methods are:
 * **GetDataViews:** Returns the list of data views to choose from.
 * **GetDataViewWhereClause:** Returns the boolean where clause expression for the given data views alias.
 
-## Setting the data views builder of a list view
+## Setting the data views builder of a collection
 
-A data views builder is assigned to a list view as part of the list view configuration. See [List View API Documentation](collection-list-views.md#defining-data-views) for more info.
+A data views builder is assigned to a collection as part of the collection configuration. See [Collections API Documentation](collections.md#defining-data-views) for more info.
