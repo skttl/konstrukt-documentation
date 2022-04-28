@@ -4,7 +4,7 @@ description: Configuring repositories in Konstrukt, the back office UI builder f
 
 # Repositories
 
-Repositories are used by Konstrukt to access the entity data stores. By default, collections will use a generic built in PetaPoco repository however you can define your own repository implementation should you wish to store your entities via an alternative strategy.
+Repositories are used by Konstrukt to access the entity data stores. By default, collections will use a generic built in NPoco repository however you can define your own repository implementation should you wish to store your entities via an alternative strategy.
 
 ## Defining a repository
 
