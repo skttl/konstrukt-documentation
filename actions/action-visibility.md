@@ -35,7 +35,7 @@ By default actions will be hidden unless they have a default visibility set on t
 
 #### **AddAction&lt;TMenuActionType&gt;(Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds an action of the given type to the collection with the given visibility. See [Actions API documentation](actions.md) for more info.
+Adds an action of the given type to the collection with the given visibility.
 
 ````csharp
 // Example
@@ -47,7 +47,7 @@ collectionConfig.AddAction<ExportMenuAction>(actionConfig => actionConfig
 
 #### **AddAction(Type actionType, Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds an action of the given type to the collection with the given visibility. See [Actions API documentation](actions.md) for more info.
+Adds an action of the given type to the collection with the given visibility.
 
 ````csharp
 // Example
@@ -59,7 +59,7 @@ collectionConfig.AddAction(typeof(ExportMenuAction), actionConfig => actionConfi
 
 #### **AddAction(IKonstruktAction action, Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds the given action to the collection with the given visibility. See [Actions API documentation](actions.md) for more info.
+Adds the given action to the collection with the given visibility.
 
 ````csharp
 // Example
