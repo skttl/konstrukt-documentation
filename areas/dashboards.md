@@ -81,7 +81,7 @@ Dashboards are only able to display a single collection. If you need to display 
 
 #### **SetCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktContextAppConfigBuilder**
 
-Sets the collection of the current dashboard with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](../collections/overview.md) for more info.
+Sets the collection of the current dashboard with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example
@@ -92,7 +92,7 @@ dashboardConfig.SetCollection<Comment>(p => p.Id, p=> "Team Member", "Team Membe
 
 #### **SetCollection&lt;TEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : KonstruktContextAppConfigBuilder**
 
-Sets the collection of the current dashboard with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](../collections/overview.md) for more info.
+Sets the collection of the current dashboard with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example

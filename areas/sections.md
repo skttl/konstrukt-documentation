@@ -60,7 +60,7 @@ sectionConfig.SetAlias("repositories");
 
 #### **Tree(Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
 
-Accesses the tree config of the current section. See [Trees API documentation](trees.md) for more info.
+Accesses the tree config of the current section. See [Trees documentation](trees.md) for more info.
 
 ````csharp
 // Example

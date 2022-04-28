@@ -36,7 +36,7 @@
 ## Searching
 
 * [Overview](searching/overview.md)
-* [Searchable Properties](collections/searchable-properties.md)
+* [Searchable Properties](searching/searchable-properties.md)
 
 ## Filtering
 
@@ -54,8 +54,8 @@
 ## Cards
 
 * [Overview](cards/overview.md)
-* [Inline Cards](actions/inline-cards.md)
-* [Complex Cards](actions/complex-cards.md)
+* [Inline Cards](cards/inline-cards.md)
+* [Complex Cards](cards/complex-cards.md)
 
 ## Property Editors
 

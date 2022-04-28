@@ -25,7 +25,7 @@ sectionConfig.Tree(treeConfig => {
 
 #### **AddFolder(string name, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
-Adds a folder to the current tree with the given name and a default folder icon. See the [Folders API documentation](folders.md) for more info.
+Adds a folder to the current tree with the given name and a default folder icon. See the [Folders documentation](folders.md) for more info.
 
 ```csharp
 // Example
@@ -36,7 +36,7 @@ treeConfig.AddFolder("Settings", folderConfig => {
 
 #### **AddFolder(string name, string icon, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
-Adds a folder to the current tree with the given name + icon. See the [Folders API documentation](folders.md) for more info.
+Adds a folder to the current tree with the given name + icon. See the [Folders documentation](folders.md) for more info.
 
 ```csharp
 // Example
@@ -49,7 +49,7 @@ treeConfig.AddFolder("Settings", "icon-settings", folderConfig => {
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a collection to the current tree with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](../collections/overview.md) for more info.
+Adds a collection to the current tree with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example
@@ -60,7 +60,7 @@ treeConfig.AddCollection<Person>(p => p.Id, "Person", "People", "A collection of
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a collection to the current tree with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections API documentation](../collections/overview.md) for more info.
+Adds a collection to the current tree with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example
