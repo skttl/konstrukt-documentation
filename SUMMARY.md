@@ -43,6 +43,7 @@
 * [Overview](filtering/overview.md)
 * [Global Filters](filtering/global-filters.md)
 * [Data Views](filtering/data-views.md)
+* [Data Views Builders](filtering/data-views-builders.md)
 * [Filterable Properties](filtering/filterable-properties.md)
 
 ## Actions

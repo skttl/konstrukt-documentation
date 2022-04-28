@@ -37,7 +37,7 @@ The required methods are:
 
 #### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+Sets the collections data views builder which allows you to define the data views dynamically at run time.
 
 ````csharp
 // Example
@@ -46,7 +46,7 @@ collectionConfig.SetDataViewsBuilder<PersonDataViewsBuilder>();
 
 #### **SetDataViewsBuilder(Type dataViewsBuilderType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+Sets the collections data views builder which allows you to define the data views dynamically at run time. 
 
 ````csharp
 // Example
@@ -55,7 +55,7 @@ collectionConfig.SetDataViewsBuilder(typeof(PersonDataViewsBuilder));
 
 #### **SetDataViewsBuilder(KonstruktDataViewsBuilder&lt;TEntityType&gt; dataViewsBuilder) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+Sets the collections data views builder which allows you to define the data views dynamically at run time.
 
 ````csharp
 // Example
