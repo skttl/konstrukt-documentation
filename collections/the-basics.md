@@ -56,19 +56,6 @@ Sets the collection icon color to the given color.  Possible options are `black`
 collectionConfig.SetIconColor("blue");
 ````
 
-## Changing a collection connection string
-
-By default Konstrukt will use the Umbraco connection string for it's database connection however you can change this by calling the `SetConnectionString` method on a `Collection` config builder instance.
-
-#### **SetConnectionString(string connectionStringName) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets the connection string name for the given collection repository.
-
-````csharp
-// Example
-collectionConfig.SetConnectionString("myConnectionStringName");
-````
-
 ## Defining an entity name
 
 Within Umbraco it is expected that an entity has a name property so we need to let Konstrukt know which property to use for the name or if our entity doesn't have a single name property, then how to construct a name from an entities other properties. We do this by using either the `SetNameProperty` or `SetNameFormat` methods on a `Collection` config builder instance.
@@ -180,4 +167,17 @@ Sets the collection as read only and disables any CRUD operations from being per
 ````csharp
 // Example
 collectionConfig.MakeReadOnly();
+````
+
+## Changing a collection connection string
+
+By default Konstrukt will use the Umbraco connection string for it's database connection however you can change this by calling the `SetConnectionString` method on a `Collection` config builder instance.
+
+#### **SetConnectionString(string connectionStringName) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the connection string name for the given collection repository.
+
+````csharp
+// Example
+collectionConfig.SetConnectionString("myConnectionStringName");
 ````
