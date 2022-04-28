@@ -8,8 +8,6 @@ There are a number of areas of the Umbraco UI that Konstrukt can be injected int
 
 Choose an area type in the list below to find out more.
 
-## Choose your area type
-
 {% content-ref url="sections.md" %}
 [sections.md](sections.md)
 {% endcontent-ref %}
