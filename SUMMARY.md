@@ -8,7 +8,6 @@
 * [Installation](getting-started/installation.md)
 * [Configuration](getting-started/configuration.md)
 * [User Interface](getting-started/user-interface.md)
-* [Conventions](getting-started/conventions.md)
 
 ## Guides
 
@@ -73,6 +72,7 @@
 
 ## Extras
 
+* [Conventions](extras/conventions.md)
 * [Umbraco Aliases](extras/umbraco-aliases.md)
 * [Konstrukt vs UI-O-Matic](extras/konstrukt-vs-uiomatic.md)
 * [Known Issues](extras/known-issues.md)
