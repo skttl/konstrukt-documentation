@@ -45,7 +45,7 @@ Additional optional configuration options are:
 
 #### **AddCard<TCardType>() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a card of the given type to the collection. See [Card API documentation](cards.md) for more info.
+Adds a card of the given type to the collection.
 
 ````csharp
 // Example
@@ -54,7 +54,7 @@ collectionConfig.AddCard<AvgPersonAgeCard>();
 
 #### **AddCard(Type cardType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a card of the given type to the collection. See [Card API documentation](cards.md) for more info.
+Adds a card of the given type to the collection.
 
 ````csharp
 // Example
