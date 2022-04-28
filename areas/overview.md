@@ -9,11 +9,9 @@ There are a number of areas of the Umbraco UI that Konstrukt can be injected int
 {% content-ref url="sections.md" %}
 [sections.md](sections.md)
 {% endcontent-ref %}
-
 {% content-ref url="dashboards.md" %}
 [dashboards.md](dashboards.md)
 {% endcontent-ref %}
-
 {% content-ref url="context-apps.md" %}
 [context-apps.md](context-apps.md)
 {% endcontent-ref %}
