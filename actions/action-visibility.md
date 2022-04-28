@@ -29,7 +29,7 @@ public class MyAction : KonstruktAction<KonstruktActionResult>
 The `IsVisible` method is passed a `KonstruktActionVisibilityContext` which contains an `ActionType` attribute defining the type of action that triggered this action handler to run as well as a `UserGroups` collection to allow you to manage visibility based on user permissions. You should use the information present in the `KonstruktActionVisibilityContext` object to decide whether the action should display, returning `true` if it should, or `false` if it should not. 
 
 
-### Overriding an actions visibility
+## Overriding an actions visibility
 
 By default actions will be hidden unless they have a default visibility set on the action definition. You can also explicitly set an actions visibility as part of the `AddAction` API.
 
