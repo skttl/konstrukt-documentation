@@ -69,28 +69,6 @@ Sets the connection string name for the given collection repository.
 collectionConfig.SetConnectionString("myConnectionStringName");
 ````
 
-## Changing a collection repository implementation
-
-By default Konstrukt will use a PetaPoco based repository for storing and fetching entities however you can implement your own repository should you need to store your entities via another strategy. To change the repository implementation used by a collection you can use the `SetRepositoryType` method. See [Repositories API documentation](repositories.md) for more info.
-
-#### **SetRepositoryType&lt;TRepositoryType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets the repository type to the given type for the current collection.
-
-````csharp
-// Example
-collectionConfig.SetRepositoryType<PersonRepositoryType>();
-````
-
-#### **SetRepositoryType(Type repositoryType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets the repository type to the given type for the current collection.
-
-````csharp
-// Example
-collectionConfig.SetRepositoryType(typeof(PersonRepositoryType));
-````
-
 ## Defining an entity name
 
 Within Umbraco it is expected that an entity has a name property so we need to let Konstrukt know which property to use for the name or if our entity doesn't have a single name property, then how to construct a name from an entities other properties. We do this by using either the `SetNameProperty` or `SetNameFormat` methods on a `Collection` config builder instance.

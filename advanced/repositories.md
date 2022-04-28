@@ -90,3 +90,24 @@ public class MyController : Controller
 }
 ````
 
+## Changing a collections repository implementation
+
+By default Konstrukt will use a PetaPoco based repository for storing and fetching entities however you can implement your own repository should you need to store your entities via another strategy. To change the repository implementation used by a collection you can use the `SetRepositoryType` method. 
+
+#### **SetRepositoryType&lt;TRepositoryType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the repository type to the given type for the current collection.
+
+````csharp
+// Example
+collectionConfig.SetRepositoryType<PersonRepositoryType>();
+````
+
+#### **SetRepositoryType(Type repositoryType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the repository type to the given type for the current collection.
+
+````csharp
+// Example
+collectionConfig.SetRepositoryType(typeof(PersonRepositoryType));
+````
