@@ -2,9 +2,7 @@
 description: Configuring actions in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Actions
-
-Actions provides an API to perform custom taks against a collection and it's entities from various locations in the UI, be that menu actions, bulk actions or individual table row actions.
+# The Basics
 
 ## Defining an action
 
@@ -42,26 +40,6 @@ The generic argument is a return type for the action. See [Controlling the actio
 {% hint style="info" %}
 You can use dependency injection to inject any services you require to perform your specific task. When injecting dependencies, it's always recomended that you inject `Lazy<YourService>` implementations of the required services to ensure they are only resolved when needed.
 {% endhint %}
-
-## Controlling the default action visibility
-
-Actions are not visible in the UI by default untill their visibility is configured. This can be done either at the action level, or at the registration level when adding the action to a collection. To define the default visbility of an action at the action level you can do this by overriding the `IsVisible` method of the `KonstruktAction<>` base class.
-
-````csharp
-// Example
-public class MyAction : KonstruktAction<KonstruktActionResult>
-{
-    ...
-    public override bool IsVisible(KonstruktActionVisibilityContext ctx)
-    {
-        return ctx.ActionType == KonstruktActionType.Bulk 
-            || ctx.ActionType == KonstruktActionType.Row;
-    }
-    ...
-}
-````
-
-The `IsVisible` method is passed a `KonstruktActionVisibilityContext` which contains an `ActionType` attribute defining the type of action that triggered this action handler to run as well as a `UserGroups` collection to allow you to manage visibility based on user permissions. You should use the information present in the `KonstruktActionVisibilityContext` object to decide whether the action should display, returning `true` if it should, or `false` if it should not. 
 
 ## Controlling the action result
 
@@ -109,4 +87,29 @@ In addition to this `Configure` method, your `Execute` method will also now acce
 
 ## Adding an action to a collection
 
-Actions are added to a collection as part of the collection configuration. See [Collections API documentation](collections.md#adding-an-action) for more info.
+#### **AddAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds an action of the given type to the collection. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction<ExportMenuAction>();
+````
+
+#### **AddAction(Type actionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds an action of the given type to the collection. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction(actionType);
+````
+
+#### **AddAction(IKonstruktAction action) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds the given action to the collection. See [Actions API documentation](actions.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddAction(action);
+````
