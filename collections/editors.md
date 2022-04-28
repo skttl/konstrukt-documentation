@@ -167,32 +167,3 @@ Set the data type of the current field to the Umbraco data type with the given i
 // Example
 fieldConfig.SetDataType(-88);
 ````
-
-## Setting a field value mapper
-
-#### **SetValueMapper&lt;TMapperType&gt;() : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
-
-Set the value mapper for the current field. See [Value Mapper API documentation](value-mappers.md) for more info.
-
-````csharp
-// Example
-fieldConfig.SetValueMapper<MyValueMapper>();
-````
-
-#### **SetValueMapper(Type mapperType) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
-
-Set the value mapper for the current field. See [Value Mapper API documentation](value-mappers.md) for more info.
-
-````csharp
-// Example
-fieldConfig.SetValueMapper(typeof(MyValueMapper));
-````
-
-#### **SetValueMapper(KonstruktMapper mapper) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
-
-Set the value mapper for the current field. See [Value Mapper API documentation](value-mappers.md) for more info.
-
-````csharp
-// Example
-fieldConfig.SetValueMapper(new MyValueMapper());
-````

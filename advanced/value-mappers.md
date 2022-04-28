@@ -30,6 +30,33 @@ public class MyValueMapper : KonstruktValueMapper
 }
 ````
 
-## Setting a mapper on a field
+## Setting a field value mapper
 
-A mapper is assigned to a field as part of the editor configuration. See [Editor API Documentation](collection-editors.md#setting-a-field-value-mapper) for more info.
+Value mappers are defined as part of a collection editor field configuration.
+
+#### **SetValueMapper&lt;TMapperType&gt;() : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Set the value mapper for the current field.
+
+````csharp
+// Example
+fieldConfig.SetValueMapper<MyValueMapper>();
+````
+
+#### **SetValueMapper(Type mapperType) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Set the value mapper for the current field. 
+
+````csharp
+// Example
+fieldConfig.SetValueMapper(typeof(MyValueMapper));
+````
+
+#### **SetValueMapper(KonstruktMapper mapper) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Set the value mapper for the current field.
+
+````csharp
+// Example
+fieldConfig.SetValueMapper(new MyValueMapper());
+````
