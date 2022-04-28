@@ -34,7 +34,7 @@ collectionConfig.AddCard("Older than 30", "icon-umb-users", p => p.Age > 30, car
 });
 ````
 
-### Change the color of a card
+### Change the color of an inline card
 
 #### **SetColor(string color) : KonstruktCardConfigBuilder**
 
@@ -45,7 +45,7 @@ Sets the color of the card.
 cardConfig.SetColor("blue");
 ````
 
-### Add a suffix to a card value
+### Add a suffix to an inline value
 
 #### **SetSuffix(string suffix) : KonstruktCardConfigBuilder**
 
@@ -56,7 +56,7 @@ Sets the suffix of the card value.
 cardConfig.SetSuffix("years");
 ````
 
-### Formatting the value of a card
+### Formatting the value of an inline
 
 #### **SetFormat(Lambda formatExpression) : KonstruktCardConfigBuilder**
 
