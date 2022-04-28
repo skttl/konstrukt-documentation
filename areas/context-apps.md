@@ -119,7 +119,7 @@ Context apps can consist of one or more collections. If a context app contains m
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktContextAppConfigBuilder**
 
-Adds a collection to the current contect app with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](collections.md) for more info.
+Adds a collection to the current contect app with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example
@@ -130,7 +130,7 @@ contextAppConfig.AddCollection<Comment>(p => p.Id, p=> "Comment", "Comments", "A
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : KonstruktContextAppConfigBuilder**
 
-Adds a collection to the current context app with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](collections.md) for more info.
+Adds a collection to the current context app with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. A foreign key property accessor is also required so that Konstrukt knows which property holds the Umbraco nodes UDI value. See the [Collections API documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example

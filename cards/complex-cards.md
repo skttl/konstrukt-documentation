@@ -1,10 +1,10 @@
 ---
-description: Configuring cards in Konstrukt, the back office UI builder for Umbraco.
+description: Configuring complex cards in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Cards
+# Complex Cards
 
-Cards provide an API to display simple summary info in a card based format. Simple cards can be defined inline as part of the [Collections API](collections.md#adding-a-card-to-a-collection) or can be defined using a `KonstruktCard` type to allow more control over the card value calculation.
+Complex cards allow you to perform more complex metric calculations and are defined via a class implementing the `KonstruktCard` base class.
 
 When Konstrukt resolves a card it will attempt to do so from the global DI container which means you can inject amy dependencies that you require for your card to calculate it's value. If there is no such type defined in the DI container, Konstrukt will then fallback to maually instantiating a new instance of the card.
 
@@ -41,6 +41,22 @@ Additional optional configuration options are:
 * **Color:** The color of the card.
 * **Suffix:** A suffix to display after the card value.
 
-## Adding a card to a collection
+## Adding a complex card to a collection
 
-A card is assigned to a collection as part of the collection configuration. See [Collections API Documentation](collections.md#adding-a-card-to-a-collection) for more info.
+#### **AddCard<TCardType>() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a card of the given type to the collection. See [Card API documentation](cards.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddCard<AvgPersonAgeCard>();
+````
+
+#### **AddCard(Type cardType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Adds a card of the given type to the collection. See [Card API documentation](cards.md) for more info.
+
+````csharp
+// Example
+collectionConfig.AddCard(typeof(AvgPersonAgeCard));
+````

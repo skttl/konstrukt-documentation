@@ -35,4 +35,29 @@ The required methods are:
 
 ## Setting the data views builder of a collection
 
-A data views builder is assigned to a collection as part of the collection configuration. See [Collections API Documentation](collections.md#defining-data-views) for more info.
+#### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+
+````csharp
+// Example
+collectionConfig.SetDataViewsBuilder<PersonDataViewsBuilder>();
+````
+
+#### **SetDataViewsBuilder(Type dataViewsBuilderType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+
+````csharp
+// Example
+collectionConfig.SetDataViewsBuilder(typeof(PersonDataViewsBuilder));
+````
+
+#### **SetDataViewsBuilder(KonstruktDataViewsBuilder&lt;TEntityType&gt; dataViewsBuilder) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collections data views builder which allows you to define the data views dynamically at run time. See [Data Views Builders API documentation](data-views-builders.md) for more info.
+
+````csharp
+// Example
+collectionConfig.SetDataViewsBuilder(new PersonDataViewsBuilder());
+````
