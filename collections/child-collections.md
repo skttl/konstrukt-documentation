@@ -12,7 +12,7 @@ A child collection is a container for a given data model that is tied to a paren
 
 ## Defining a child collection
 
-You define a child collection by calling one of the `AddChildCollection` methods on a given [`Collection`](collections.md) config builder instance.
+You define a child collection by calling one of the `AddChildCollection` methods on a given collection config builder instance.
 
 #### **AddChildCollection&lt;TChildEntityType&gt;(Lambda idFieldExpression, Lambda fkFieldExpression, string nameSingular, string namePlural, string description, Lambda childCollectionConfig = null) : KonstruktChildCollectionConfigBuilder&lt;TEntityType&gt;**
 
@@ -38,4 +38,4 @@ collectionConfig.AddChildCollection<Child>(c => c.Id, c => c.ParentId, "Child", 
 
 ## Configuring a child collection
 
-Child collections share the same API as the `Collection` config builder API, except child collections cannot contain further child collections. Please see the [Collections API documentation](collections.md) for more info.
+Child collections share the same API as the `Collection` config builder API, except child collections cannot contain further child collections. Please see the [core collections documentation](the-basics.md) for more info.
