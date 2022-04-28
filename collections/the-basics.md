@@ -102,6 +102,15 @@ Sets which property of our entity to sort against, defaulting to ascending sort 
 collectionConfig.SetSortProperty(p => p.FirstName);
 ````
 
+#### **SetSortProperty(Lambda sortPropertyExpression, SortDirection sortDirection) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets which property of our entity to sort against in the provided sort direction.
+
+````csharp
+// Example
+collectionConfig.SetSortProperty(p => p.FirstName, SortDirection.Descending);
+````
+
 ## Defining time stamp properties
 
 #### **SetDateCreatedProperty(Lambda dateCreatedProperty) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
@@ -133,15 +142,6 @@ Sets which property of our entity to use as the deleted property flag. Property 
 ````csharp
 // Example
 collectionConfig.SetDeletedProperty(p => p.Deleted);
-````
-
-#### **SetSortProperty(Lambda sortPropertyExpression, SortDirection sortDirection) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets which property of our entity to sort against in the provided sort direction.
-
-````csharp
-// Example
-collectionConfig.SetSortProperty(p => p.FirstName, SortDirection.Descending);
 ````
 
 ## Controlling the ability to create, update or delete a collections entities
