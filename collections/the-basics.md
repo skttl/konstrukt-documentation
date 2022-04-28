@@ -144,7 +144,7 @@ Sets which property of our entity to use as the deleted property flag. Property 
 collectionConfig.SetDeletedProperty(p => p.Deleted);
 ````
 
-## Controlling the ability to create, update or delete a collections entities
+## Disabling create, update or delete features
 
 #### **DisableCreate() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
