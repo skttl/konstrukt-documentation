@@ -6,7 +6,7 @@ description: Configuring filterable properties in Konstrukt, the back office UI 
 
 Konstrukt can dynamically build a filter dialog choosing appropriate editor views for you based on a simple property configuration. Properties of a number or date types will become range pickers, enums and properties with options defined will become select / checkbox lists and all other properties will become text input filters.
 
-![Cards](../images/cards.png)
+![Filterable Properties](../images/filterable_properties.png)
 
 {% hint style="info" %}
 **Work in Progress:** The documentation for this page is currently in progress.
