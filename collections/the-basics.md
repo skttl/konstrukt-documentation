@@ -91,6 +91,17 @@ Sets a format expression to use to dynamically create a label for the entity in 
 collectionConfig.SetNameFormat(p => $"{p.FirstName} {p.LastName}");
 ````
 
+## Defining a default sort order
+
+#### **SetSortProperty(Lambda sortPropertyExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets which property of our entity to sort against, defaulting to ascending sort direction.
+
+````csharp
+// Example
+collectionConfig.SetSortProperty(p => p.FirstName);
+````
+
 ## Defining time stamp properties
 
 #### **SetDateCreatedProperty(Lambda dateCreatedProperty) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
@@ -111,7 +122,7 @@ Sets which property of our entity to use as the date modified property. Property
 collectionConfig.SetDateModifiedProperty(p => p.DateModified);
 ````
 
-## Defining a deleted flag
+## Configuring soft deletes
 
 By default in Konstrukt any entity that is deleted via the Konstrukt repository is completely removed from the system. In some occasions however you may wish to keep the records in the data repository but just mark them as deleted so that they don't appear in the UI. This is where the `SetDeletedProperty` method comes in handy.
 
@@ -124,17 +135,6 @@ Sets which property of our entity to use as the deleted property flag. Property 
 collectionConfig.SetDeletedProperty(p => p.Deleted);
 ````
 
-## Defining a default sort order
-
-#### **SetSortProperty(Lambda sortPropertyExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets which property of our entity to sort against, defaulting to ascending sort direction.
-
-````csharp
-// Example
-collectionConfig.SetSortProperty(p => p.FirstName);
-````
-
 #### **SetSortProperty(Lambda sortPropertyExpression, SortDirection sortDirection) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Sets which property of our entity to sort against in the provided sort direction.
@@ -144,18 +144,7 @@ Sets which property of our entity to sort against in the provided sort direction
 collectionConfig.SetSortProperty(p => p.FirstName, SortDirection.Descending);
 ````
 
-## Making a collection read only
-
-#### **MakeReadOnly() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets the collection as read only and disables any CRUD operations from being performed on the collection via the UI.
-
-````csharp
-// Example
-collectionConfig.MakeReadOnly();
-````
-
-## Disable the option to create
+## Controlling the ability to create, update or delete a collections entities
 
 #### **DisableCreate() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
@@ -166,8 +155,6 @@ Disables the option to create entities on the current collection. An entity coul
 collectionConfig.DisableCreate();
 ````
 
-## Disable the option to update
-
 #### **DisableUpdate() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Disables the option to update entities on the current collection. An entity can be created, but further editing is not allowed. 
@@ -177,8 +164,6 @@ Disables the option to update entities on the current collection. An entity can 
 collectionConfig.DisableUpdate();
 ````
 
-## Disable the option to delete
-
 #### **DisableDelete() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Disables the option to delete entities on the current collection. Useful if the data needs to be retained and visible. See also [defining a deleted flag](#defining-a-deleted-flag).
@@ -186,4 +171,13 @@ Disables the option to delete entities on the current collection. Useful if the 
 ````csharp
 // Example
 collectionConfig.DisableDelete();
+````
+
+#### **MakeReadOnly() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collection as read only and disables any CRUD operations from being performed on the collection via the UI.
+
+````csharp
+// Example
+collectionConfig.MakeReadOnly();
 ````
