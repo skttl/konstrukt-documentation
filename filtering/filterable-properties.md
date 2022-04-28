@@ -4,13 +4,15 @@ description: Configuring filterable properties in Konstrukt, the back office UI 
 
 # Filterable Properties
 
+Konstrukt can dynamically build a filter dialog choosing appropriate editor views for you based on a simple property configuration. Properties of a number or date types will become range pickers, enums and properties with options defined will become select / checkbox lists and all other properties will become text input filters.
+
+![Cards](../images/cards.png)
+
 {% hint style="info" %}
 **Work in Progress:** The documentation for this page is currently in progress.
 {% endhint %}
 
 ## Defining filterable properties
-
-Konstrukt will use filterable properties to dynamically build a filter dialog choosing an appropriate editor view for the property. Property of a number or date types will become range pickers, enums and properties with options defined will become select / checkbox lists and all other properties will become text input filters.
 
 #### **AddFilterableProperty(Lambda filterablePropertyExpression, Lambda filterConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 

@@ -6,6 +6,8 @@ description: Configuring cards in Konstrukt, the back office UI builder for Umbr
 
 Cards provide an API to display simple summary info in a card based format and are useful for displaying key metrics about a collection.
 
+![Cards](../images/cards.png)
+
 Cards can be defined in one of two ways:
 
 {% content-ref url="inline-cards.md" %}
