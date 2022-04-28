@@ -48,7 +48,23 @@ public class PersonRepository : KonstruktRepository<Person, int> {
 
 ## Changing the repository implementation of a collection
 
-A repository is assigned to a collection as part of the collection configuration. See [Collection API Documentation](collections.md#changing-a-collection-repository-implementation) for more info.
+#### **SetRepositoryType&lt;TRepositoryType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the repository type to the given type for the current collection.
+
+````csharp
+// Example
+collectionConfig.SetRepositoryType<PersonRepositoryType>();
+````
+
+#### **SetRepositoryType(Type repositoryType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the repository type to the given type for the current collection.
+
+````csharp
+// Example
+collectionConfig.SetRepositoryType(typeof(PersonRepositoryType));
+````
 
 ## Accessing a repository in code
 
@@ -88,26 +104,4 @@ public class MyController : Controller
         _repo = repoFactory.GetRepository<Person, int>("person");
     }
 }
-````
-
-## Changing a collections repository implementation
-
-By default Konstrukt will use a PetaPoco based repository for storing and fetching entities however you can implement your own repository should you need to store your entities via another strategy. To change the repository implementation used by a collection you can use the `SetRepositoryType` method. 
-
-#### **SetRepositoryType&lt;TRepositoryType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets the repository type to the given type for the current collection.
-
-````csharp
-// Example
-collectionConfig.SetRepositoryType<PersonRepositoryType>();
-````
-
-#### **SetRepositoryType(Type repositoryType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
-
-Sets the repository type to the given type for the current collection.
-
-````csharp
-// Example
-collectionConfig.SetRepositoryType(typeof(PersonRepositoryType));
 ````
