@@ -14,14 +14,13 @@ With Konstrukt, custom back office integrations can now take a matter of minutes
 
 **These docs are aimed at developers** who have at least a basic understanding of Umbraco, as well as C# / MVC principals.
 
-If you are new to Konstrukt, you may way to start by taking a look at the [Getting Started](./getting-started/overview.md) section for details on how to install Konstrukt and any system requirements. 
+If you are new to Konstrukt, you may want to start by taking a look at the [Getting Started](./getting-started/overview.md) section for details on how to install Konstrukt and any system requirements. 
 
-If you are looking for a quick guide on getting Konstrukt up and running then you'll want to take a look at the [Guides](./guides/creating-your-first-integration.md) section.
+If you have Konstrukt installed and are wondering "what next?" then you'll want to take a look at the [Guides](./guides/creating-your-first-integration.md) section for some quick-start examples of how to configure Konstrukt.
 
-To dive deeper into Konstrukt and get to know all of it's features in detail, use the main menu to jump to the specific topic you are interested in.
+To dive deeper into Konstrukt and get to know all of it's features in detail, use the main menu to jump to the specific topic you are interested in to find out more.
 
 Finally, for all other resources / useful information you can head over to the [Extras](./extras/property-editors/README.md) section.
-
 
 ## Getting Help
 
