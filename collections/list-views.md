@@ -6,6 +6,8 @@ description: Configuring the list view of a collection in Konstrukt, the back of
 
 A list view is a list based view of a collections entities providing such features as pagination for large collections, custom data views, searching and bulk actions.
 
+![A collection list view](../images/people_listview.png)
+
 ## Configuring a list view
 
 The list view configuration is a sub configuration of a [`Collection`](the-basics.md) config builder instance and is accessed via it's `ListView` method.

@@ -6,6 +6,8 @@ description: Configuring the editor of a collection in Konstrukt, the back offic
 
 An editor is the user interface used to edit an entity and is made up of tabs and property editors.
 
+![A collection editor](../images/people_editor.png)
+
 ## Configuring an editor
 
 The editor configuration is a sub configuration of a [`Collection`](the-basics.md) config builder instance and is accessing via it's `Editor` method.
