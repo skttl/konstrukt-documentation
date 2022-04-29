@@ -4,6 +4,12 @@ description: Configuring searching in Konstrukt, the back office UI builder for 
 
 # Searching
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
+Beyond listing collection entities, there are times when you need to be able to locate specific entities within a collection and for that Konstrukt provides a simple search API. 
+
+![Search](../images/search.png)
+
+Get started by reviewing how to define searchable properties.
+
+{% content-ref url="searchable-properties.md" %}
+[searchable-properties.md](searchable-properties.md)
+{% endcontent-ref %}
