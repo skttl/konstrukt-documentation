@@ -4,8 +4,10 @@ description: Configuring collection in Konstrukt, the back office UI builder for
 
 # Collections
 
-A collection is a container for a given data model and configures how the given model should display in a list view as well as how it should be edited.
+A collection is the cornerstone Konstrukt config and it represents a collection of entities for a given data model. From this config object you can configure everything about how this collection integrates into the UI, from how it should display in a list view as well as how it should be edited.
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
+Get started by reviewing the basics of collection configuration.
+
+{% content-ref url="sections.md" %}
+[sections.md](sections.md)
+{% endcontent-ref %}
