@@ -6,7 +6,7 @@ description: Configuring data views in Konstrukt, the back office UI builder for
 
 Data views allow you to define multiple, pre-filtered views of the same data source. This can be useful when entities exist in different states and you want a way to toggle between them.
 
-![Filterable Properties](../images/filterable_properties.png)
+![Data Views](../images/data_views.png)
 
 ## Defining data views
 
