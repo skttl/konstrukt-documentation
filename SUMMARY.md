@@ -65,7 +65,6 @@
 
 ## Advanced
 
-* [Overview](advanced/overview.md)
 * [Encrypted Properties](advanced/encrypted-properties.md)
 * [Value Mappers](advanced/value-mappers.md)
 * [Repositories](advanced/repositories.md)
