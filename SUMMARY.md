@@ -31,7 +31,7 @@
   * [Field Views](collections/field-views.md)
 * [Editors](collections/editors.md)
 * [Child Collections](collections/child-collections.md)
-* [Child Collection Groups](collections/child-collection-groups.md)
+  * [Child Collection Groups](collections/child-collection-groups.md)
 
 ## Searching
 
