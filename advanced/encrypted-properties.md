@@ -18,5 +18,5 @@ Adds the given property to the encrypted properties collection. Property must be
 
 ````csharp
 // Example
-collectionConfig.AddEncryptedProperty(p => p.Email);
+collectionConfig.AddEncryptedProperty(p => p.Secret);
 ````
