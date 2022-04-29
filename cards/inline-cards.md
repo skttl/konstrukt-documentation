@@ -4,9 +4,9 @@ description: Configuring inline cards in Konstrukt, the back office UI builder f
 
 # Inline Cards
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
+Inline cards allow you to define cards directly against the [collection](../collections/overview.md) configuration, providing a basic where clause to use in a count SQL statement. These work perfectly for simple data visualizations based on simple counts. 
+
+If you need to do more than a simple count, you'll want to take a look at the [complex cards](complex-cards.md) documentation.
 
 ## Adding an inline card to a collection
 
