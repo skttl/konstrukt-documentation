@@ -4,8 +4,12 @@ description: Configuring actions in Konstrukt, the back office UI builder for Um
 
 # Actions
 
-Actions provides an API to perform custom taks against a collection and it's entities from various locations in the UI, be that menu actions, bulk actions or individual table row actions.
+Actions provides an API to perform custom tasks against a collection and it's entities from various locations in the UI, be that menu actions, bulk actions or individual table row actions.
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
+![Bulk Actions UI](../images/bulk_actions.png)
+
+Get started with actions by learning about the basics.
+
+{% content-ref url="the-basics.md" %}
+[the-basics.md](the-basics.md)
+{% endcontent-ref %}
