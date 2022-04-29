@@ -4,13 +4,11 @@ description: Configuring a global filter in Konstrukt, the back office UI builde
 
 # Global Filters
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
+Sometimes you may only want to work with a sub-set of data within a given collection so this is where the global filters comes in handy. These allow you to define a filter to apply to all queries for a given collection.
 
 ## Applying a global filter
 
-Sometimes you may only want to work with a sub-set of data within a given table so this is where the `SetFilter` method comes in handy, allowing you to define a global filter to apply to all queries for the given collection.
+Applying a global filter is controlled via the collection configuration.
 
 #### **SetFilter(Lambda whereClauseExression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
