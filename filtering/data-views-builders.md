@@ -35,6 +35,8 @@ The required methods are:
 
 ## Setting the data views builder of a collection
 
+Setting a data views builder is controlled via the [collections](../collections/overview.md) configuration.
+
 #### **SetDataViewsBuilder&lt;TDataViewsBuilder&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Sets the collections data views builder which allows you to define the data views dynamically at run time.

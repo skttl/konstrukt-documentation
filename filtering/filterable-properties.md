@@ -8,11 +8,9 @@ Konstrukt can dynamically build a filter dialog choosing appropriate editor view
 
 ![Filterable Properties](../images/filterable_properties.png)
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
-
 ## Defining filterable properties
+
+Defining filterable properties is controlled via the [collections](../collections/overview.md) configuration.
 
 #### **AddFilterableProperty(Lambda filterablePropertyExpression, Lambda filterConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 

@@ -10,7 +10,7 @@ Data views allow you to define multiple, pre-filtered views of the same data sou
 
 ## Defining data views
 
-Data views are defined via the collection configuration.
+Data views are defined via the [collections](../collections/overview.md) configuration.
 
 #### **AddDataView(string name, Lambda whereClauseExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 

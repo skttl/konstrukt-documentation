@@ -8,7 +8,7 @@ Sometimes you may only want to work with a sub-set of data within a given collec
 
 ## Applying a global filter
 
-Applying a global filter is controlled via the collection configuration.
+Applying a global filter is controlled via the [collections](../collections/overview.md) configuration.
 
 #### **SetFilter(Lambda whereClauseExression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
