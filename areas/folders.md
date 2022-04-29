@@ -6,6 +6,8 @@ description: Configuring folders to organise trees in Konstrukt, the back office
 
 A folder can appear in either a tree or as a sub folder to other folders. Folders can contain either other (sub)folders or [collections](../collections/overview.md).
 
+![Tree with Settings folder](../images/tree.png)
+
 ## Defining a folder
 
 You define a folder by calling one of the `AddFolder` methods on a given [`Tree`](trees.md) or parent `Folder` config builder instance.

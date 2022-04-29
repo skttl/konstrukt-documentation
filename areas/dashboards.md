@@ -61,6 +61,8 @@ dashboardConfig.SetAlias("team");
 
 Changing when a dashboard is displayed is controlled via an inner config. Options on the inner config are `ShowInSection` to control which sections a dashboard displays in and `ShowForUserGroup` and `HideForUserGroup` to control the visibility of the dashboard for given user groups. You can call these config methods multiple times to add multiple section/role configurations.
 
+![Dashboards](../images/dashboards.png)
+
 #### **SetVisibility(Lambda visibilityConfig) : KonstruktDashboardConfigBuilder**
 
 Sets the dashboard visibility config. 
