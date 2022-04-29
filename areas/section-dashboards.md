@@ -10,7 +10,7 @@ A section dashboard is automatically displayed at the root of a Konstrukt define
 
 ## Showing a collection on a section dashboard
 
-Showing a collection in the section dashboard is controlled within the collection configuration.
+Showing a collection in the section dashboard is controlled via the collection configuration.
 
 #### **ShowOnDashboard() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
