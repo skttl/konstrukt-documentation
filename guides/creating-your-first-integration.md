@@ -117,5 +117,3 @@ With the permissions set, you can refresh your browser and you should now see yo
 ## Summary
 
 As you can see, with very little code you can start to create very powerful interfaces for your custom data structures.
-
-To see all the possible configuration options for each of the UI components, be sure to read through the [API documentation](../api/conventions.md).
