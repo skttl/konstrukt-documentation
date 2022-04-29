@@ -55,7 +55,7 @@
 ## Cards
 
 * [Overview](cards/overview.md)
-* [Inline Cards](cards/inline-cards.md)
+* [Count Cards](cards/count-cards.md)
 * [Complex Cards](cards/complex-cards.md)
 
 ## Property Editors

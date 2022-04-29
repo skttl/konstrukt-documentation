@@ -1,14 +1,14 @@
 ---
-description: Configuring inline cards in Konstrukt, the back office UI builder for Umbraco.
+description: Configuring count cards in Konstrukt, the back office UI builder for Umbraco.
 ---
 
-# Inline Cards
+# count Cards
 
-Inline cards allow you to define cards directly against the [collection](../collections/overview.md) configuration, providing a basic where clause to use in a count SQL statement. These work perfectly for simple data visualizations based on simple counts. 
+Count cards allow you to define cards directly against the [collection](../collections/overview.md) configuration, providing a basic where clause to use in a count SQL statement. These work perfectly for simple data visualizations based on simple counts of entities in a collection.
 
 If you need to do more than a simple count, you'll want to take a look at the [complex cards](complex-cards.md) documentation.
 
-## Adding an inline card to a collection
+## Adding a count card to a collection
 
 Cards allow you to display simple summaries of key information that may be useful to the editor.
 
@@ -34,7 +34,7 @@ collectionConfig.AddCard("Older than 30", "icon-umb-users", p => p.Age > 30, car
 });
 ````
 
-### Change the color of an inline card
+### Change the color of a count card
 
 #### **SetColor(string color) : KonstruktCardConfigBuilder**
 
@@ -45,7 +45,7 @@ Sets the color of the card.
 cardConfig.SetColor("blue");
 ````
 
-### Add a suffix to an inline value
+### Add a suffix to a count value
 
 #### **SetSuffix(string suffix) : KonstruktCardConfigBuilder**
 
@@ -56,7 +56,7 @@ Sets the suffix of the card value.
 cardConfig.SetSuffix("years");
 ````
 
-### Formatting the value of an inline
+### Formatting the value of a count
 
 #### **SetFormat(Lambda formatExpression) : KonstruktCardConfigBuilder**
 
