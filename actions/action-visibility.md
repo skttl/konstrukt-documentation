@@ -98,6 +98,6 @@ The `Row` action type determines that the action will be displayed in the collec
 
 ![Row Actions](../images/row_actions_menu.png)
 
-## UserGroups
+### UserGroups
 
 The user groups collection contains a list of Umbraco `IReadOnlyUserGroup` objects for the current logged in back office user and allows you to control the visibility of actions for given user group members.
