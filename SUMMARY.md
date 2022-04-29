@@ -28,6 +28,7 @@
 * [Overview](collections/overview.md)
 * [The Basics](collections/the-basics.md)
 * [List Views](collections/list-views.md)
+  * [Field Views](collections/field-views.md)
 * [Editors](collections/editors.md)
 * [Child Collections](collections/child-collections.md)
 * [Child Collection Groups](collections/child-collection-groups.md)

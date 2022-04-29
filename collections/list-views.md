@@ -8,7 +8,7 @@ A list view is a list based view of a collections entities providing such featur
 
 ## Configuring a list view
 
-The list view configuration is a sub configuration of a [`Collection`](collections.md) config builder instance and is accessed via it's `ListView` method.
+The list view configuration is a sub configuration of a [`Collection`](the-basics.md) config builder instance and is accessed via it's `ListView` method.
 
 #### **ListView(Lambda listViewConfig = null) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
 

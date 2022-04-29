@@ -8,7 +8,7 @@ An editor is the user interface used to edit an entity and is made up of tabs an
 
 ## Configuring an editor
 
-The editor configuration is a sub configuration of a [`Collection`](collections.md) config builder instance and is accessing via it's `Editor` method.
+The editor configuration is a sub configuration of a [`Collection`](the-basics.md) config builder instance and is accessing via it's `Editor` method.
 
 #### **Editor(Lambda editorConfig = null) : KonstruktEditorConfig&lt;TEntityType&gt;**
 
