@@ -4,7 +4,7 @@ description: The basics of a collection configuration in Konstrukt, the back off
 
 # The Basics
 
-A collection is a container for a given data model and configures how the given model should display in a list view as well as how it should be edited.
+There is a lot that can be configured from the collection config, but what follows are the core basics. You can find more configuration options about specific topics from the other configuration sections in the main menu.
 
 ## Defining a collection
 
