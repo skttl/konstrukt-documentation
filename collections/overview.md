@@ -8,6 +8,8 @@ A collection is the cornerstone Konstrukt config and it represents a collection 
 
 ![A collection list view](../images/people_listview.png)
 
+![A collection editor](../images/people_editor.png)
+
 Get started by reviewing the basics of collection configuration.
 
 {% content-ref url="the-basics.md" %}
