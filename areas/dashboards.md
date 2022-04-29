@@ -6,6 +6,8 @@ description: Configuring dashboards in Konstrukt, the back office UI builder for
 
 A dashboard is a view that is displayed at the root of a section and usually contains welcome information and/or useful tools relevant to the given section. When there are multiple dashboards to display in a section these are usually presented in a tabbed layout to allow you to swich between the different dashboard views.
 
+![Dashboards](../images/dashboards.png)
+
 ## Defining a dashboard
 
 You define a dashboard by calling one of the `AddDashboard` methods on the root level `KonstruktConfigBuilder` instance.
@@ -60,8 +62,6 @@ dashboardConfig.SetAlias("team");
 ## Changing when a dashboard should display
 
 Changing when a dashboard is displayed is controlled via an inner config. Options on the inner config are `ShowInSection` to control which sections a dashboard displays in and `ShowForUserGroup` and `HideForUserGroup` to control the visibility of the dashboard for given user groups. You can call these config methods multiple times to add multiple section/role configurations.
-
-![Dashboards](../images/dashboards.png)
 
 #### **SetVisibility(Lambda visibilityConfig) : KonstruktDashboardConfigBuilder**
 
