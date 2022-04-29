@@ -6,7 +6,7 @@ description: Configuring count cards in Konstrukt, the back office UI builder fo
 
 Count cards allow you to define cards directly against the [collection](../collections/overview.md) configuration, providing a basic where clause to use in a count SQL statement. These work perfectly for simple data visualizations based on simple counts of entities in a collection.
 
-If you need to do more than a simple count, you'll want to take a look at the [complex cards](complex-cards.md) documentation.
+If you need to do more than a simple count, you'll want to take a look at the [custom cards](custom-cards.md) documentation.
 
 ## Adding a count card to a collection
 
