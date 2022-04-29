@@ -8,7 +8,7 @@ There is a lot that can be configured from the collection config, but what follo
 
 ## Defining a collection
 
-You define a collection by calling one of the `AddCollection` methods on a given [`Tree`](trees.md) or parent [`Folder`](folders.md) config builder instance.
+You define a collection by calling one of the `AddCollection` methods on a given [`Tree`](../areas/trees.md) or parent [`Folder`](../areas/folders.md) config builder instance.
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
