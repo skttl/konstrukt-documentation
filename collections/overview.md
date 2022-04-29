@@ -8,6 +8,6 @@ A collection is the cornerstone Konstrukt config and it represents a collection 
 
 Get started by reviewing the basics of collection configuration.
 
-{% content-ref url="sections.md" %}
-[sections.md](sections.md)
+{% content-ref url="the-basics.md" %}
+[the-basics.md](the-basics.md)
 {% endcontent-ref %}
