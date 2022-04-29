@@ -4,6 +4,8 @@ description: Configuring actions in Konstrukt, the back office UI builder for Um
 
 # The Basics
 
+Actions are a powerful way of adding custom functionality to Konstrukt without needing to create an custom UI elements. By providing an action to run Konstrukt can automatically trigger actions from a number of UI locations.
+
 ## Defining an action
 
 To define an action you create a class that inherits from the base class `KonstruktAction<>` and configure it like so.
@@ -86,6 +88,8 @@ By implementing this base class you are required to implement an additional `Con
 In addition to this `Configure` method, your `Execute` method will also now accept an additional `settings` parameter of the settings type which will be pre-populated by Konstrukt with the value entered by the user allowing you to alter your actions behaviour accordingly.
 
 ## Adding an action to a collection
+
+Actions are added via the [collections](../collections/overview.md) configuration.
 
 #### **AddAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
