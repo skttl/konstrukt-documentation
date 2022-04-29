@@ -8,7 +8,7 @@ In this guide we'll take you through the steps needed for a basic implementation
 
 ## Set up the database
 
-Out of the box Konstrukt works using PetaPoco as the persistence layer as this is what ships with Umbraco. It is possible to use a custom [Repository](../api/repositories.md) if you prefer, but for the sake of getting started, we’ll assume you are using this default strategy.
+Out of the box Konstrukt works using PetaPoco as the persistence layer as this is what ships with Umbraco. It is possible to use a custom [Repository](../advanced/repositories.md) if you prefer, but for the sake of getting started, we’ll assume you are using this default strategy.
 
 Start by setting up a database table for your model (you might want to populate it with some dummy data as well whilst learning). We’ll use the following as an example:
 
