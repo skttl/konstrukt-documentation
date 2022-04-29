@@ -4,7 +4,7 @@ description: Configuring custom cards in Konstrukt, the back office UI builder f
 
 # Custom Cards
 
-Custom cards allow you to perform more custom metric calculations and are defined via a class implementing the `KonstruktCard` base class.
+Custom cards allow you to perform more complex metric calculations and are defined via a class implementing the `KonstruktCard` base class.
 
 When Konstrukt resolves a card it will attempt to do so from the global DI container which means you can inject amy dependencies that you require for your card to calculate it's value. If there is no such type defined in the DI container, Konstrukt will then fallback to maually instantiating a new instance of the card.
 
