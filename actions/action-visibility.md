@@ -4,13 +4,11 @@ description: Controlling the visibility of actions in Konstrukt, the back office
 
 # Action Visibility
 
-{% hint style="info" %}
-**Work in Progress:** The documentation for this page is currently in progress.
-{% endhint %}
+By default actions are not visible in the UI and you must expressly define when and were an action should display. This can be achived in two ways, either on the action definition itself or at the point of registration on the collections config.
 
 ## Controlling the default action visibility
 
-Actions are not visible in the UI by default untill their visibility is configured. This can be done either at the action level, or at the registration level when adding the action to a collection. To define the default visbility of an action at the action level you can do this by overriding the `IsVisible` method of the `KonstruktAction<>` base class.
+To define the default visbility of an action at the action level you can do this by overriding the `IsVisible` method of the `KonstruktAction<>` base class.
 
 ````csharp
 // Example
@@ -26,12 +24,11 @@ public class MyAction : KonstruktAction<KonstruktActionResult>
 }
 ````
 
-The `IsVisible` method is passed a `KonstruktActionVisibilityContext` which contains an `ActionType` attribute defining the type of action that triggered this action handler to run as well as a `UserGroups` collection to allow you to manage visibility based on user permissions. You should use the information present in the `KonstruktActionVisibilityContext` object to decide whether the action should display, returning `true` if it should, or `false` if it should not. 
-
+The `IsVisible` method is passed a `KonstruktActionVisibilityContext` which you should use to decide whether the action should display, returning `true` if it should, or `false` if it should not. See [Action visibility context](#action-visibility-context) bellow for more info.
 
 ## Overriding an actions visibility
 
-By default actions will be hidden unless they have a default visibility set on the action definition. You can also explicitly set an actions visibility as part of the `AddAction` API.
+Overriding an actions visibility is controlled via the [collections](../collections/overview.md) configuration.
 
 #### **AddAction&lt;TMenuActionType&gt;(Lambda actionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
@@ -68,3 +65,39 @@ collectionConfig.AddAction(action, actionConfig => actionConfig
         || x.ActionType == KonstruktActionType.Row)
 );
 ````
+
+## Action visibility context
+
+When controlling the visibility of an action you will be given a `KonstruktActionVisibilityContext` object from which you can decide whether to show the action or not. The visibility context contains two key pieces of information on which you can base this decision.
+
+### ActionType
+
+The action type property is an enum property that define which area of the UI it is that wishes to access this action. Enabling an action to display for a given action type will determine where an action is displayed.
+
+#### ContainerMenu
+
+The `ContainerMenu` action type determines that the action will be displayed in both the tree of the collection as well as it's list view actions menu.
+
+![Container Menu](../images/container_actions_menu.png)
+
+#### EntityMenu
+
+The `EntityMenu` action type determines that the action will be displayed in the actions menu of a collection editor UI.
+
+![Entity Menu](../images/entity_actions_menu.png)
+
+#### Bulk
+
+The `Bulk` action type determines that the action will be displayed in the collection list view bulk actions menu.
+
+![Bulk Actions](../images/bulk_actions_menu.png)
+
+#### Row
+
+The `Row` action type determines that the action will be displayed in the collection list view action row menu.
+
+![Row Actions](../images/row_actions_menu.png)
+
+## UserGroups
+
+The user groups collection contains a list of Umbraco `IReadOnlyUserGroup` objects for the current logged in back office user and allows you to control the visibility of actions for given user group members.
