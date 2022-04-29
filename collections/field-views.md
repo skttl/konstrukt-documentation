@@ -65,4 +65,4 @@ public class KonstruktFieldViewContext
 
 ## Setting the field view of a list view field
 
-A field view is assigned to a list view field as part of the list view configuration. See [List View API Documentation](collection-list-views.md#setting-the-view-of-a-field) for more info.
+A field view is assigned to a list view field as part of the list view configuration. See [List View Documentation](list-views.md#setting-the-view-of-a-field) for more info.

@@ -58,7 +58,7 @@ fieldConfig.SetFormat((v, p) => $"{v} years old");
 
 ## Setting the view of a field
 
-Field views allow you to customize the markup of the field in the list view so that you can show more rich visualizations of the fields content.
+Field views allow you to customize the markup of the field in the list view so that you can show more rich visualizations of the fields content. See [Field Views Documentation](field-views.md) for more info.
 
 #### **SetView(string viewComponentName) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
 
