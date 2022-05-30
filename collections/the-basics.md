@@ -124,12 +124,13 @@ By default in Konstrukt any entity that is deleted via the Konstrukt repository 
 
 #### **SetDeletedProperty(Lambda deletedPropertyExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Sets which property of our entity to use as the deleted property flag. Property must be of type `boolean`. When a deleted property is set, any delete actions will set the deleted flag instead of actualy deleting the entity. In addition, any fetch actions will also pre-filter out any deleted entities.
+Sets which property of our entity to use as the deleted property flag. Property must be of type `boolean` or `int`. When a deleted property is set, any delete actions will set the deleted flag instead of actualy deleting the entity. For `boolean` based properties, deleted entities will have a value of `True` when deleted, and for `int` based properties, deleted entities will have a UTC UNIX timestamp value of the date the entity was deleted. In addition, any fetch actions will also pre-filter out any deleted entities.
 
 ````csharp
 // Example
 collectionConfig.SetDeletedProperty(p => p.Deleted);
 ````
+
 
 ## Disabling create, update or delete features
 
