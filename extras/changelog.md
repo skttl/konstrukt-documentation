@@ -14,7 +14,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 - Fixed SQL escaping issue when using table names with schema prefix
 - Fixed bug in range property filters when a value is `null`
 - Fixed bug where save opperations would show success notification even if the save opperation failed
-- Fixed bug in Data Attribute validation where `IServerProvider` wasn't being passed through
+- Fixed bug in Data Attribute validation where `IServiceProvider` wasn't being passed through
 - Fixed `null` error when searching returns no items
 - Fixed deleted property filter condition not working
 - Fixed bug where encrypted properties would throw exception if value was `null`
