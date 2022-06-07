@@ -9,7 +9,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 **Description:** Minor patch release with non breaking changes
 
 - Added client side required / regex validation support
-- Added mapping support for nullable typed when mapping property filters
+- Added support for nullable types when mapping property filters
 - Added support for passing notification messages back from action results
 - Fixed SQL escaping issue when using table names with schema prefix
 - Fixed bug in range property filters when a value is `null`
