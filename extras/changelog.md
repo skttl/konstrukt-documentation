@@ -5,7 +5,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 # Changelog
 
 ## v1.1.1
-**Date:** TBC  
+**Date:** 2022-06-08  
 **Description:** Minor patch release with non breaking changes
 
 - Added client side required / regex validation support
