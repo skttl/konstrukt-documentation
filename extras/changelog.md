@@ -4,6 +4,15 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.2.0
+**Date:** 2022-06-20  
+**Description:** Minor release with some breaking changes / additional features
+
+- Added `DeletedProperty` support where column types is an `int`, and the value is a UNIX timestamp
+- Fix bug with encrypted properties not handling `null` values
+- Updated minimum Umbraco dependency to v10
+- Updated UI assets to be a (RCL) Razor Compiled Library. **Be sure to clean your solution to remove old files**.
+
 ## v1.1.1
 **Date:** 2022-06-08  
 **Description:** Minor patch release with non breaking changes
