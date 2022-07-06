@@ -45,7 +45,7 @@ config.AddVirtualSubTreeAfter("content", "content", ctx => ctx.Source.Id == 1056
 
 ## Controlling where to inject the virtual sub tree
 
-To control where a virtual sub tree is injected is done so via the visibility expression passed to one of the `AddVirtualSubTree` methods on the root level `KonstruktConfigBuilder` instance. Without a vsibility expression Konstrukt would inject the virtual sub tree under every node in the given tree and so we use this expression to indentify the exact location where our tree should go. To help with this the visibility expression is passed a single `KonstruktVirtualSubTreeFilterContext` argument with relevant contextual information about the current node being rendered, alongside a list of the current users user groups for permission based visibility control and access to a `IServiceProvider` in case you need to resolve a service to determine the correct node to inject below.
+Controlling where a virtual sub tree is injected is done so via the visibility expression passed to one of the `AddVirtualSubTree` methods on the root level `KonstruktConfigBuilder` instance. Without a vsibility expression Konstrukt would inject the virtual sub tree under every node in the given tree and so we use this expression to indentify the exact location where our tree should go. To help with this the visibility expression is passed a single `KonstruktVirtualSubTreeFilterContext` argument with relevant contextual information about the current node being rendered, alongside a list of the current users user groups for permission based visibility control and access to a `IServiceProvider` in case you need to resolve a service to determine the correct node to inject below.
 
 ````csharp
 public class KonstruktVirtualSubTreeFilterContext
