@@ -85,18 +85,27 @@ config.AddVirtualSubTree("content", "content", ctx =>
 
 ## Controlling the position of the injected virtual sub tree  
 
-The position of a virtual sub tree within the child nodes of the injection node is controlled by using one of the  `AddVirtualSubTreeBefore` or `AddVirtualSubTreeAfter` methods on the root level `KonstruktConfigBuilder` instance, along with passing a match expression which is used to identify the tree node to insert before / after. This expression is passed a single `TreeNode` argument for your determine the position and requires a `boolean` return value to indicate the relevant location has been found.
+The position of a virtual sub tree within the child nodes of the injection node is controlled by using one of the  `AddVirtualSubTreeBefore` or `AddVirtualSubTreeAfter` methods on the root level `KonstruktConfigBuilder` instance, along with passing a match expression which is used to identify the tree node to insert before / after. This expression is passed a single `TreeNode` argument for you to determine the position and requires a `boolean` return value to indicate the relevant location has been found.
 
 ````csharp
 public class TreeNode
 {
     public object Id { get; }
     public object ParentId { get; }
+    public string Alias { get; }
     public string Name { get; }
     public string NodeType { get; }
+    public string Path { get; }
     public string RoutePath { get; }
+    public IDictionary<string, object> AdditionalData { get; }
     ...
 }
+````
+
+An example of positioning a sub tree after a node with the alias "settings" might look like the following:
+
+````csharp
+treeNode => treeNode.alias == "settings"
 ````
 
 ## Configuring a virtual sub tree  
