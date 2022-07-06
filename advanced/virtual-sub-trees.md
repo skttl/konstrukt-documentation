@@ -6,6 +6,8 @@ description: Configuring virtual sub trees in Konstrukt, the back office UI buil
 
 Virtual sub trees are a powerful feature that allows you to inject a Konstrukt tree structure into an other Umbraco tree at a desired location, thus acting as child nodes to the node chosen as the injection point. With virtual sub trees it allows you to extend built in or even 3rd party package trees with additional features. An example could be developing a "loyalty point" program for your ecommerce site and injecting the related database tables into a Vendr store tree to allow management of the program in it's most logical location.
 
+![Example virtual sub tree injected into a Vendr store tree](../images/virtual-sub-tree.png)
+
 ## Defining virtual sub trees
 
 You define a virtual sub tree by calling one of the `AddVirtualSubTree` methods on the root level `KonstruktConfigBuilder` instance.
