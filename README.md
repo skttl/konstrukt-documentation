@@ -4,7 +4,7 @@ description: Documentation for Konstrukt, the back office UI builder for Umbraco
 
 # Konstrukt Documentation
 
-Konstrukt is the Umbraco v9+ back office UI builder for custom data structures configured via a fluent API.
+Konstrukt is the Umbraco v10+ back office UI builder for custom data structures configured via a fluent API.
 
 ![Example Konstrukt UI](../images/comments_listview.png)
 

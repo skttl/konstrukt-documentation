@@ -44,7 +44,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Data Export | Export Bulk/Row action available OOTB | Via 3rd party add-on |
 | Property Editors | Entity Picker | Dropdown + Multi Picker |
 | Localized | No | Yes |
-| Supported Umbraco Versions | v9+ | v7+ |
+| Supported Umbraco Versions | v10+ | v7+ |
 
 ## License
 

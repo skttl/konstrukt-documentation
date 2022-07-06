@@ -6,7 +6,7 @@ description: Getting Started with Konstrukt, the back office UI builder for Umbr
 
 In this section we will guide you through the key steps necessary to get you started with Konstrukt.
 
-It is assumed that before we begin that you already have an Umbraco v9+ website configured, ready to install Konstrukt into. If you are unsure how to setup a basic Umbraco install, you should review the [Getting Started](https://our.umbraco.com/documentation/getting-started/) documentation on the main Umbraco developer portal and return once you have this in place.
+It is assumed that before we begin that you already have an Umbraco v10+ website configured, ready to install Konstrukt into. If you are unsure how to setup a basic Umbraco install, you should review the [Getting Started](https://our.umbraco.com/documentation/getting-started/) documentation on the main Umbraco developer portal and return once you have this in place.
 
 ## System Requirements
 At this time, the minimum requirements for using Konstrukt are as follows:
