@@ -81,3 +81,12 @@ In a number of places in the Konstrukt API you are required to know the aliases 
 | Members | `member` |
 | Forms | `forms` |
 | Translation | `translation` |
+
+## Tree aliases
+
+| Name | Alias |
+| -- | -- |
+| Content | `content` |
+| Media | `media` |
+| Members | `member` |
+| Member Groups | `memberGroups` |
