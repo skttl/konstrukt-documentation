@@ -11,7 +11,7 @@ Konstrukt comes with a number of inbuilt actions that are available for you to u
 
 Provides a simple CSV export functionality converting all properties to column headings and rendering each entities property values on each row.
 
-### Konstrukt.Infrastructure.Configuration.Actions.KonstruktImportEntityAction  
+### KonstruktImportEntityAction  
 **Namespace** Konstrukt.Infrastructure.Configuration.Actions  
 
 Provides a simple CSV import functionality matching column headings with entity properties an mapping row values to an entity.
