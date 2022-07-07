@@ -14,4 +14,4 @@ Provides a simple CSV export functionality converting all properties to column h
 ### KonstruktImportEntityAction  
 **Namespace** Konstrukt.Infrastructure.Configuration.Actions  
 
-Provides a simple CSV import functionality matching column headings with entity properties an mapping row values to an entity.
+Provides a simple CSV import functionality matching column headings with entity properties and mapping row values to an entity.
