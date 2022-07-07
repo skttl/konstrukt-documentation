@@ -51,6 +51,7 @@
 * [Overview](actions/overview.md)
 * [The Basics](actions/the-basics.md)
 * [Action Visbility](actions/action-visibility.md)
+* [Inbuilt Actions](actions/inbuilt-actions.md)
 
 ## Cards
 
