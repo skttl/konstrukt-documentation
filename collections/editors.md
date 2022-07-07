@@ -25,7 +25,7 @@ collectionConfig.Editor(editorConfig => {
 
 ## Adding a tab to an editor
 
-#### **AddTab(string name, Lambda tabConfig = null) : KonstruktTabConfigBuilder&lt;TEntityType&gt;**
+#### **AddTab(string name, Lambda tabConfig = null) : KonstruktEditorTabConfigBuilder&lt;TEntityType&gt;**
 
 Adds a tab to the editor.
 
@@ -36,9 +36,24 @@ editorConfig.AddTab("General", tabConfig => {
 });
 ````
 
+## Configuring a sidebar for a tab
+
+A slidebar is a smaller area that is displayed to the right of the main editor. The sidebar can also contain fieldsets and fields in the same way tabs can but with a much more limited display area so you'll need to choose your field types carefully. The sidebar is a great location to display entity metadata.
+
+#### **Sidebar(Lambda sidebarConfig = null) : KonstruktEditorTabSidebarConfigBuilder&lt;TEntityType&gt;**
+
+Configures the sidebar for the tab.
+
+````csharp
+// Example
+tabConfig.Sidebar(sidebarConfig => {
+    ...
+});
+````
+
 ## Adding a fieldset to a tab
 
-#### **AddFieldset(string name, Lambda fieldsetConfig = null) : KonstruktEditorFieldTabConfigBuilder&lt;TEntityType, TValueType&gt;**
+#### **AddFieldset(string name, Lambda fieldsetConfig = null) : KonstruktEditorFieldsetConfigBuilder&lt;TEntityType&gt;**
 
 Adds the given fieldset to the tab.
 
