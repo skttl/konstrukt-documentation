@@ -10,7 +10,7 @@ Context Apps in Konstrukt are analogous with Content Apps in Umbraco and they al
 
 ## Defining a context app
 
-You define a context app by calling one of the `AddContextApp` methods on a `KonstruktWithTreeConfigBuilder` instance.
+You define a context app by calling one of the `AddContextApp` methods on a [`KonstruktWithTreeConfigBuilder`](trees.md#extending-an-existing-tree) instance.
 
 #### **AddContextApp(string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
 

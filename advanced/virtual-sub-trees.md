@@ -10,7 +10,7 @@ Virtual sub trees are a powerful feature that allows you to inject a Konstrukt t
 
 ## Defining virtual sub trees
 
-You define a virtual sub tree by calling one of the `AddVirtualSubTree` methods o a `KonstruktWithTreeConfigBuilder` instance.
+You define a virtual sub tree by calling one of the `AddVirtualSubTree` methods o a [`KonstruktWithTreeConfigBuilder`](../areas/trees.md#extending-an-existing-tree) instance.
 
 #### **AddVirtualSubTree(string sectionAlias, string treeAlias, Lambda visibilityExpression, Lambda virtualSubTreeConfig = null) : KonstruktVirtualSubTreeConfigBuilder**
 
