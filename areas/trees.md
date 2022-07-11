@@ -25,7 +25,7 @@ sectionConfig.Tree(treeConfig => {
 
 ## Adding a tree to an existing section
 
-The tree configuration for existing sections is a sub configuration of a [`WithSection`](sections.md) config builder instance and is accessed via one of it's `AddTree` methods.
+The tree configuration for existing sections is a sub configuration of a [`WithSection`](sections.md#extending-an-existing-section) config builder instance and is accessed via one of it's `AddTree` methods.
 
 #### **AddTree(string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
 
