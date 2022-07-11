@@ -10,7 +10,7 @@ A dashboard is a view that is displayed at the root of a section and usually con
 
 ## Defining a dashboard
 
-You define a dashboard by calling one of the `AddDashboard` methods on the root level `KonstruktConfigBuilder` instance.
+You define a dashboard by calling one of the `AddDashboard` methods on a `KonstruktWithSectionConfigBuilder` instance.
 
 #### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
 
@@ -18,7 +18,7 @@ Adds a dashboard with the given name.
 
 ```csharp
 // Example
-config.AddDashboard("Team", dashboardConfig => {
+withSectionConfig.AddDashboard("Team", dashboardConfig => {
     ...
 });
 ```
@@ -30,7 +30,7 @@ Adds a dashboard with the given name before the dashboard with the given alias.
 
 ```csharp
 // Example
-config.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
+withSectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
     ...
 });
 ```
@@ -41,7 +41,7 @@ Adds a dashboard with the given name after the dashboard with the given alias.
 
 ```csharp
 // Example
-config.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
+withSectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
     ...
 });
 ```
@@ -61,7 +61,9 @@ dashboardConfig.SetAlias("team");
 
 ## Changing when a dashboard should display
 
-Changing when a dashboard is displayed is controlled via an inner config. Options on the inner config are `ShowInSection` to control which sections a dashboard displays in and `ShowForUserGroup` and `HideForUserGroup` to control the visibility of the dashboard for given user groups. You can call these config methods multiple times to add multiple section/role configurations.
+Changing when a dashboard is displayed is controlled via an inner config. Options on the inner config are `ShowForUserGroup` and `HideForUserGroup` to control the visibility of the dashboard for given user groups. You can call these config methods multiple times to add multiple role configurations.
+
+By default, Konstrukt will pre-filter dashboards to only display on the section it is defined in. This will be combined with the `SetVisibility` config to decide when to display the dashboard.
 
 #### **SetVisibility(Lambda visibilityConfig) : KonstruktDashboardConfigBuilder**
 
@@ -70,8 +72,6 @@ Sets the dashboard visibility config.
 ````csharp
 // Example
 dashboardConfig.SetVisibility(visibilityConfig => visibilityConfig
-    .ShowInSection("content")
-    .ShowInSection("media")
     .ShowForUserGroup("admin")
     .HideForUserGroup("translator")
 );

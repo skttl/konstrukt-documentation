@@ -10,37 +10,37 @@ Virtual sub trees are a powerful feature that allows you to inject a Konstrukt t
 
 ## Defining virtual sub trees
 
-You define a virtual sub tree by calling one of the `AddVirtualSubTree` methods on the root level `KonstruktConfigBuilder` instance.
+You define a virtual sub tree by calling one of the `AddVirtualSubTree` methods o a `KonstruktWithTreeConfigBuilder` instance.
 
 #### **AddVirtualSubTree(string sectionAlias, string treeAlias, Lambda visibilityExpression, Lambda virtualSubTreeConfig = null) : KonstruktVirtualSubTreeConfigBuilder**
 
-Adds a virtual sub tree to given tree in the given section with it's visibility controlled via the visibility expression.
+Adds a virtual sub tree to the current tree with it's visibility controlled via the visibility expression.
 
 ````csharp
 // Example
-config.AddVirtualSubTree("content", "content", ctx => ctx.Source.Id == 1056, contextAppConfig => {
+withTreeConfig.AddVirtualSubTree(ctx => ctx.Source.Id == 1056, contextAppConfig => {
     ...
 });
 ````
 
 #### **AddVirtualSubTreeBefore(string sectionAlias, string treeAlias, Lambda visibilityExpression, Lambda matchExpression, Lambda virtualSubTreeConfig = null) : KonstruktVirtualSubTreeConfigBuilder**
 
-Adds a virtual sub tree to given tree in the given section, before the tree node matching the match expression, with it's visibility controlled via the visibility expression.
+Adds a virtual sub tree to the current tree, before the tree node matching the match expression, with it's visibility controlled via the visibility expression.
 
 ````csharp
 // Example
-config.AddVirtualSubTreeBefore("content", "content", ctx => ctx.Source.Id == 1056, treeNode => treeNode.Name == "Settings", contextAppConfig => {
+withTreeConfig.AddVirtualSubTreeBefore(ctx => ctx.Source.Id == 1056, treeNode => treeNode.Name == "Settings", contextAppConfig => {
     ...
 });
 ````
 
 #### **AddVirtualSubTreeAfter(string sectionAlias, string treeAlias, Lambda visibilityExpression, Lambda matchExpression, Lambda virtualSubTreeConfig = null) : KonstruktVirtualSubTreeConfigBuilder**
 
-Adds a virtual sub tree to given tree in the given section, after the tree node matching the match expression, with it's visibility controlled via the visibility expression.
+Adds a virtual sub tree to the current tree, after the tree node matching the match expression, with it's visibility controlled via the visibility expression.
 
 ````csharp
 // Example
-config.AddVirtualSubTreeAfter("content", "content", ctx => ctx.Source.Id == 1056, treeNode => treeNode.Name == "Settings", contextAppConfig => {
+withTreeConfig.AddVirtualSubTreeAfter(ctx => ctx.Source.Id == 1056, treeNode => treeNode.Name == "Settings", contextAppConfig => {
     ...
 });
 ````
@@ -71,7 +71,7 @@ public class KonstruktNodeContext
 An example of a more complex filter expression where injection is based on the document type of a content node might look like the following:
 
 ````csharp
-config.AddVirtualSubTree("content", "content", ctx => 
+withTreeConfig.AddVirtualSubTree(ctx => 
     {
         using var umbracoContextRef = ctx.ServiceProvider.GetRequiredService<IUmbracoContextFactory>().EnsureUmbracoContext();
         

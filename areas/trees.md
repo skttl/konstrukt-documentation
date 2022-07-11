@@ -23,11 +23,24 @@ sectionConfig.Tree(treeConfig => {
 });
 ````
 
-## Adding a folder to a tree
+## Adding a group to a tree
+
+#### **AddGroup(string name, Lambda groupConfig = null) : KonstruktGroupConfigBuilder**
+
+Adds a group to the current tree with the given name.
+
+```csharp
+// Example
+treeConfig.AddGroup("Settings", groupConfig => {
+    ...
+});
+```
+
+## Adding a folder to a tree / group
 
 #### **AddFolder(string name, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
-Adds a folder to the current tree with the given name and a default folder icon. See the [Folders documentation](folders.md) for more info.
+Adds a folder to the current tree / group with the given name and a default folder icon. See the [Folders documentation](folders.md) for more info.
 
 ```csharp
 // Example
@@ -38,7 +51,7 @@ treeConfig.AddFolder("Settings", folderConfig => {
 
 #### **AddFolder(string name, string icon, Lambda folderConfig = null) : KonstruktFolderConfigBuilder**
 
-Adds a folder to the current tree with the given name + icon. See the [Folders documentation](folders.md) for more info.
+Adds a folder to the current tree / group with the given name + icon. See the [Folders documentation](folders.md) for more info.
 
 ```csharp
 // Example
@@ -47,11 +60,11 @@ treeConfig.AddFolder("Settings", "icon-settings", folderConfig => {
 });
 ```
 
-## Adding a collection to a tree
+## Adding a collection to a tree / group
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a collection to the current tree with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
+Adds a collection to the current tree / group with the given names and description and default icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example
@@ -62,11 +75,94 @@ treeConfig.AddCollection<Person>(p => p.Id, "Person", "People", "A collection of
 
 #### **AddCollection&lt;TEntityType&gt;(Lambda idFieldExpression, string nameSingular, string namePlural, string description, string iconSingular, string iconPlural, Lambda collectionConfig = null) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds a collection to the current tree with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
+Adds a collection to the current tree / group with the given names, description and icons. An ID property accessor expression is required so that Konstrukt knows which property is the ID property. See the [Collections documentation](../collections/overview.md) for more info.
 
 ```csharp
 // Example
 treeConfig.AddCollection<Person>(p => p.Id, "Person", "People", "A collection of people", "icon-umb-users", "icon-umb-users", collectionConfig => {
+    ...
+});
+```
+
+## Extending an existing tree
+
+You can extend existing trees adding Konstrukt context apps and virtual sub trees by calling the `WithTree` method of a `KonstruktWithSectionConfigBuilder` instance.
+
+#### **WithTree(string alias, Lambda treeConfig = null) : KonstruktWithTreeConfigBuilder**
+
+Starts a sub configuration for the existing Umbraco tree with the given alias.
+
+```csharp
+// Example
+sectionConfig.WithTree("content", withTreeConfig => {
+    ...
+});
+```
+
+## Adding a context app to an existing tree
+
+#### **AddContextApp(string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app with the given name and default icon. See the [Context App documentation](context-apps.md) for more info.
+
+```csharp
+// Example
+withTreeConfig.AddContextApp("Comments", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextApp(string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app to the Umbraco menu with the given name and icon. See the [Context App documentation](context-apps.md) for more info.
+
+```csharp
+// Example
+withTreeConfig.AddContextApp("Comments", "icon-chat", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppBefore(string beforeAlias, string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app with the given name and default icon before the context app with the given alias. See the [Context App documentation](context-apps.md) for more info.
+
+```csharp
+// Example
+withTreeConfig.AddContextAppBefore("umbContent", "Comments", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppBefore(string beforeAlias, string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app to the Umbraco menu with the given name and icon before the context app with the given alias. See the [Context App documentation](context-apps.md) for more info.
+
+```csharp
+// Example
+withTreeConfig.AddContextAppBefore("umbContent", "Comments", "icon-chat", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppAfter(string afterAlias, string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app with the given name and default icon after the context app with the given alias. See the [Context App documentation](context-apps.md) for more info.
+
+```csharp
+// Example
+withTreeConfig.AddContextAppAfter("umbContent", "Comments", contextAppConfig => {
+    ...
+});
+```
+
+#### **AddContextAppAfter(string afterAlias, string name, string icon, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
+
+Adds a context app to the Umbraco menu with the given name and icon after the context app with the given alias. See the [Context App documentation](context-apps.md) for more info.
+
+```csharp
+// Example
+withTreeConfig.AddContextAppAfter("umbContent", "Comments", "icon-chat", contextAppConfig => {
     ...
 });
 ```

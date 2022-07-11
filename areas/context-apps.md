@@ -10,7 +10,7 @@ Context Apps in Konstrukt are analogous with Content Apps in Umbraco and they al
 
 ## Defining a context app
 
-You define a context app by calling one of the `AddContextApp` methods on the root level `KonstruktConfigBuilder` instance.
+You define a context app by calling one of the `AddContextApp` methods on a `KonstruktWithTreeConfigBuilder` instance.
 
 #### **AddContextApp(string name, Lambda contextAppConfig = null) : KonstruktContextAppConfigBuilder**
 
@@ -18,7 +18,7 @@ Adds a context app with the given name and default icon.
 
 ```csharp
 // Example
-config.AddContextApp("Comments", contextAppConfig => {
+withTreeConfig.AddContextApp("Comments", contextAppConfig => {
     ...
 });
 ```
@@ -29,7 +29,7 @@ Adds a context app to the Umbraco menu with the given name and icon.
 
 ```csharp
 // Example
-config.AddContextApp("Comments", "icon-chat", contextAppConfig => {
+withTreeConfig.AddContextApp("Comments", "icon-chat", contextAppConfig => {
     ...
 });
 ```
@@ -40,7 +40,7 @@ Adds a context app with the given name and default icon before the context app w
 
 ```csharp
 // Example
-config.AddContextAppBefore("umbContent", "Comments", contextAppConfig => {
+withTreeConfig.AddContextAppBefore("umbContent", "Comments", contextAppConfig => {
     ...
 });
 ```
@@ -51,7 +51,7 @@ Adds a context app to the Umbraco menu with the given name and icon before the c
 
 ```csharp
 // Example
-config.AddContextAppBefore("umbContent", "Comments", "icon-chat", contextAppConfig => {
+withTreeConfig.AddContextAppBefore("umbContent", "Comments", "icon-chat", contextAppConfig => {
     ...
 });
 ```
@@ -62,7 +62,7 @@ Adds a context app with the given name and default icon after the context app wi
 
 ```csharp
 // Example
-config.AddContextAppAfter("umbContent", "Comments", contextAppConfig => {
+withTreeConfig.AddContextAppAfter("umbContent", "Comments", contextAppConfig => {
     ...
 });
 ```
@@ -73,7 +73,7 @@ Adds a context app to the Umbraco menu with the given name and icon after the co
 
 ```csharp
 // Example
-config.AddContextAppAfter("umbContent", "Comments", "icon-chat", contextAppConfig => {
+withTreeConfig.AddContextAppAfter("umbContent", "Comments", "icon-chat", contextAppConfig => {
     ...
 });
 ```
@@ -104,7 +104,9 @@ contextAppConfig.SetIconColor("blue");
 
 ## Changing when a context app should display
 
-Changing when a context app is displayed is controlled by a delegate method which is passed a `KonstruktContextAppVisibilityContext` instance which contains a `Source` property which holds a reference to the source object that content app is being displayed on (ie, an `IContent` instance) and a `UserGroups` collection of the current logged in users user groups. You can use an value from those to return a boolean result which sets whether to display the context app or not.
+Changing when a context app is displayed is controlled by a delegate method which is passed a `KonstruktContextAppVisibilityContext` instance which contains a `Source` property which holds a reference to the source object that content app is being displayed on (ie, an `IContent` instance) and a `UserGroups` collection of the current logged in users user groups. You can use any value from those to return a boolean result which sets whether to display the context app or not.
+
+By default, Konstrukt will pre-filter context apps to only display on the tree it is defined in. This will be combined with the `SetVisibility` config to decide when to display the context app.
 
 #### **SetVisibility(Func&lt;KonstruktContextAppVisibilityContext, bool&gt; visibilityExpression) : KonstruktContextAppConfigBuilder**
 

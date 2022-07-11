@@ -70,3 +70,99 @@ sectionConfig.Tree(treeConfig => {
     ...
 });
 ````
+
+## Extending an existing section
+
+You can extend existing sections adding Konstrukt trees and dashboards, context apps and virtual sub trees by calling the `WithSection` method on the root level `KonstruktConfigBuilder` instance.
+
+#### **WithSection(string alias, Lambda sectionConfig = null) : KonstruktWithSectionConfigBuilder**
+
+Starts a sub configuration for the existing Umbraco section with the given alias.
+
+```csharp
+// Example
+config.WithSection("member", withSectionConfig => {
+    ...
+});
+```
+
+## Adding a dashboard to an existing section
+
+#### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+withSectionConfig.AddDashboard("Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardBefore(string beforeAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name before the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+withSectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardAfter(string afterAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name after the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+withSectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
+## Adding a tree to an existing section
+
+#### **AddTree(string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section. See [Trees documentation](trees.md) for more info.
+
+````csharp
+// Example
+withSectionConfig.AddTree("My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+#### **AddTree(string groupName, string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section in a group with the given name. See [Trees documentation](trees.md) for more info.
+
+````csharp
+// Example
+withSectionConfig.AddTree("My Group", "My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+#### **AddTreeBefore(string treeAlias, string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section before the tree with the given alias. See [Trees documentation](trees.md) for more info.
+
+````csharp
+// Example
+withSectionConfig.AddTreeBefore("member", "My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+#### **AddTreeAfter(string treeAlias, string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section after the tree with the given alias. See [Trees documentation](trees.md) for more info.
+
+````csharp
+// Example
+withSectionConfig.AddTreeAfter("member", "My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
