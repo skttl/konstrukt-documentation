@@ -8,9 +8,9 @@ A tree is a hierarchical structure that helps organise a section into logical su
 
 ![Tree](../images/tree.png)
 
-## Configuring a tree
+## Configuring a Konstrukt section tree
 
-The tree configuration is a sub configuration of a [`Section`](sections.md) config builder instance and is accessed via it's `Tree` method.
+The tree configuration for Konstrukt sections is a sub configuration of a [`Section`](sections.md) config builder instance and is accessed via it's `Tree` method.
 
 #### **Tree(Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
 
@@ -23,11 +23,77 @@ sectionConfig.Tree(treeConfig => {
 });
 ````
 
+## Adding a tree to an existing section
+
+The tree configuration for existing sections is a sub configuration of a [`WithSection`](sections.md) config builder instance and is accessed via one of it's `AddTree` methods.
+
+#### **AddTree(string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section. 
+
+````csharp
+// Example
+withSectionConfig.AddTree("My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+#### **AddTree(string groupName, string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section in a group with the given name. 
+````csharp
+// Example
+withSectionConfig.AddTree("My Group", "My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+#### **AddTreeBefore(string treeAlias, string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section before the tree with the given alias. 
+
+````csharp
+// Example
+withSectionConfig.AddTreeBefore("member", "My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+#### **AddTreeAfter(string treeAlias, string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
+
+Adds a tree to the current section after the tree with the given alias. 
+
+````csharp
+// Example
+withSectionConfig.AddTreeAfter("member", "My Tree", "icon-folder", treeConfig => {
+    ...
+});
+````
+
+## Changing the tree icon color
+
+#### **SetIconColor(string color) : KonstruktTreeConfigBuilder**
+
+Sets the trees icon color to the given color.  Possible options are `black`, `green`, `yellow`, `orange`, `blue` or `red`.
+
+{% hint style="info" %}
+**NB:** Only trees added to existing sections have an icon. Trees added to Konstrukt sections don't show a tree icon instead they go straight into displaying the tree contents.
+{% endhint %}
+
+````csharp
+// Example
+collectionConfig.SetIconColor("blue");
+````
+
 ## Adding a group to a tree
 
 #### **AddGroup(string name, Lambda groupConfig = null) : KonstruktGroupConfigBuilder**
 
 Adds a group to the current tree with the given name.
+
+{% hint style="info" %}
+**NB:** Only Konstrukt section trees can configure groups, where trees added to existing sections cannot.
+{% endhint %}
 
 ```csharp
 // Example
