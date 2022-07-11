@@ -10,7 +10,7 @@ A dashboard is a view that is displayed at the root of a section and usually con
 
 ## Defining a dashboard
 
-You define a dashboard by calling one of the `AddDashboard` methods on a `KonstruktWithSectionConfigBuilder` instance.
+You define a dashboard by calling one of the `AddDashboard` methods on a [`KonstruktWithSectionConfigBuilder`](sections.md#extending-an-existing-section) instance.
 
 #### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
 
