@@ -36,7 +36,7 @@ editorConfig.AddTab("General", tabConfig => {
 });
 ````
 
-## Configuring a sidebar for a tab
+## Configuring a sidebar to a tab
 
 A slidebar is a smaller area that is displayed to the right of the main editor. The sidebar can also contain fieldsets and fields in the same way tabs can but with a much more limited display area so you'll need to choose your field types carefully. The sidebar is a great location to display entity metadata.
 
