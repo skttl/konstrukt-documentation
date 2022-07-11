@@ -152,7 +152,7 @@ treeConfig.AddCollection<Person>(p => p.Id, "Person", "People", "A collection of
 
 ## Extending an existing tree
 
-You can extend existing trees adding Konstrukt context apps and virtual sub trees by calling the `WithTree` method of a `KonstruktWithSectionConfigBuilder` instance.
+You can extend existing trees adding Konstrukt context apps and virtual sub trees by calling the `WithTree` method of a [`KonstruktWithSectionConfigBuilder`](sections.md#extending-an-existing-section) instance.
 
 #### **WithTree(string alias, Lambda treeConfig = null) : KonstruktWithTreeConfigBuilder**
 
