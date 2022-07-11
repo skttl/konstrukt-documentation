@@ -11,9 +11,9 @@ Cards provide an API to display simple summary info in a card based format and a
 Cards can be defined in one of two ways:
 
 {% content-ref url="count-cards.md" %}
-[count-cards.md](count-cards.md)
+[Count Cards](count-cards.md)
 {% endcontent-ref %}
 
 {% content-ref url="custom-cards.md" %}
-[custom-cards.md](custom-cards.md)
+[Custom Cards](custom-cards.md)
 {% endcontent-ref %}
