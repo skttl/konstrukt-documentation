@@ -18,7 +18,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 - Added explicit Insert / Update methods to IKonstruktRepository and we now internaly use these instead of the Save method as the Save method isn't reliably able to determine if an entity is new or not.
 - Added better support for transient / scoped repository dependencies (ie better support for EF Core DB contexts which are by default registered as scoped)
 - Obsoleted root level APIs for `AddSection`, `AddDashboard` and `AddVirtualSubTree` which have now moved to sub configurations of the `WithSection` or `WithTree` APIs.
-- Fixed bug with DataViews resolving the wrong filter when using groups and the data view has the same name as a view in a different group. We not prefix the data view alias with the group name to ensure uniqueness across groups.
+- Fixed bug with DataViews resolving the wrong filter when using groups and the data view has the same name as a view in a different group. We now prefix the data view alias with the group name to ensure uniqueness across groups.
 - Fixed bug in child collections create dialog thinking it was always editing an existing entity and so wrongfuly trying to load an entity from the DB due to the fact the entity ID passed through to the dialog "0" when it should be "-1".
 
 ## v1.3.0
