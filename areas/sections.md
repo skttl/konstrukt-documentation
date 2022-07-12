@@ -121,41 +121,6 @@ config.WithSection("member", withSectionConfig => {
 });
 ```
 
-## Adding a dashboard to an existing section
-
-#### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
-
-Adds a dashboard with the given name. See [Dashboards documentation](dashboards.md) for more info.
-
-```csharp
-// Example
-withSectionConfig.AddDashboard("Team", dashboardConfig => {
-    ...
-});
-```
-
-#### **AddDashboardBefore(string beforeAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
-
-Adds a dashboard with the given name before the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
-
-```csharp
-// Example
-withSectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
-    ...
-});
-```
-
-#### **AddDashboardAfter(string afterAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
-
-Adds a dashboard with the given name after the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
-
-```csharp
-// Example
-withSectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
-    ...
-});
-```
-
 ## Adding a tree to an existing section
 
 #### **AddTree(string name, string icon, Lambda treeConfig = null) : KonstruktTreeConfigBuilder**
@@ -201,3 +166,38 @@ withSectionConfig.AddTreeAfter("member", "My Tree", "icon-folder", treeConfig =>
     ...
 });
 ````
+
+## Adding a dashboard to an existing section
+
+#### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+withSectionConfig.AddDashboard("Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardBefore(string beforeAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name before the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+withSectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardAfter(string afterAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name after the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+withSectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
