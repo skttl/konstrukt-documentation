@@ -71,6 +71,41 @@ sectionConfig.Tree(treeConfig => {
 });
 ````
 
+## Adding a dashboard to the section
+
+#### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+sectionConfig.AddDashboard("Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardBefore(string beforeAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name before the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+sectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
+#### **AddDashboardAfter(string afterAlias, string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
+
+Adds a dashboard with the given name after the dashboard with the given alias. See [Dashboards documentation](dashboards.md) for more info.
+
+```csharp
+// Example
+sectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
+    ...
+});
+```
+
 ## Extending an existing section
 
 You can extend existing sections adding Konstrukt trees and dashboards, context apps and virtual sub trees by calling the `WithSection` method on the root level `KonstruktConfigBuilder` instance.

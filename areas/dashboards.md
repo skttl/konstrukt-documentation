@@ -10,7 +10,7 @@ A dashboard is a view that is displayed at the root of a section and usually con
 
 ## Defining a dashboard
 
-You define a dashboard by calling one of the `AddDashboard` methods on a [`KonstruktWithSectionConfigBuilder`](sections.md#extending-an-existing-section) instance.
+You define a dashboard by calling one of the `AddDashboard` methods on either a [`KonstruktSectionConfigBuilder`](sections.md) or a [`KonstruktWithSectionConfigBuilder`](sections.md#extending-an-existing-section) instance.
 
 #### **AddDashboard(string name, Lambda dashboardConfig = null) : KonstruktDashboardConfigBuilder**
 
@@ -18,7 +18,7 @@ Adds a dashboard with the given name.
 
 ```csharp
 // Example
-withSectionConfig.AddDashboard("Team", dashboardConfig => {
+sectionConfig.AddDashboard("Team", dashboardConfig => {
     ...
 });
 ```
@@ -30,7 +30,7 @@ Adds a dashboard with the given name before the dashboard with the given alias.
 
 ```csharp
 // Example
-withSectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
+sectionConfig.AddDashboardBefore("contentIntro", "Team", dashboardConfig => {
     ...
 });
 ```
@@ -41,7 +41,7 @@ Adds a dashboard with the given name after the dashboard with the given alias.
 
 ```csharp
 // Example
-withSectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
+sectionConfig.AddDashboardAfter("contentIntro", "Team", dashboardConfig => {
     ...
 });
 ```

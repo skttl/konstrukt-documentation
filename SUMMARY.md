@@ -17,7 +17,7 @@
 
 * [Overview](areas/overview.md)
 * [Sections](areas/sections.md)
-  * [Section Dashboards](areas/section-dashboards.md)
+  * [Section Summary Dashboards](areas/section-summary-dashboards.md)
   * [Trees](areas/trees.md)
   * [Folders](areas/folders.md)
 * [Dashboards](areas/dashboards.md)
