@@ -14,7 +14,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 - Added [Tab Sidebar](../collections/editors.md#configuring-a-sidebar-to-a-tab) support to allow showing meta data on the right hand side of the editor.
 - Added file upload support to the actions dialog
 - Added a simple CSV Import action
-- Added `HideLabel()` support to editor fields to explicitly hide the label.
+- Added [`HideLabel`](../collections/editors.md#hiding-the-label-of-a-field) support to editor fields to explicitly hide the label.
 - Added explicit Insert / Update methods to IKonstruktRepository and we now internaly use these instead of the Save method as the Save method isn't reliably able to determine if an entity is new or not.
 - Added better support for transient / scoped repository dependencies (ie better support for EF Core DB contexts which are by default registered as scoped)
 - Obsoleted root level APIs for `AddSection`, `AddDashboard` and `AddVirtualSubTree` which have now moved to sub configurations of the `WithSection` or `WithTree` APIs.
