@@ -36,7 +36,7 @@ For anyone familiar with Umbraco you may already know of the open source back of
 | Bulk Actions | Yes - C# based | No |
 | Row Actions | Yes - C# based | No |
 | Virtual Sub Trees | Yes | No |
-| Konstrukt Trees in Existing Sections | Yes | No |
+| Custom Trees in Existing Sections | Yes | No |
 | Encrypted Properties | Yes | No |
 | Value Mappers | Yes | No |
 | Child Collections | Yes | Yes - Requires a convoluted config of hidden collections + list view properties on the parent poco model |
