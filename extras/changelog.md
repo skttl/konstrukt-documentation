@@ -8,10 +8,10 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 **Date:** 2022-07-12  
 **Description:** Minor release with additional features and bug fixes
 
-- Added WithSection / WithTree API to create more logical API groupings and to set context for some APIs.
-- Added `AddTree` support to allow adding a tree to an existing section (currently only able to add 1 Konstrukt tree per section).
-- Added Tree Group support to allow grouping root level tree folders / collections.
-- Added Tab Sidebar support to allow showing meta data on the right hand side of the editor.
+- Added [WithSection](../areas/sections.md#extending-an-existing-section) / [WithTree](../areas/trees.md#extending-an-existing-tree) API to create more logical API groupings and to set context for some APIs.
+- Added [`AddTree`](../areas/trees.md#adding-a-tree-to-an-existing-section) support to allow adding a tree to an existing section (currently only able to add 1 Konstrukt tree per section).
+- Added [Tree Group](../areas/trees.md#adding-a-group-to-a-tree) support to allow grouping root level tree folders / collections.
+- Added [Tab Sidebar](../collections/editors.md#configuring-a-sidebar-to-a-tab) support to allow showing meta data on the right hand side of the editor.
 - Added file upload support to the actions dialog
 - Added a simple CSV Import action
 - Added `HideLabel()` support to editor fields to explicitly hide the label.

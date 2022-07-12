@@ -90,6 +90,19 @@ Sets the label for the editor field.
 fieldConfig.SetLabel("First Name");
 ````
 
+## Hiding the label of a field
+
+Sometimes you may have a field editor that would work better in full width, in which case you can achieve this by explicitly hiding the fields label.
+
+#### **HideLabel() : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Hides the label for the editor field.
+
+````csharp
+// Example
+fieldConfig.HideLabel();
+````
+
 ## Adding a description to a field
 
 #### **SetDescription(string description) : KonstruktEditorFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
