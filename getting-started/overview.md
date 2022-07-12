@@ -10,7 +10,7 @@ It is assumed that before we begin that you already have an Umbraco v10+ website
 
 ## System Requirements
 At this time, the minimum requirements for using Konstrukt are as follows:
-* **Umbraco 9.0+**
+* **Umbraco 10.0+**
 * **SQL Server Database** (CE is fine for testing, but not recommend for live deployments)
 
 ## Versioning
