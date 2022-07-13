@@ -14,6 +14,10 @@ To define a repository you create a class that inherits from the base class `Kon
 // Example
 public class PersonRepository : KonstruktRepository<Person, int> {
 
+    public PersonRepository(KonstruktRepositoryContext context)
+        : base(context)
+    { }
+
     protected override int GetIdImpl(Person entity) {
         return entity.Id;
     }
@@ -68,9 +72,7 @@ collectionConfig.SetRepositoryType(typeof(PersonRepositoryType));
 
 ## Accessing a repository in code
 
-If you have created your own repository implementation, then accessing the repository can be as simple as instantiating a new instance of the repository class, however if you are using the built in repository, unfortunately a new instance can't be created in this way.
-
-To help with accessing a repository (default or custom) Konstrukt has a `IKonstruktRepositoryFactory` you can inject into your code base with a couple of factory methods to create the repository instances for you.
+To help with accessing a repository (default or custom) Konstrukt has a `IKonstruktRepositoryFactory` you can inject into your code base with a couple of factory methods to create the repository instances for you. Repositories should only be created via the repository factory as there are a number of injected depenedencies that can only be resolved by Konstrukt.
 
 #### **IKonstruktRepositoryFactory.GetRepository&lt;TEntity, TId&gt;() : KonstruktRepository&lt;TEntity, TId&gt;**
 
