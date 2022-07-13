@@ -17,8 +17,8 @@
 
 * [Overview](areas/overview.md)
 * [Sections](areas/sections.md)
-  * [Section Summary Dashboards](areas/section-summary-dashboards.md)
-  * [Trees](areas/trees.md)
+  * [Summary Dashboards](areas/summary-dashboards.md)
+* [Trees](areas/trees.md)
   * [Folders](areas/folders.md)
 * [Dashboards](areas/dashboards.md)
 * [Context Apps](areas/context-apps.md)
