@@ -4,6 +4,25 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.5.0
+**Date:** 2022-08-18  
+**Description:** Minor release with additional features and bug fixes
+
+- Added ability to control collection visibility in the section tree at runtime.
+- Added ability to control collection create, updated, delete persmissions at runtime.
+- Added ability to control list view field visbility at runtime.
+- Added ability to control editor tab visbility at runtime.
+- Added ability to control editor fieldset visbility at runtime.
+- Added ability to control editor field visibility at runtime.
+- Added ability to control whether an editor field is read only or not at runtime.
+- Added ability to add custom dashboards to Konstrukt sections.
+- Added child collections support to dashboard collections.
+- Updated Konstrukt API to null check sections / collections first and throw exceptions if not found.
+- Updated based repositories to automatically implement filtering for configuriable options.
+- Updated the summary dashboard to not display if there are no collections configured to show on it.
+- Fixed bug where entity service would silently fail if it couldn't retrieve an entity. Now throws an exception.
+- Fixed bug where content app factory would throw an exception when run in sections where the section entity was not `IUmbracoEntity`.
+
 ## v1.4.0
 **Date:** 2022-07-12  
 **Description:** Minor release with additional features and bug fixes

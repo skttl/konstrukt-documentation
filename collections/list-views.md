@@ -80,6 +80,17 @@ Sets the view component for the list view field.
 fieldConfig.SetView<ImageFieldView>();
 ````
 
+## Setting the visibility of a field
+
+#### **SetVisibility(Predicate&lt;KonstruktListViewFieldVisibilityContext&gt; visibilityExpression) : KonstruktListViewFieldConfigBuilder&lt;TEntityType, TValueType&gt;**
+
+Sets the runtime visibility of the list view field.
+
+````csharp
+// Example
+fieldConfig.SetVisibility(ctx => ctx.UserGroups.Any(x => x.Alias == "editor"));
+````
+
 ## Changing the page size
 
 #### **SetPageSize(int pageSize) : KonstruktListViewConfigBuilder&lt;TEntityType&gt;**
