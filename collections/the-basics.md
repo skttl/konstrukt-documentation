@@ -136,11 +136,20 @@ collectionConfig.SetDeletedProperty(p => p.Deleted);
 
 #### **DisableCreate() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Disables the option to create entities on the current collection. An entity could be created via code-behind and then only editing is allowed in the UI for example.
+Disables the option to create entities on the current collection. An entity could be created via code and then only editing is allowed in the UI for example.
 
 ````csharp
 // Example
 collectionConfig.DisableCreate();
+````
+
+#### **DisableCreate(Predicate&lt;KonstruktCollectionPermissionContext&gt; disableExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Disables the option to create entities on the current collection if the given runtime predicate is true. An entity could be created via code and then only editing is allowed in the UI for example.
+
+````csharp
+// Example
+collectionConfig.DisableCreate(ctx => ctx.UserGroups.Any(x => x.Alias == "editor"));
 ````
 
 #### **DisableUpdate() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
@@ -152,6 +161,15 @@ Disables the option to update entities on the current collection. An entity can 
 collectionConfig.DisableUpdate();
 ````
 
+#### **DisableUpdate(Predicate&lt;KonstruktCollectionPermissionContext&gt; disableExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Disables the option to update entities on the current collection if the given runtime predicate is true. An entity can be created, but further editing is not allowed. 
+
+````csharp
+// Example
+collectionConfig.DisableUpdate(ctx => ctx.UserGroups.Any(x => x.Alias == "editor"));
+````
+
 #### **DisableDelete() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Disables the option to delete entities on the current collection. Useful if the data needs to be retained and visible. See also [defining a deleted flag](#defining-a-deleted-flag).
@@ -161,6 +179,15 @@ Disables the option to delete entities on the current collection. Useful if the 
 collectionConfig.DisableDelete();
 ````
 
+#### **DisableDelete(Predicate&lt;KonstruktCollectionPermissionContext&gt; disableExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Disables the option to delete entities on the current collection if the given runtime predicate is true. Useful if the data needs to be retained and visible. See also [defining a deleted flag](#defining-a-deleted-flag).
+
+````csharp
+// Example
+collectionConfig.DisableDelete(ctx => ctx.UserGroups.Any(x => x.Alias == "editor"));
+````
+
 #### **MakeReadOnly() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
 Sets the collection as read only and disables any CRUD operations from being performed on the collection via the UI.
@@ -168,6 +195,26 @@ Sets the collection as read only and disables any CRUD operations from being per
 ````csharp
 // Example
 collectionConfig.MakeReadOnly();
+````
+
+#### **MakeReadOnly(Predicate&lt;KonstruktCollectionPermissionContext&gt; disableExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the collection as read only if the given runtime predicate is true and disables any CRUD operations from being performed on the collection via the UI.
+
+````csharp
+// Example
+collectionConfig.MakeReadOnly(ctx => ctx.UserGroups.Any(x => x.Alias == "editor"));
+````
+
+## Set the visibility of the collection
+
+#### **SetVisibility(Predicate&lt;KonstruktCollectionVisibilityContext&gt; visibilityExpression) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
+
+Sets the runtime visibility of the collection.
+
+````csharp
+// Example
+collectionConfig.SetVisibility(ctx => ctx.UserRoles.Any(x => x.Alias == "editor"));
 ````
 
 ## Changing a collection connection string
