@@ -93,7 +93,7 @@ Actions are added via the [collections](../collections/overview.md) configuratio
 
 #### **AddAction&lt;TMenuActionType&gt;() : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds an action of the given type to the collection. See [Actions API documentation](actions.md) for more info.
+Adds an action of the given type to the collection.
 
 ````csharp
 // Example
@@ -102,7 +102,7 @@ collectionConfig.AddAction<ExportMenuAction>();
 
 #### **AddAction(Type actionType) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds an action of the given type to the collection. See [Actions API documentation](actions.md) for more info.
+Adds an action of the given type to the collection.
 
 ````csharp
 // Example
@@ -111,7 +111,7 @@ collectionConfig.AddAction(actionType);
 
 #### **AddAction(IKonstruktAction action) : KonstruktCollectionConfigBuilder&lt;TEntityType&gt;**
 
-Adds the given action to the collection. See [Actions API documentation](actions.md) for more info.
+Adds the given action to the collection.
 
 ````csharp
 // Example
