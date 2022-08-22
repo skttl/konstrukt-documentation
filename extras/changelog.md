@@ -4,6 +4,14 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.5.1
+**Date:** 2022-08-22 
+**Description:** Patch release with bug fixes
+
+- Fixed searchable properties not being searched in a case-insensitive way for repositories that don't used Umbraco's NPoco extension methods.
+- Fixed regression in Konstrukt repository not correctly combining filters.
+- Fixed exception due to `ServiceProvider` not getting passed to DTO mapper.
+
 ## v1.5.0
 **Date:** 2022-08-18  
 **Description:** Minor release with additional features and bug fixes
