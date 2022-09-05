@@ -5,7 +5,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 # Changelog
 
 ## v1.5.1
-**Date:** 2022-08-22 
+**Date:** 2022-08-22  
 **Description:** Patch release with bug fixes
 
 - Fixed searchable properties not being searched in a case-insensitive way for repositories that don't used Umbraco's NPoco extension methods.
