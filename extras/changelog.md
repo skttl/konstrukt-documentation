@@ -5,7 +5,7 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 # Changelog
 
 ## v1.5.2
-**Date:** 2022-09-09 
+**Date:** 2022-09-09  
 **Description:** Patch release with bug fixes
 
 - Fixed bug in entity picker not correctly showing the `Add` button when it should ([#39](https://github.com/outfielddigital/konstrukt/issues/39)).
