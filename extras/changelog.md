@@ -4,6 +4,12 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.6.0
+**Date:** 2022-09-30  
+**Description:** Minor release with additional features
+
+- Added a Save action type to display actions as sub button in an entities Save button (similar to the "Save and Publish" button in the content section).
+
 ## v1.5.2
 **Date:** 2022-09-09  
 **Description:** Patch release with bug fixes

@@ -98,6 +98,12 @@ The `Row` action type determines that the action will be displayed in the collec
 
 ![Row Actions](../images/row_actions_menu.png)
 
+#### Save
+
+The `Save` action type determines that the action will be displayed as a sub button in an entity editors save button. All `Save` action types trigger a save before the action is executed and so to convey this, all `Save` action type button labels are prefixed `Save & [Action Name]`
+
+![Save Actions](../images/save_actions_menu.png)
+
 ### UserGroups
 
 The user groups collection contains a list of Umbraco `IReadOnlyUserGroup` objects for the current logged in back office user and allows you to control the visibility of actions for given user group members.
