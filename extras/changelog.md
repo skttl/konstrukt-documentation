@@ -4,6 +4,12 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.6.1
+**Date:** 2022-10-11  
+**Description:** Patch release with bug fixes
+
+- Fixed issue when running on Azure where the DB provider name reverts to `System.Data.SqlClient` when it should be `Microsoft.Data.SqlClient`
+
 ## v1.6.0
 **Date:** 2022-09-30  
 **Description:** Minor release with additional features
