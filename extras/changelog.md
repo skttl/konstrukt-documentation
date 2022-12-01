@@ -4,6 +4,16 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.6.2
+**Date:** 2022-12-01  
+**Description:** Patch release with bug fixes
+
+- Added marketplace updates.
+- Update the Konstrukt type finder to use a non obsolete constructor.
+- Updated to use `IComposer` instead of `IUserCompser` as the later has been removed in v11.
+- Fixed parent ID not being passed to create dialog for associated entities.
+- Removed settings section restriction on the licensing info endpoint as it would cause errors when the licensing banner is shown in other sections.
+
 ## v1.6.1
 **Date:** 2022-10-11  
 **Description:** Patch release with bug fixes
