@@ -4,6 +4,15 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.6.3
+**Date:** 2023-01-16  
+**Description:** Patch release with bug fixes
+
+- Moved encrypted properties implementation to the base repository class so encryption is honored when performing save / load opperation directly agains the repository API ([#44](https://github.com/outfielddigital/konstrukt/issues/44)). 
+- Made `SecurityHelper` swappable so you can use something other than the default `DataProtectionProvider` implementation that comes OOTB.
+- Fixed issue with advanced filters that use the lambda `ParameterReplacer` due to the parameter being replaced in the function, but not in the lambdas parameters list ([#45](https://github.com/outfielddigital/konstrukt/issues/45)).
+- Fixed date filters not working on mobile resolution devices ([#46](https://github.com/outfielddigital/konstrukt/issues/46)). 
+
 ## v1.6.2
 **Date:** 2022-12-01  
 **Description:** Patch release with bug fixes
