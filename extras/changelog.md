@@ -4,6 +4,13 @@ description: Changelog for Konstrukt, the back office UI builder for Umbraco.
 
 # Changelog
 
+## v1.6.4
+**Date:** 2023-02-22  
+**Description:** Patch release with bug fixes
+
+- Fixed issue where upload file property editor would throw "the specified file type has been disallowed by the administrator" error  ([#49](https://github.com/outfielddigital/konstrukt/issues/49)). 
+- Added ngrok urls to allowed domains that don't need a license.
+
 ## v1.6.3
 **Date:** 2023-01-16  
 **Description:** Patch release with bug fixes
