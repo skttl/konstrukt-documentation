@@ -56,30 +56,30 @@ Sometimes you may need to collect further user input before you can perform an a
 
 ````csharp
 // Example
-public class MyAction : KonstruktAction<MyBulkdActionSettings, KonstruktActionResult>
+public class MyAction : KonstruktAction<MyBulkActionSettings, KonstruktActionResult>
 {
     public override string Icon => "icon-settings";
     public override string Alias => "myaction";
     public override string Name => "My Action";
     public override bool ConfirmAction => true;
 
-    public override void Configure(KonstruktSettingsConfigBuilder<MyActionSettings> settingsConfig)
+    public override void Configure(KonstruktSettingsConfigBuilder<MyBulkActionSettings> settingsConfig)
     {
-        settingsConfig.AddFielset("General", fieldsetConfig => fieldsetConfig
+        settingsConfig.AddFieldset("General", fieldsetConfig => fieldsetConfig
             .AddField(s => s.RecipientName).SetLabel("Recipient Name")
             .AddField(s => s.ReceipientEmail).SetLabel("Recipient Email"))
     }
 
-    public override KonstruktActionResult Execute(string collectionAlias, object[] entityIds, MyActionSettings settings)
+    public override KonstruktActionResult Execute(string collectionAlias, object[] entityIds, MyBulkActionSettings settings)
     {
         // Perform operation here...
     }
 }
 
-public class MyActionSettings
+public class MyBulkActionSettings
 {
-    public string ReceipientName { get; set; }
-    public string ReceipientEmail { get; set; }
+    public string RecipientName { get; set; }
+    public string RecipientEmail { get; set; }
 }
 ````
 
